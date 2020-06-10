@@ -1,0 +1,8 @@
+body {
+	padding-top: 56px;
+	font-family: 'Open Sans', sans-serif;	
+}
+.navbar-brand.logo {
+	font-family: 'Exo', sans-serif;
+	font-weight: 900;
+}
