@@ -1,8 +1,23 @@
 body {
-	padding-top: 56px;
 	font-family: 'Open Sans', sans-serif;	
 }
 .navbar-brand.logo {
 	font-family: 'Exo', sans-serif;
 	font-weight: 900;
+	font-size: 3.5rem;
+}
+.bg-light {
+    background-color: transparent!important;
+}
+.navbar-light .navbar-brand {
+    color: rgba(255,255,255,.9);
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(255,255,255,.9);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.7);
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: rgba(255,255,255,.9);
 }
