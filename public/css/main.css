@@ -19,6 +19,7 @@
     font-weight: 900!important;
     color: #fff!important;
 }
-.homeLogo span {
+.homeLogo span,
+span.orange {
 	color: #EC572C;
 }
