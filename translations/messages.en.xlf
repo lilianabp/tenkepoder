@@ -85,6 +85,26 @@
         <source>Inglés</source>
         <target>English</target>
       </trans-unit>
+      <trans-unit id="XJESdoH" resname="cargando...">
+        <source>cargando...</source>
+        <target>is loading...</target>
+      </trans-unit>
+      <trans-unit id="UnRPpCL" resname="Servicios">
+        <source>Servicios</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="PIOwEH0" resname="Proyectos">
+        <source>Proyectos</source>
+        <target>Projects</target>
+      </trans-unit>
+      <trans-unit id="_t2jhQo" resname="Contáctanos">
+        <source>Contáctanos</source>
+        <target>Contact us</target>
+      </trans-unit>
+      <trans-unit id=".DEXxZp" resname="Solicita Presupuesto">
+        <source>Solicita Presupuesto</source>
+        <target>Get a quote</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

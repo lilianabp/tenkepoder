@@ -1,822 +1,398 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}TenKePoder{% endblock %}
+{% block title %}Ten Ke Poder{% endblock %}
 
 {% block content %}
-	<div id="preloader">
-		<div id="status">&nbsp;</div>
-	</div>  
-	<div id="home"> 
-		<div class="home-text">
-			<div class="container">
-				<div class="sixteen columns">
-					<div class="home-text-top">{% trans %}tkp{% endtrans %}</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="sixteen columns">
-					<div class="line"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="sixteen columns">
-					<div class="home-text-middle"><span>t</span>en<span class="pl-4">k</span>e<span class="pl-4">p</span>oder</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="sixteen columns">
-					<div class="line"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="sixteen columns">
-					<div class="home-text-bottom">{% trans %}haciendo tus ideas posible{% endtrans %}</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="sixteen columns">
-					<div class="cl-effect-18">
-						<a href="/es" data-hover="facebook">{% trans %}Español{% endtrans %}</a>
-						<a href="/en" data-hover="Twitter">{% trans %}Inglés{% endtrans %}</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="arrow"><a href="#profile" class="scroll" >About Us</a></div>   
-
-	</div>  
-
-
-	<div id="cbp-so-scroller" class="cbp-so-scroller">  
-
-		{% include 'layout/header.html.twig' %}
-
-		<div id="profile">
-			<div class="title">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h1><strong><span>who</span></strong></h1>
-							<div class="angle"><h1><strong>we are?</strong></h1></div><div class="line-vert"></div>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<h6>WE ARE A GROUP OF EXPERIENCED <span>DESIGNERS</span> AND <span>DEVELOPERS</span></h6>
-						</div>
-					</section>
-				</div>
-			</div>
-			<div class="background-pat">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="eight columns cbp-so-side cbp-so-side-left">
-							<div class="profile-proces">
-								<div class="h5-text">
-									<h5>what we do?</h5>
-								</div>
-								<div class="profile-icon"><div class="font-icon">&#xf109;</div></div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend.</p>
-							</div>
-						</div>
-						<div class="eight columns cbp-so-side cbp-so-side-right">
-							<div class="profile-proces">
-								<div class="h5-text">
-									<h5>how do we do it?</h5>
-								</div>
-								<div class="profile-icon"><div class="font-icon">&#xf13b;</div></div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend.</p>
-							</div>
-						</div>
-						<div class="eight columns cbp-so-side cbp-so-side-left">
-							<div class="profile-proces">
-								<div class="h5-text">
-									<h5>what we achieve?</h5>
-								</div>
-								<div class="profile-icon"><div class="font-icon">&#xf0d0;</div></div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend.</p>
-							</div>
-						</div>
-						<div class="eight columns cbp-so-side cbp-so-side-right">
-							<div class="profile-proces">
-								<div class="h5-text">
-									<h5>at the end?</h5>
-								</div>
-								<div class="profile-icon"><div class="font-icon">&#xf0f4;</div></div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend.</p>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-			<div class="background-pat1-last">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h4>HOW ABOUT SOME Fun Facts</h4>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-left1">
-							<div class="facts">
-								<div class="facts-num"><h2>45</h2></div>
-								<div class="facts-icon1"></div>
-								<div class="facts-text"><h6>Web Awards</h6></div>
-							</div>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-left">
-							<div class="facts">
-								<div class="facts-num"><h2>24</h2></div>
-								<div class="facts-icon2"></div>
-								<div class="facts-text"><h6>LOCATIONS</h6></div>
-							</div>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-right">
-							<div class="facts">
-								<div class="facts-num"><h2>97</h2></div>
-								<div class="facts-icon3"></div>
-								<div class="facts-text"><h6>happy clients</h6></div>
-							</div>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-right1">
-							<div class="facts">
-								<div class="facts-num"><h2>86</h2></div>
-								<div class="facts-icon4"></div>
-								<div class="facts-text"><h6>Projects</h6></div>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>                      
-		</div>
-
-
-
-
-
-
-
-
-		<div id="parallax-2" class="parallax" style="background-image: url(images/parallax-2.jpg);">
-			<div class="parallax-wrap">     
-				<div class="container">
-					<div class="sixteen columns">  
-						<h5><span>Client Testimonials</span></h5>         
-					</div>
-					<div class="sixteen columns"> 
-						<div class="slider1">
-							<div class="slide">
-								<div class="testimonial"> 
-									<h6>Duis in nibh id lorem pulvinar adipiscing. Nulla odio elit, rutrum at convallis in, rhoncus ac urna. Curabitur justo urna, congue quis volutpat sed.</h6>
-									<p>Sarah, GraphicRiver</p>
-								</div> 
-							</div>
-							<div class="slide">
-								<div class="testimonial"> 
-									<h6>Curabitur justo urna, congue quis volutpat sed. Duis in nibh id lorem pulvinar adipiscing. Nulla odio elit, rutrum at convallis in, rhoncus ac urna.</h6>
-									<p>John Doe, ThemeForest</p>
-								</div> 
-							</div>
-							<div class="slide">
-								<div class="testimonial"> 
-									<h6>Nulla odio elit, rutrum at convallis in, rhoncus ac urna. Curabitur justo urna, congue quis volutpat sed. Duis in nibh id lorem pulvinar adipiscing.</h6>
-									<p>Mike Smith, CodeCanyon</p>
-								</div> 
-							</div>
-						</div>  
-					</div>              
-				</div>
-				<div class="clouds"></div>
-			</div>
-		</div>  
-
-
-
-
-
-
-
-		<div id="team">
-			<div class="title">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h1><strong><span>Who's</span></strong></h1>
-							<div class="angle"><h1><strong>Behind Apollo?</strong></h1></div><div class="line-vert"></div>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<h6>We design <span>websites</span>, <span>applications</span>, <span>logo's</span> and other awesome digital media</h6>
-						</div>
-					</section>
-				</div>
-			</div>  
-			<div class="background-pat">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="eight columns cbp-so-side cbp-so-side-left">
-							<div class="team1"><div class="team-name"><h6>Robert Doe</h6></div></div>
-						</div>
-						<div class="eight columns cbp-so-side cbp-so-side-right">
-							<div class="team2"><div class="team-name"><h6>Caroline Smith</h6></div></div>
-						</div>
-					</section>
-				</div>
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="eight columns team-list cbp-so-side cbp-so-side-left">
-							<h5>Head of Development</h5>
-							<ul class="list-team">
-								<li class="check"><p>Brand Design</p></li>
-								<li class="check"><p>Visual Identity</p></li>
-								<li class="check"><p>Product Design</p></li>
-								<li class="check"><p>Illustrations</p></li>
-								<li class="check"><p>Brand Action</p></li>
-							</ul>
-							<div class="cl-effect-18-team">
-								<a href="#" data-hover="facebook">facebook</a>
-								<a href="#" data-hover="Twitter">Twitter</a>
-								<a href="#" data-hover="Instagram">Instagram</a>
-							</div>
-						</div>
-						<div class="eight columns team-list cbp-so-side cbp-so-side-right">
-							<h5>Client Service Director</h5>
-							<ul class="list-team">
-								<li class="check"><p>Interactive Experience</p></li>
-								<li class="check"><p>User Interface</p></li>
-								<li class="check"><p>Search Engine Marketing</p></li>
-								<li class="check"><p>Social Media</p></li>
-								<li class="check"><p>Digital Installations</p></li>
-							</ul>
-							<div class="cl-effect-18-team">
-								<a href="#" data-hover="Twitter">Twitter</a>
-								<a href="#" data-hover="Google+">Google+</a>
-								<a href="#" data-hover="Linkedin">Linkedin</a>
-							</div>
-						</div>
-					</section>
-				</div>  
-			</div>
-			<div class="background-pat1-last">  
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h4>Team skills</h4>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-left1">
-							<h5>PHP</h5>
-							<div class="bar">
-								<input class="knob"  data-width="172" data-skin="tron" data-fgColor="#ffffff" data-thickness=".05" data-readOnly=true value="79">
-							</div>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-left">
-							<h5>CSS3</h5>
-							<div class="bar">
-								<input class="knob" data-width="172" data-skin="tron" data-fgColor="#ffffff" data-thickness=".05" data-readOnly=true value="83">
-							</div>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-right">
-							<h5>HTML5</h5>
-							<div class="bar">
-								<input class="knob" data-width="172" data-skin="tron" data-fgColor="#ffffff" data-thickness=".05" data-readOnly=true value="92">
-							</div>
-						</div>
-						<div class="four columns cbp-so-side cbp-so-side-right1">
-							<h5>JQUERY</h5>
-							<div class="bar">
-								<input class="knob" data-width="172" data-skin="tron" data-fgColor="#ffffff" data-thickness=".05" data-readOnly=true value="87">
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>  
-		</div>
-
-
-
-
-
-
-		<div id="parallax-1" class="parallax" style="background-image: url(images/parallax-1.jpg);">
-			<div class="parallax-wrap"> 
-				<div class="container">
-					<div class="sixteen columns">  
-						<h5><span>Our Latest Flickr Shots</span></h5>         
-					</div>
-					<div class="sixteen columns">  
-						<div id="flkr"></div>           
-					</div>              
-				</div>
-			</div>
-		</div>  
-
-
-
-
-
-
-
-		<div id="services">
-			<div class="title">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h1><strong><span>WHAT</span></strong></h1>
-							<div class="angle"><h1><strong>WE DO?</strong></h1></div><div class="line-vert"></div>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<h6>OUR SERVICES ARE DELIVERED BY OUR TEAM WITH <span>YEARS OF EXPERIENCE</span></h6>
-						</div>
-					</section>
-				</div>
-			</div>  
-			<div class="background-pat">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="one-third column cbp-so-side cbp-so-side-left">
-							<div class="services-offer">
-								<h5>Graphic Design</h5>
-								<div class="services-icon1"></div>
-								<p>Nulla odio elit, rutrum at convallis in, rhoncus ac urna. Curabitur justo urna, congue quis volutpat sed.</p>
-								<div class="services-list">
-									<ul class="list-services">
-										<li><p>Brand Design</p></li>
-										<li><p>User Interface</p></li>
-										<li><p>Illustrations</p></li>
-										<li><p>Social Media</p></li>
-										<li><p>Digital Installations</p></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="one-third column cbp-so-side cbp-so-side-right">
-							<div class="services-offer">
-								<h5>Web Design</h5>
-								<div class="services-icon2"></div>
-								<p>Nulla odio elit, rutrum at convallis in, rhoncus ac urna. Curabitur justo urna, congue quis volutpat sed.</p>
-								<div class="services-list">
-									<ul class="list-services">
-										<li><p>Product Design</p></li>
-										<li><p>User Interface</p></li>
-										<li><p>Search Engine Marketing</p></li>
-										<li><p>Social Media</p></li>
-										<li><p>Digital Installations</p></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="one-third column cbp-so-side cbp-so-side-right1">
-							<div class="services-offer">
-								<h5>SEO</h5>
-								<div class="services-icon3"></div>
-								<p>Nulla odio elit, rutrum at convallis in, rhoncus ac urna. Curabitur justo urna, congue quis volutpat sed.</p>
-								<div class="services-list">
-									<ul class="list-services">
-										<li><p>Interactive Experience</p></li>
-										<li><p>User Interface</p></li>
-										<li><p>Search Engine Marketing</p></li>
-										<li><p>Social Media</p></li>
-										<li><p>Digital Installations</p></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-			<div class="background-pat1-last">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="services-link">
-							<div class="sixteen columns cbp-so-side cbp-so-side-left">
-								<h5>ARE YOU READY TO START A CONVERSATION?</h5>
-							</div>
-							<div class="sixteen columns cbp-so-side cbp-so-side-right">
-								<nav class="cl-effect-9">
-									<a href="#contact" class="scroll"><span>Get In Touch</span><span>&#xf107;</span></a>
-								</nav>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>      
-		</div>
-
-
-
-
-
-		<div id="parallax-3" class="parallax" style="background-image: url(images/parallax-3.jpg);">    
-			<div class="fallingLeaves">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<div class="parallax-wrap">         
-				<div class="container">
-					<div class="sixteen columns">  
-						<h5><span>our beloved clients</span></h5>         
-					</div>
-					<div class="sixteen columns">
-						<div class="slider2">
-							<div class="slide"><img src="{{ asset('images/cli/1.png') }}" alt="" loading="lazy"></div>
-							<div class="slide"><img src="{{ asset('images/cli/2.png') }}" alt="" loading="lazy"></div>
-							<div class="slide"><img src="{{ asset('images/cli/3.png') }}" alt="" loading="lazy"></div>
-							<div class="slide"><img src="{{ asset('images/cli/4.png') }}" alt="" loading="lazy"></div>
-							<div class="slide"><img src="{{ asset('images/cli/5.png') }}" alt="" loading="lazy"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>  
-
-
-
-
-
-
-		<div id="portfolio">
-			<div class="title">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h1><strong><span>WHAT</span></strong></h1>
-							<div class="angle"><h1><strong>IT LOOKS LIKE?</strong></h1></div><div class="line-vert"></div>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<h6>HIRE US <span>IF YOU LIKE</span> WHAT WE DO</h6>
-						</div>
-					</section>
-				</div>
-			</div>
-			<div class="background-pat-last">
-				<div class="container">
-					<div class="fil">   
-						<div class="sixteen columns">
-							<div id="portfolio-filter">
-								<ul id="filter" class="cl-effect-18">
-									<li><a href="#" class="current" data-filter="*" data-hover="Show All">Show all</a></li>
-									<li><a href="#" data-filter=".photography" data-hover="photography">photography</a></li>
-									<li><a href="#" data-filter=".illustration" data-hover="illustration">illustration</a></li>
-									<li><a href="#" data-filter=".motion-graphics" data-hover="motion graphics">graphics</a></li>
-									<li><a href="#" data-filter=".web-design" data-hover="web design">web design</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>      
-				<div class="container">
-					<div class="portfolio-isotope">
-						<div class="box one-third column photography motion-graphics">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/17.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Motion Graphics</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column illustration web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project1.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/2.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Web Design</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column illustration motion-graphics">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/13.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Illustration</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column photography web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project1.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/4.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Photography</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column illustration">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/5.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Illustration</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column photography web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project1.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/14.jpg" alt="" loading="lazy" />
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Photography</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column motion-graphics web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/7.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Motion Graphics</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column illustration web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project1.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/8.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Illustration</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/15.jpg" alt="" loading="lazy"/>
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Web Design</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column illustration">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project1.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/10.jpg" alt="" loading="lazy" />
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Illustration</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-						<div class="box one-third column photography web-design">
-							<div class="gallery-item">
-								<a class='iframe group1'  href="project.html" title="">
-									<div class="gallery-item-mask">
-										<img src="images/gallery/1.jpg" alt="" loading="lazy" />
-										<div class="mask1"></div>
-										<div class="gallery-text-down">
-											<h6>Photography</h6>
-										</div>
-									</div>  
-								</a>
-							</div>
-						</div>
-					</div>      
-				</div>
-			</div>  
-		</div>
-
-
-
-
-		<div id="parallax-4" class="parallax" style="background-image: url(images/parallax-4.jpg);">
-			<div class="parallax-wrap">     
-				<div class="container">
-					<div class="sixteen columns">  
-						<h5><span>Latest News</span></h5>         
-					</div>
-				</div>  
-				<div id="blog" class="owl-carousel owl-theme">
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/1.jpg" alt="" loading="lazy"/><div class="date"><p>July 28. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/2.jpg" alt="" loading="lazy"/><div class="date"><p>July 25. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/3.jpg" alt="" loading="lazy"/><div class="date"><p>July 23. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/4.jpg" alt="" loading="lazy"/><div class="date"><p>July 19. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/5.jpg" alt="" loading="lazy"/><div class="date"><p>July 18. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/6.jpg" alt="" loading="lazy"/><div class="date"><p>July 14. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-					<div class="item">
-						<a href="#"><div class="img-blog"><img src="images/blog/7.jpg" alt="" loading="lazy"/><div class="date"><p>July 09. 2013</p></div></div></a>
-						<h6>Post Title</h6>
-						<p>Consectetur est quis mauris accumsan eleifend sit amet non neq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
-						<a class="link-blog" href="#">Read More</a>
-					</div>
-				</div>  
-			</div>
-		</div>  
-
-
-
-
-		<div id="contact">
-			<div class="title">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<h1><strong><span>LET'S</span></strong></h1>
-							<div class="angle"><h1><strong>HAVE A CHAT</strong></h1></div><div class="line-vert"></div>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<h6><span>WE CAN HELP YOU</span> PROMOTE YOUR BUSINESS</h6>
-						</div>
-					</section>
-				</div>
-			</div>
-			<div class="background-pat">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<form name="ajax-form" id="ajax-form" action="mail-it.php" method="post">
-								<h4>Say Hello</h4>
-								<label for="name">Name: * 
-									<span class="error" id="err-name">please enter name</span>
-								</label>
-								<input name="name" id="name" type="text" />
-								<label for="email">E-Mail: * 
-									<span class="error" id="err-email">please enter e-mail</span>
-									<span class="error" id="err-emailvld">e-mail is not a valid format</span>
-								</label>
-								<input name="email" id="email" type="text" />
-								<label for="message">Message:</label>
-								<textarea name="message" id="message"></textarea>
-								<button class="send_message" id="send">Submit</button>
-								<div class="error" id="err-form">There was a problem validating the form please check!</div>
-								<div class="error" id="err-timedout">The connection to the server timed out!</div>
-								<div class="error" id="err-state"></div>
-							</form>
-							<div id="ajaxsuccess">Successfully sent!!</div> 
-						</div>
-					</section>  
-				</div>
-			</div>
-			<div class="background-pat1-last">  
-				<div class="contact-info">
-					<div class="container">
-						<section class="cbp-so-section">
-							<div class="one-third column cbp-so-side cbp-so-side-left1">
-								<h5>Address:</h5>
-								<p>Home and Office: Brace Spasojevic 27, Trstenik,
-									Serbia</p>
-								</div>
-								<div class="one-third column cbp-so-side cbp-so-side-left">
-									<h5>Phone:</h5>
-									<p>Support: +381 (100) 1234 (09am - 05pm)</p>
-									<p>Director: +381 (100) 1243 (08am - 06pm)</p>
-								</div>
-								<div class="one-third column cbp-so-side cbp-so-side-right">
-									<h5>Email:</h5>
-									<p>Support: <a href="mailto:support@example.com" title="mailto:support@example.com">support@example.com</a></p>
-									<p>Director: <a href="mailto:chief@example.com" title="mailto:chief@example.com">chief@example.com</a></p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-
-
-			<div id="copy">
-				<div class="container">
-					<section class="cbp-so-section">
-						<div class="sixteen columns cbp-so-side cbp-so-side-left">
-							<p>© 2013 Apollo. All rights reserved. Theme by IG DESIGN.</p>
-						</div>
-						<div class="sixteen columns cbp-so-side cbp-so-side-right">
-							<div class="cl-effect-18">
-								<a href="#" data-hover="facebook">facebook</a>
-								<a href="#" data-hover="Twitter">Twitter</a>
-								<a href="#" data-hover="Google+">Google+</a>
-								<a href="#" data-hover="Linkedin">Linkedin</a>
-								<a href="#" data-hover="Instagram">Instagram</a>
-							</div>
-						</div>
-					</section>  
-				</div>  
-			</div>      
-
-
-
-
-
-
-
-		</div>      
-
-{#         	<div class="container-fluid">
-<div class="row">
-<div class="video">
-<video loop="loop" muted="muted" autoplay="autoplay" width="100%">
-<source src="{{ asset('videos/Keyboard2.mp4') }}" type="video/mp4">
-</video>
-</div>
-<div class="col-lg-6 offset-lg-3 position-absolute" style="top: 45%">
-{% if app.request.attributes.get('_locale') == 'es' %}
-<div class="col-12 exo-400 text-center animate__animated animate__slideInLeft">{% trans %}Soluciones{% endtrans %}</div>
-<div class="col-12 exo-400 text-center animate__animated animate__slideInRight">{% trans %}Creativas{% endtrans %}</div>
-{% else %}
-<div class="col-12 exo-400 text-center animate__animated animate__slideInLeft">{% trans %}Creativas{% endtrans %}</div>
-<div class="col-12 exo-400 text-center animate__animated animate__slideInRight">{% trans %}Soluciones{% endtrans %}</div>
-{% endif %}
-</div>
-<div class="col-12 px-0 position-absolute">{% include 'layout/header.html.twig' %}</div>
-</div>
-</div>
-<div class="container-fluid">
-<div class="row">
-<div class="col-12">{% block content %}{% endblock%}</div>
-</div>
-</div> #}
+	        <section class="main-banner">
+            <div class="banner-slider">
+                <div class="banner-slide">
+                    <div class="container">
+                        <div class="main-banner-text">
+                            <span class="wow fadeInUp" data-wow-delay="300ms">Creative ideas</span>
+                            <h1 class="wow fadeInUp" data-wow-delay="450ms">Craft Design Solutions <span></span></h1>
+                            <p class="wow fadeInUp" data-wow-delay="600ms">We create new technologies for your business thanks to our wonderful team of professionals.</p>
+                            <div class="play-video-div wow fadeInUp" data-wow-delay="800ms">
+                                <div class="poly1">
+                                    <div class="poly2">
+                                        <a href="https://www.youtube.com/watch?v=FSGfN9rr78Q" title="" class="play-video html5lightbox">
+                                            <img src="images/icon1.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pl-text">
+                                    <h3>About Us</h3>
+                                    <span>Promotion video</span>
+                                </div>
+                            </div>
+                        </div><!--main-banner-text end-->
+                    </div>
+                </div><!--banner-slide end-->
+                <div class="banner-slide">
+                    <div class="container">
+                        <div class="main-banner-text">
+                            <span>Creative ideas</span>
+                            <h1>Craft Design Solutions <span></span></h1>
+                            <p>We create new technologies for your business thanks to our wonderful team of professionals.</p>
+                            <div class="play-video-div">
+                                <div class="poly1">
+                                    <div class="poly2">
+                                        <a href="#" title="" class="play-video">
+                                            <img src="images/icon1.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pl-text">
+                                    <h3>About Us</h3>
+                                    <span>Promotion video</span>
+                                </div>
+                            </div>
+                        </div><!--main-banner-text end-->
+                    </div>
+                </div><!--banner-slide end-->
+                <div class="banner-slide">
+                    <div class="container">
+                        <div class="main-banner-text">
+                            <span>Creative ideas</span>
+                            <h1>Craft Design Solutions <span></span></h1>
+                            <p>We create new technologies for your business thanks to our wonderful team of professionals.</p>
+                            <div class="play-video-div">
+                                <div class="poly1">
+                                    <div class="poly2">
+                                        <a href="#" title="" class="play-video">
+                                            <img src="images/icon1.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pl-text">
+                                    <h3>About Us</h3>
+                                    <span>Promotion video</span>
+                                </div>
+                            </div>
+                        </div><!--main-banner-text end-->
+                    </div>
+                </div><!--banner-slide end-->
+            </div><!--banner-slider end-->
+        </section><!--main-banner end-->
+
+        <section class="sec-block overlay">
+            <h2 class="page-number bottom">02.</h2>
+            <div class="bg-position left-position"></div>
+            <div class="container">
+                <div class="expt-text float-right">
+                    <div class="main-banner-text title-hd wow slideInRight" data-wow-delay="300ms">
+                        <span>about us</span>
+                        <h1>We are Experts in Our Field <span></span></h1>
+                        <p>Our digital company of professionals has been developing products for 15 years. </p>
+                        <p class="bdy">We’ve got a lot of awards for our work and develop applications that became popular in the world. Every morning in our company begins with hot coffee and a stand-up. Discussion is an important thing in the development process. Thus new ideas and ingenious solutions are born. Then we get to work with renewed vigor and inspiration. We are never bored. </p>
+                        <a href="about.html" title="" class="btn-default2">read more <img src="images/icon4.svg" alt=""></a>
+                    </div>
+                </div><!--expt-text end-->
+                <div class="clearfix"></div>
+            </div>
+        </section>
+
+        <section class="sec-block">
+            <div class="fixed-bg bg3"></div>
+            <h2 class="page-number">03</h2>
+            <div class="container">
+                <div class="main-banner-text title-hd svs-header wow fadeInLeft" data-wow-delay="500ms">
+                    <span>our services</span>
+                    <h1>We do everything <span></span></h1>
+                    <p class="bdy">You may be interested in what we can offer you. More services you can find below. We do everything at a high level. </p>
+                </div>
+            </div>
+            <div class="services-section">
+                <div class="container">
+                    <div class="row svs-carousel">
+                        <div class="col-lg-3">
+                            <div class="service-col wow fadeIn" data-wow-delay="300ms">
+                                <div class="svs-icon">
+                                    <img src="images/icon5.svg" alt="">
+                                </div>
+                                <h3>UI/UX and Brand Identity</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col wow fadeIn" data-wow-delay="600ms">
+                                <div class="svs-icon">
+                                    <img src="images/icon6.svg" alt="">
+                                </div>
+                                <h3>App Development</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col wow fadeIn" data-wow-delay="900ms">
+                                <div class="svs-icon">
+                                    <img src="images/icon7.svg" alt="">
+                                </div>
+                                <h3>SEO & SMM Optimization</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col wow fadeIn" data-wow-delay="1200ms">
+                                <div class="svs-icon">
+                                    <img src="images/icon8.svg" alt="">
+                                </div>
+                                <h3>Web Development</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col">
+                                <div class="svs-icon">
+                                    <img src="images/icon5.svg" alt="">
+                                </div>
+                                <h3>UI/UX and Brand Identity</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col">
+                                <div class="svs-icon">
+                                    <img src="images/icon6.svg" alt="">
+                                </div>
+                                <h3>App Development</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col">
+                                <div class="svs-icon">
+                                    <img src="images/icon7.svg" alt="">
+                                </div>
+                                <h3>SEO & SMM Optimization</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="service-col">
+                                <div class="svs-icon">
+                                    <img src="images/icon8.svg" alt="">
+                                </div>
+                                <h3>Web Development</h3>
+                                <a href="services.html" title="" class="btn-default2">read more</a>
+                            </div><!--service-col end-->
+                        </div>
+                    </div>
+                </div>
+            </div><!--services-section end-->
+        </section>
+
+        <section class="sec-block overlay">
+            <div class="bg-position right-position"></div>
+            <div class="container">
+                <div class="consulation-section">
+                    <div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">
+                        <span>let’s get started</span>
+                        <h1>Get a Free Consultation <span></span></h1>
+                        <p class="bdy">We always try to implement our creative ideas at the highest level. Tell us about your project and we will make it work. </p>
+                    </div><!--title-hd end-->
+                    <div class="contact-form wow fadeInUp" data-wow-delay="300ms">
+                        <form method="post" action="#" id="contact-form">
+                            <div class="response"></div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <input type="text" name="name" class="name" placeholder="Name">
+                                    </div><!--input-field end-->
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-field">
+                                        <input type="text" name="email" class="email" placeholder="Email">
+                                    </div><!--input-field end-->
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-field">
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div><!--input-field end-->
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-field m-0">
+                                        <button type="button" class="btn-default" id="submit">Send message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!--contact-form end-->
+                </div><!--consulation-section end-->
+            </div>
+        </section>
+
+        <section class="sec-block why-choose-us">
+            <div class="fixed-bg bg6"></div>
+            <h2 class="page-number">05</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="counter-section">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="counter-div gradient-bg1 wow fadeInUp" data-wow-delay="300ms">
+                                        <h2>235 <sup>+</sup></h2>
+                                        <span>Satisfied Clients</span>
+                                    </div><!--counter-div end-->
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="counter-div scnd-dv gradient-bg1 wow fadeInUp" data-wow-delay="600ms">
+                                        <h2>15 <sup>+</sup></h2>
+                                        <span>Awards Winning</span>
+                                    </div><!--counter-div end-->
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="counter-div gradient-bg2 wow fadeInUp" data-wow-delay="900ms">
+                                        <h2>39 <sup>+</sup></h2>
+                                        <span>Team Members</span>
+                                    </div><!--counter-div end-->
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="counter-div frht gradient-bg2 wow fadeInUp" data-wow-delay="1200ms">
+                                        <h2>354 <sup>+</sup></h2>
+                                        <span>Successful Projects</span>
+                                    </div><!--counter-div end-->
+                                </div>
+                            </div>
+                        </div><!--counter-section end-->
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="why-we-sec">
+                            <div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">
+                                <span>a few words</span>
+                                <h1>Why choose us <span></span></h1>
+                                <p>We’ve got a lot of awards for our products and services that became popular in the world.</p>
+                            </div><!--title-hd end-->
+                            <ul class="our-features-list wow fadeInDown" data-wow-delay="600ms">
+                                <li>
+                                    <h3>Modern Technologies</h3>
+                                    <p>Discussion is an important thing in the development process. Thus new ideas and ingenious solutions are born. </p>
+                                </li>
+                                <li>
+                                    <h3>Huge Digital Experience</h3>
+                                    <p>Our company has been developing digital products for 15 years. We’ve got a lot of awards for our work.</p>
+                                </li>
+                            </ul><!--our-features-list end-->
+                        </div><!--why-we-sec end-->
+                    </div>
+                </div>
+            </div>
+        </section><!--why-choose-us end-->
+
+        <section class="sec-block">
+            <div class="fixed-bg bg4"></div>
+            <h2 class="page-number">06.</h2>
+            <div class="container">
+                <div class="section-head">
+                    <div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">
+                        <span>portfolio</span>
+                        <h1>Our latest cases <span></span></h1>
+                        <p class="bdy">We always try to implement our creative ideas at the highest level. You can see it by looking at our portfolio.</p>
+                    </div><!--title-hd end-->
+                    <a href="cases.html" title="" class="btn-default2">view all cases <img src="images/icon4.svg" alt=""></a>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="pft-items">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="pft-item wow fadeInUp" data-wow-delay="300ms">
+                                <img src="images/resources/pt1.jpg" alt="">
+                                <div class="figcaption">
+                                    <h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
+                                    <a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
+                                </div><!--figcaption end-->
+                            </div><!--pft-item end-->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="pft-item wow fadeInUp" data-wow-delay="600ms">
+                                <img src="images/resources/pt2.jpg" alt="">
+                                <div class="figcaption">
+                                    <h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
+                                    <a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
+                                </div><!--figcaption end-->
+                            </div><!--pft-item end-->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="pft-item wow fadeInUp" data-wow-delay="900ms">
+                                <img src="images/resources/pt3.jpg" alt="">
+                                <div class="figcaption">
+                                    <h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
+                                    <a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
+                                </div><!--figcaption end-->
+                            </div><!--pft-item end-->
+                        </div>
+                    </div>
+                </div><!--pft-items end-->
+            </div>
+        </section><!--case-studies-section end-->
+
+        <section class="sec-block">
+            <div class="fixed-bg bg5"></div>
+            <h2 class="page-number">07.</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 wow slideInLeft" data-wow-delay="300ms">
+                        <div class="main-banner-text title-hd">
+                            <span>recent posts</span>
+                            <h1>Latest in crope <span></span></h1>
+                            <p class="bdy">You may be interested in our technologies. We want to share more helpful infomation with you about our digital life and methods.</p>
+                        </div><!--title-hd end-->
+                        <div class="blog-posts">
+                            <div class="blog_post">
+                                <div class="blog-thumbnail">
+                                    <img src="images/resources/blog1.jpg" alt="">
+                                </div><!--blog-thumbnail end-->
+                                <div class="blog_info">
+                                    <ul class="meta">
+                                        <li>
+                                            <span class="category">Corporate</span>
+                                        </li>
+                                        <li>
+                                            <span>Apr 06, 2020</span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="post-title"><a href="blog-single.html" title="">Where to find clients and how to develop cool ...</a></h2>
+                                    <a href="blog-single.html" title="" class="btn-default2">read more</a>
+                                </div>
+                            </div><!--blog_post end-->
+                            <div class="blog_post">
+                                <div class="blog-thumbnail">
+                                    <img src="images/resources/blog2.jpg" alt="">
+                                </div><!--blog-thumbnail end-->
+                                <div class="blog_info">
+                                    <ul class="meta">
+                                        <li>
+                                            <span class="category">Web</span>
+                                        </li>
+                                        <li>
+                                            <span>Apr 06, 2020</span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="post-title"><a href="blog-single.html" title="">If you want to learn more about design look at this</a></h2>
+                                    <a href="blog-single.html" title="" class="btn-default2">read more</a>
+                                </div>
+                            </div><!--blog_post end-->
+                        </div><!--blog-posts end-->
+                    </div>
+                    <div class="col-lg-6 wow slideInRight" data-wow-delay="300ms">
+                        <div class="blog_post main">
+                            <div class="blog-thumbnail">
+                                <img src="images/resources/blog3.jpg" alt="">
+                            </div><!--blog-thumbnail end-->
+                            <div class="blog_info">
+                                <ul class="meta">
+                                    <li>
+                                        <span class="category">Portfolio</span>
+                                    </li>
+                                    <li>
+                                        <span>Apr 06, 2020</span>
+                                    </li>
+                                </ul>
+                                <h2 class="post-title"><a href="blog-single.html" title="">Best 20 useful tools for people who like to spend time in ...</a></h2>
+                            </div>
+                        </div><!--blog_post end-->
+                    </div>
+                </div>
+            </div>
+        </section>
 {% endblock %}
