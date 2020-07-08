@@ -213,29 +213,26 @@ a,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: -1;
 	background-repeat: no-repeat;
 }
-.bg-position::before {
+.bg-position:before {
 	content: '';
-	width: 100%;
-	background-color: rgba(0,0,0,0.8);
 	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: 100%;
+	background-color: #191b27;
+	opacity: 0.7;
 }
 .left-position {
-	background-position: left;
+	background-position: right;
+	background-size: cover;
 }
 .right-position {
 	background-position: right;
 	background-image: url(../images/resources/home-03.jpg);
-}
-.right-position::before {
-	content: '';
-	width: 100%;
-	background-color: rgba(0,0,0,0.8);
-	position: absolute;
-	height: 100%;
+	background-size: cover;
 }
 .bg3 {
 	background: url(../images/bg3.png) #121318;
@@ -358,7 +355,6 @@ header .container {
 }
 .logo {
 	float: left;
-	margin-top: 9px;
 }
 header .logo img {
 	max-width: -webkit-fill-available;
@@ -440,13 +436,17 @@ header .menu-btn {
 	background: url(../images/resources/home-01.jpg) #121318;
 	background-repeat: no-repeat;
 	background-position: top right;
+	background-size: contain;
 }
-.main-banner::before {
+.main-banner:before {
 	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.8);
-	position: absolute;
+	background-color: #191b27;
+	opacity: 0.7;
 }
 .banner-slider {
 	padding: 285px 0 163px;
