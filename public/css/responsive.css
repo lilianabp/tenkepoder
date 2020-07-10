@@ -12,11 +12,12 @@
 	.main-banner-text.title-hd > h1 {font-size: 54px;}
 	footer  {background-position: center;}
 	.right-position {background-position: center;}
-	.main-banner {background-size: cover;background-position: center;}
+	.main-banner {background-size: contain;background-position: right;}
 	.lang-slct li {padding: 0 13px;}
 	header.pb .container {padding: 0 15px 0 115px;}
 	.page-number {right: 40px;}
 	.sec-block {padding: 210px 0 150px;}
+	.main-banner-text > h1 {font-size: 60px;}
 }
 
 @media (max-width: 1200px) {
@@ -26,7 +27,7 @@
 	nav {padding-left: 40px;}
 	nav ul li {margin-right: 40px;}
 	nav ul li:last-child {margin-right: 0;}
-	.main-banner-text > h1 {font-size: 80px;}
+	.main-banner-text > h1 {font-size: 60px;}
 	.expt-text {width: 100%;text-align: center;max-width: 100%;}
 	.expt-text .main-banner-text.title-hd {max-width: 100%;}
 	.main-banner-text > p {max-width: 100%;}

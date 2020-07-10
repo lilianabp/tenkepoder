@@ -3,7 +3,7 @@
 {% block title %}Ten Ke Poder{% endblock %}
 
 {% block content %}
-<section class="main-banner">
+<section class="main-banner" {% if is_mobile() %}style="background-size: cover;background-position: center;"{% endif %}>
     <div class="banner-slider">
         <div class="banner-slide">
             <div class="container">
@@ -11,7 +11,7 @@
                     <span class="wow fadeInUp" data-wow-delay="300ms">{% trans %}Estrategia{% endtrans %}</span>
                     <h1 class="wow fadeInUp" data-wow-delay="450ms">{% trans %}Soluciones digitales{% endtrans %}<span></span></h1>
                     <p class="wow fadeInUp" data-wow-delay="600ms">{% trans %}Creamos nuevas tecnologías para tu negocio. Te ayudamos a mantener, adaptar o expandir tu proyecto. {% endtrans %}</p>
-                 
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}más información{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -20,46 +20,30 @@
                 <div class="main-banner-text">
                     <span>{% trans %}Creatividad{% endtrans %}</span>
                     <h1>{% trans %}Soluciones de Diseño{% endtrans %}<span></span></h1>
-                    <p>{% trans %}Ideas {% endtrans %}</p>
-                    <div class="play-video-div">
-                        <div class="poly1">
-                            <div class="poly2">
-                                <a href="#" title="" class="play-video">
-                                    <img src="images/icon1.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="pl-text">
-                            <h3>About Us</h3>
-                            <span>Promotion video</span>
-                        </div>
-                    </div>
+                    <p>{% trans %}Responsive. Soporte SEO con metadatos que te permiten posicionar fácilmente. Contenidos web gestionables. {% endtrans %}</p>
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}más información{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
         <div class="banner-slide">
             <div class="container">
                 <div class="main-banner-text">
-                    <span>Creative ideas</span>
-                    <h1>Craft Design Solutions <span></span></h1>
-                    <p>We create new technologies for your business thanks to our wonderful team of professionals.</p>
-                    <div class="play-video-div">
-                        <div class="poly1">
-                            <div class="poly2">
-                                <a href="#" title="" class="play-video">
-                                    <img src="images/icon1.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="pl-text">
-                            <h3>About Us</h3>
-                            <span>Promotion video</span>
-                        </div>
-                    </div>
+                    <span>{% trans %}Compromiso{% endtrans %}</span>
+                    <h1>{% trans %}Orientado al objetivo{% endtrans %}<span></span></h1>
+                    <p>Te ofrecemos soluciones web adaptadas a tus necesidades y objetivos. </p>
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}más información{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
     </div><!--banner-slider end-->
+    {% if is_mobile() or is_tablet() %}
+        <div class="container">
+            <div class="row pt-4 text-center">
+                <div class="col-12"><a href="#" title="TKP - Presupuesto" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a></div>
+                <div class="col-12"><a href="tel:+34695807868" title="TKP - Presupuesto" class="btn-default2 mt-4 ml-1">+34 695 80 78 68</a></div>
+            </div>
+        </div>
+    {% endif %}
 </section><!--main-banner end-->
 
 <section class="sec-block overlay">
@@ -79,7 +63,7 @@
     </div>
 </section>
 
-<section class="sec-block">
+<section class="sec-block" id="sec-block">
     <div class="fixed-bg bg3"></div>
     <h2 class="page-number">03</h2>
     <div class="container">
