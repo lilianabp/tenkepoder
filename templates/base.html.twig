@@ -35,8 +35,11 @@
             </svg>
         </a>
         <ul class="mbl-menu">
-            <li><a href="#" title="Ten Ke Poder - Linkedin">Español</a></li>
-            <li><a href="#" title="Ten Ke Poder - Instagram">Inglés</a></li>
+            {% set route = app.request.attributes.get('_route') %}
+            {% set route_params = app.request.attributes.get('_route_params') %}
+            {% set params = route_params|merge(app.request.query.all) %}
+            <li><a class="es active" href="{{ path(route, params|merge({ _locale: 'es' })) }}" title="Ten Ke Poder">Español</a></li>
+            <li><a class="en" href="{{ path(route, params|merge({ _locale: 'en' })) }}" title="Ten Ke Poder">Inglés</a></li>
         </ul>
     </div><!--left-sidebar end-->
 
@@ -54,5 +57,14 @@
     <script src="{{ asset('js/plugin/html5lightbox.js') }}"></script>
     <script src="{{ asset('js/wow.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    <script type="text/javascript">
+        {% if app.request.locale == 'es' %}
+            $('.es').addClass('active');
+            $('.en').removeClass('active');
+        {% else %}
+            $('.en').addClass('active');
+            $('.es').removeClass('active');
+        {% endif %}
+    </script>
 </body>
 </html>

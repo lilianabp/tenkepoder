@@ -188,7 +188,7 @@
 @media (max-width: 480px) {
 	.main-banner-text > h1 {font-size: 40px;}
 	.main-banner-text > h1 span {width: 10px;height: 10px;left: 0;}
-	.banner-slider {padding: 180px 0 130px;}
+	.banner-slider {padding: 180px 0 0px;}
 	.main-banner-text.title-hd > h1 {font-size: 30px;line-height: 42px;margin-bottom: 15px;}
 	.main-banner-text > p {font-size: 15px;line-height: 27px;}
 	.page-number.bottom,.page-number {top: 20px;right: 20px;}
