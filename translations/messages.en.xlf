@@ -117,7 +117,7 @@
         <source>Creamos nuevas tecnologías para tu negocio. Te ayudamos a mantener, adaptar o expandir tu proyecto.</source>
         <target>We create new technologies for your business. We help you to maintenance or expansion of your project.</target>
       </trans-unit>
-      <trans-unit id="TEfBz8H" resname="más info">
+      <trans-unit id="SLBrCTu" resname="más info">
         <source>más info</source>
         <target>more info</target>
       </trans-unit>
@@ -137,7 +137,7 @@
         <source>Compromiso</source>
         <target>Commitment</target>
       </trans-unit>
-      <trans-unit id="eCEafBQ" resname="Orientado a objetivos">
+      <trans-unit id="EcNQ7mN" resname="Orientado a objetivos">
         <source>Orientado a objetivos</source>
         <target>Goal oriented</target>
       </trans-unit>
@@ -148,6 +148,58 @@
       <trans-unit id="DkrPmk7" resname="Te ofrecemos soluciones web adaptadas a tus necesidades y objetivos.">
         <source>Te ofrecemos soluciones web adaptadas a tus necesidades y objetivos.</source>
         <target>We offer you web solutions adapted to your needs and aims.</target>
+      </trans-unit>
+      <trans-unit id="XcGezBf" resname="ver más">
+        <source>ver más</source>
+        <target>read more</target>
+      </trans-unit>
+      <trans-unit id="deU.Sdj" resname="Sobre nosotros">
+        <source>Sobre nosotros</source>
+        <target>About us</target>
+      </trans-unit>
+      <trans-unit id="UQETT_X" resname="Somos un equipo de profesionales">
+        <source>Somos un equipo de profesionales</source>
+        <target>We are a professional team</target>
+      </trans-unit>
+      <trans-unit id="Nsu2u3w" resname="Estamos comprometidos con la calidad de nuestros productos y su satisfacción, gracias a nuestro grupo de profesionales con experiencia somos capaces de brindarle el valor agregado que usted y su negocio están buscando.">
+        <source>Estamos comprometidos con la calidad de nuestros productos y su satisfacción, gracias a nuestro grupo de profesionales con experiencia somos capaces de brindarle el valor agregado que usted y su negocio están buscando.</source>
+        <target>We are committed to the quality of our products and your satisfaction, thanks to our group of trained professionals we are able to provide you with the aggregated value that you and your business are looking for.</target>
+      </trans-unit>
+      <trans-unit id="Cl8F0JF" resname="nuestros servicios">
+        <source>nuestros servicios</source>
+        <target>our services</target>
+      </trans-unit>
+      <trans-unit id="2ex69Ro" resname="Qué hacemos">
+        <source>Qué hacemos</source>
+        <target>What we do</target>
+      </trans-unit>
+      <trans-unit id="dT7XCdB" resname="Desarrollo de páginas web corporativas, tiendas online, desarrollo a medida, consultoría, SEO...">
+        <source>Desarrollo de páginas web corporativas, tiendas online, desarrollo a medida, consultoría, SEO...</source>
+        <target>Corporate website development, online stores, custom development, consulting, SEO...</target>
+      </trans-unit>
+      <trans-unit id="qxOKhgC" resname="Horario:">
+        <source>Horario:</source>
+        <target>Working hours:</target>
+      </trans-unit>
+      <trans-unit id="q1JvvbX" resname="Lun - Vi: 9hs - 18hs Sáb, Dom: Cerrado">
+        <source>Lun - Vi: 9hs - 18hs Sáb, Dom: Cerrado</source>
+        <target>Mon - Fri: 9 am - 6 pm Sat, Sun: Closed</target>
+      </trans-unit>
+      <trans-unit id="sitDU.f" resname="Dirección:">
+        <source>Dirección:</source>
+        <target>Address:</target>
+      </trans-unit>
+      <trans-unit id="N5u1a94" resname="Primo de Rivera 12, Alicante, 03002, España">
+        <source>Primo de Rivera 12, Alicante, 03002, España</source>
+        <target>Primo de Rivera 12, Alicante, 03002, Spain</target>
+      </trans-unit>
+      <trans-unit id="_csySGG" resname="Contáctanos:">
+        <source>Contáctanos:</source>
+        <target>Contact us:</target>
+      </trans-unit>
+      <trans-unit id="1Qaecnn" resname="Con más de 10 años de experiencia en diferentes tecnologías.">
+        <source>Con más de 10 años de experiencia en diferentes tecnologías.</source>
+        <target>With more than 10 years of experience in different technologies.</target>
       </trans-unit>
     </body>
   </file>

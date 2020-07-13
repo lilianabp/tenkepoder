@@ -298,6 +298,7 @@ a,
 	text-transform: capitalize;
 	color: #FFFFFF;
 	opacity: 0.05;
+	z-index: 999;
 }
 .page-number.bottom {
 	top: auto;
@@ -356,7 +357,8 @@ header .container {
 .logo {
 	float: left;
 }
-header .logo img {
+header .logo img,
+.preloader .logo img {
 	max-width: 80%;
 	margin-top: 5px;
 }
@@ -653,7 +655,7 @@ header .menu-btn {
 .main-banner-text.title-hd > h1 span {
 	width: 12px;
 	height: 12px;
-	left: -5px;
+	left: 1%;
 }
 .main-banner-text.title-hd > p {
 	margin-bottom: 28px;
@@ -1248,6 +1250,7 @@ footer {
 }
 .widget-about > img {
 	margin-bottom: 20px;
+	max-width: 85%;
 }
 .widget-about > p {
 	font-family: Muli;

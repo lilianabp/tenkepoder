@@ -39,26 +39,26 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="widget widget-about wow fadeInUp" data-wow-delay="300ms">
                         <img src="images/logo.png" alt="">
-                        <p>Copyright © 2020 Crope.</p>
+                        <p>Copyright © {{ "now"|date("Y") }} TKP.</p>
                     </div><!--widget-about end-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="widget widget-para wow fadeInDown" data-wow-delay="600ms">
-                        <h3 class="widget-title">Working hours:</h3>
-                        <p>Mon - Fri: 9 am - 6 pm Sat, Sun: Holiday</p>
+                        <h3 class="widget-title">{% trans %}Horario:{% endtrans %}</h3>
+                        <p>{% trans %}Lun - Vi: 9hs - 18hs Sáb, Dom: Cerrado{% endtrans %}</p>
                     </div><!--widget-para end-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="widget widget-para wow fadeInUp" data-wow-delay="900ms">
-                        <h3 class="widget-title">Address:</h3>
-                        <p>27 Division St, New York, NY 10002, USA</p>
+                        <h3 class="widget-title">{% trans %}Dirección:{% endtrans %}</h3>
+                        <p>{% trans %}Primo de Rivera 12, Alicante, 03002, España{% endtrans %}</p>
                     </div><!--widget-para end-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="widget widget-para wow fadeInDown" data-wow-delay="1200ms">
-                        <h3 class="widget-title">Hit us up:</h3>
-                        <span>+1 845 631 78 49</span>
-                        <p>info@sitename.com</p>
+                        <h3 class="widget-title">{% trans %}Contáctanos:{% endtrans %}</h3>
+                        <span><a href="tel:+34695807868">+34 695 80 78 68</a></span>
+                        <p><a href="mailto:info@tenkepoder.com">info@tenkepoder.com</a></p>
                     </div><!--widget-para end-->
                 </div>
             </div>
