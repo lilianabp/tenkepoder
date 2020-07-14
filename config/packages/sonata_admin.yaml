@@ -1,5 +1,6 @@
 sonata_admin:
-    title: 'TenkePoder'
+    title: 'Ten ke Poder'
+    title_logo: /images/favicon.png
     dashboard:
         blocks:
             - { type: sonata.admin.block.admin_list, position: left }

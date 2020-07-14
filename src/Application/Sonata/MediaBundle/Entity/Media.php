@@ -2,6 +2,7 @@
 
 namespace App\Application\Sonata\MediaBundle\Entity;
 
+use App\Entity\Service;
 use Sonata\MediaBundle\Entity\BaseMedia as BaseMedia;
 
 /**
@@ -20,6 +21,11 @@ class Media extends BaseMedia
     protected $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity=Service::class, inversedBy="image")
+     */
+    private $service;
+
+    /**
      * Get id.
      *
      * @return int $id
@@ -27,5 +33,17 @@ class Media extends BaseMedia
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getService(): ?Service
+    {
+        return $this->service;
+    }
+
+    public function setService(?Service $service): self
+    {
+        $this->service = $service;
+
+        return $this;
     }
 }

@@ -15,6 +15,7 @@
         "sonata-project/user-bundle": "^4.5",
         "suncat/mobile-detect-bundle": "1.1.1",
         "symfony/asset": "4.3.*",
+        "symfony/cache": "4.3.*",
         "symfony/console": "4.3.*",
         "symfony/dotenv": "4.3.*",
         "symfony/expression-language": "4.3.*",

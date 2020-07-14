@@ -2,6 +2,9 @@
 
 namespace App\Application\Sonata\ClassificationBundle\Entity;
 
+use App\Entity\Project;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Sonata\ClassificationBundle\Entity\BaseCategory as BaseCategory;
 
 /**
@@ -20,6 +23,17 @@ class Category extends BaseCategory
     protected $id;
 
     /**
+     * @ORM\ManyToMany(targetEntity=Project::class, mappedBy="category")
+     */
+    private $projects;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->projects = new ArrayCollection();
+    }
+
+    /**
      * Get id.
      *
      * @return int $id
@@ -27,5 +41,33 @@ class Category extends BaseCategory
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return Collection|Project[]
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    public function addProject(Project $project): self
+    {
+        if (!$this->projects->contains($project)) {
+            $this->projects[] = $project;
+            $project->addCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProject(Project $project): self
+    {
+        if ($this->projects->contains($project)) {
+            $this->projects->removeElement($project);
+            $project->removeCategory($this);
+        }
+
+        return $this;
     }
 }

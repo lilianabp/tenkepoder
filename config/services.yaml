@@ -5,7 +5,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'es'
-
+    locales: ['en', 'es']
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -26,3 +26,24 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    admin.client:
+        class: App\Admin\ClientAdmin
+        arguments: [~, App\Entity\Client, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Clientes, label: Clientes, on_top: true }
+        public: true
+
+    admin.project:
+        class: App\Admin\ProjectAdmin
+        arguments: [~, App\Entity\Project, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Proyectos, label: Proyectos, on_top: true }
+        public: true
+
+    admin.service:
+        class: App\Admin\ServiceAdmin
+        arguments: [~, App\Entity\Service, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Servicios, label: Servicios, on_top: true }
+        public: true
