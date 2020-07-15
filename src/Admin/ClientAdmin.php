@@ -9,6 +9,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Symfony\Component\Intl\Intl;
 
 final class ClientAdmin extends AbstractAdmin
 {
@@ -42,10 +43,12 @@ final class ClientAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper): void
     {
         $formMapper
-            ->add('id')
             ->add('name')
+            ->add('name_en')
             ->add('url')
             ->add('description')
+            ->add('description_en')
+            ->add('projects')
             ;
     }
 

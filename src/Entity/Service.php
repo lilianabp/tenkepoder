@@ -31,36 +31,6 @@ class Service
     private $abstract;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wp1_title;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wp1_desc;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wp2_title;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wp2_desc;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wp3_title;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wp3_desc;
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $description;
@@ -74,6 +44,21 @@ class Service
      * @ORM\ManyToMany(targetEntity=Project::class, inversedBy="services")
      */
     private $projects;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name_en;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $abstract_en;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description_en;
 
     public function __construct()
     {
@@ -111,78 +96,6 @@ class Service
     public function setAbstract(string $abstract): self
     {
         $this->abstract = $abstract;
-
-        return $this;
-    }
-
-    public function getWp1Title(): ?string
-    {
-        return $this->wp1_title;
-    }
-
-    public function setWp1Title(?string $wp1_title): self
-    {
-        $this->wp1_title = $wp1_title;
-
-        return $this;
-    }
-
-    public function getWp1Desc(): ?string
-    {
-        return $this->wp1_desc;
-    }
-
-    public function setWp1Desc(?string $wp1_desc): self
-    {
-        $this->wp1_desc = $wp1_desc;
-
-        return $this;
-    }
-
-    public function getWp2Title(): ?string
-    {
-        return $this->wp2_title;
-    }
-
-    public function setWp2Title(?string $wp2_title): self
-    {
-        $this->wp2_title = $wp2_title;
-
-        return $this;
-    }
-
-    public function getWp2Desc(): ?string
-    {
-        return $this->wp2_desc;
-    }
-
-    public function setWp2Desc(?string $wp2_desc): self
-    {
-        $this->wp2_desc = $wp2_desc;
-
-        return $this;
-    }
-
-    public function getWp3Title(): ?string
-    {
-        return $this->wp3_title;
-    }
-
-    public function setWp3Title(?string $wp3_title): self
-    {
-        $this->wp3_title = $wp3_title;
-
-        return $this;
-    }
-
-    public function getWp3Desc(): ?string
-    {
-        return $this->wp3_desc;
-    }
-
-    public function setWp3Desc(?string $wp3_desc): self
-    {
-        $this->wp3_desc = $wp3_desc;
 
         return $this;
     }
@@ -252,6 +165,42 @@ class Service
         if ($this->projects->contains($project)) {
             $this->projects->removeElement($project);
         }
+
+        return $this;
+    }
+
+    public function getNameEn(): ?string
+    {
+        return $this->name_en;
+    }
+
+    public function setNameEn(string $name_en): self
+    {
+        $this->name_en = $name_en;
+
+        return $this;
+    }
+
+    public function getAbstractEn(): ?string
+    {
+        return $this->abstract_en;
+    }
+
+    public function setAbstractEn(string $abstract_en): self
+    {
+        $this->abstract_en = $abstract_en;
+
+        return $this;
+    }
+
+    public function getDescriptionEn(): ?string
+    {
+        return $this->description_en;
+    }
+
+    public function setDescriptionEn(?string $description_en): self
+    {
+        $this->description_en = $description_en;
 
         return $this;
     }

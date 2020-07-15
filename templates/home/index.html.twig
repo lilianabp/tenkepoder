@@ -76,78 +76,18 @@
     <div class="services-section">
         <div class="container">
             <div class="row svs-carousel">
-                <div class="col-lg-3">
-                    <div class="service-col wow fadeIn" data-wow-delay="300ms">
-                        <div class="svs-icon">
-                            <img src="images/icon5.svg" alt="">
-                        </div>
-                        <h3>UI/UX and Brand Identity</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col wow fadeIn" data-wow-delay="600ms">
-                        <div class="svs-icon">
-                            <img src="images/icon6.svg" alt="">
-                        </div>
-                        <h3>App Development</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col wow fadeIn" data-wow-delay="900ms">
-                        <div class="svs-icon">
-                            <img src="images/icon7.svg" alt="">
-                        </div>
-                        <h3>SEO & SMM Optimization</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col wow fadeIn" data-wow-delay="1200ms">
-                        <div class="svs-icon">
-                            <img src="images/icon8.svg" alt="">
-                        </div>
-                        <h3>Web Development</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col">
-                        <div class="svs-icon">
-                            <img src="images/icon5.svg" alt="">
-                        </div>
-                        <h3>UI/UX and Brand Identity</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col">
-                        <div class="svs-icon">
-                            <img src="images/icon6.svg" alt="">
-                        </div>
-                        <h3>App Development</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col">
-                        <div class="svs-icon">
-                            <img src="images/icon7.svg" alt="">
-                        </div>
-                        <h3>SEO & SMM Optimization</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
-                <div class="col-lg-3">
-                    <div class="service-col">
-                        <div class="svs-icon">
-                            <img src="images/icon8.svg" alt="">
-                        </div>
-                        <h3>Web Development</h3>
-                        <a href="services.html" title="" class="btn-default2">read more</a>
-                    </div><!--service-col end-->
-                </div>
+                {% set locale = app.request.locale %}
+                {% for service in services %}
+                    <div class="col-lg-3">
+                        <div class="service-col wow fadeIn" data-wow-delay="300ms">
+                            <div class="svs-icon">
+                                <i class="fa fa-code fa-4x" aria-hidden="true" style="color: #a9afc3;"></i>
+                            </div>
+                            <h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
+                            <a href="" title="" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
+                        </div><!--service-col end-->
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div><!--services-section end-->

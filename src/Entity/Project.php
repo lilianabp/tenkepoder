@@ -72,6 +72,16 @@ class Project
      */
     private $services;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name_en;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description_en;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -229,6 +239,30 @@ class Project
             $this->services->removeElement($service);
             $service->removeProject($this);
         }
+
+        return $this;
+    }
+
+    public function getNameEn(): ?string
+    {
+        return $this->name_en;
+    }
+
+    public function setNameEn(string $name_en): self
+    {
+        $this->name_en = $name_en;
+
+        return $this;
+    }
+
+    public function getDescriptionEn(): ?string
+    {
+        return $this->description_en;
+    }
+
+    public function setDescriptionEn(string $description_en): self
+    {
+        $this->description_en = $description_en;
 
         return $this;
     }

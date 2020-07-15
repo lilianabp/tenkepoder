@@ -10,6 +10,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use App\Entity\ServiceTranslation;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 final class ServiceAdmin extends AbstractAdmin
 {
@@ -20,12 +21,6 @@ final class ServiceAdmin extends AbstractAdmin
             ->add('id')
             ->add('name')
             ->add('abstract')
-            ->add('wp1_title')
-            ->add('wp1_desc')
-            ->add('wp2_title')
-            ->add('wp2_desc')
-            ->add('wp3_title')
-            ->add('wp3_desc')
             ->add('description')
             ;
     }
@@ -36,12 +31,6 @@ final class ServiceAdmin extends AbstractAdmin
             ->add('id')
             ->add('name')
             ->add('abstract')
-            ->add('wp1_title')
-            ->add('wp1_desc')
-            ->add('wp2_title')
-            ->add('wp2_desc')
-            ->add('wp3_title')
-            ->add('wp3_desc')
             ->add('description')
             ->add('_action', null, [
                 'actions' => [
@@ -55,16 +44,12 @@ final class ServiceAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper): void
     {
         $formMapper
-            ->add('id')
             ->add('name')
-            ->add('abstract')
-            ->add('wp1_title')
-            ->add('wp1_desc')
-            ->add('wp2_title')
-            ->add('wp2_desc')
-            ->add('wp3_title')
-            ->add('wp3_desc')
-            ->add('description')
+            ->add('abstract', CKEditorType::class, [])
+            ->add('description', CKEditorType::class, [])
+            ->add('name_en')
+            ->add('abstract_en', CKEditorType::class, [])
+            ->add('description_en', CKEditorType::class, [])
             ;
     }
 
@@ -74,12 +59,6 @@ final class ServiceAdmin extends AbstractAdmin
             ->add('id')
             ->add('name')
             ->add('abstract')
-            ->add('wp1_title')
-            ->add('wp1_desc')
-            ->add('wp2_title')
-            ->add('wp2_desc')
-            ->add('wp3_title')
-            ->add('wp3_desc')
             ->add('description')
             ;
     }
