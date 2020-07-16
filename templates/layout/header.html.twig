@@ -1,4 +1,4 @@
-<header class="pb">
+<header {% if app.request.attributes.get('_route') == 'home' %}class="pb"{% elseif app.request.attributes.get('_route') == 'services' %}class="gradient-bg"{% endif %}>
     <div class="container">
         <div class="row header-content">
             <div class="logo col-10 col-md-11 col-lg-3">
@@ -7,13 +7,6 @@
                 </a>
             </div><!--logo end-->
             {% if is_mobile() == 0 and is_tablet() == 0 %}
-                {# <nav class="col-lg-4">
-                    <ul>
-                        <li><a href="" title="TKP - Servicios">{% trans %}Servicios{% endtrans %}</a></li>
-                        <li><a href="" title="TKP - Proyectos">{% trans %}Proyectos{% endtrans %}</a></li>
-                        <li><a href="" title="TKP - Contáctanos">{% trans %}Contáctanos{% endtrans %}</a></li>
-                    </ul>
-                </nav><!--navigation end--> #}
                 <div class="right-side-hd col-lg-9 text-right">
                     <a href="tel:+34 695 80 78 68" title="TKP - {% trans %}Llámanos{% endtrans %}"><span>+34 695 80 78 68</span>
                     <a href="#" title="TKP - {% trans %}Solicita Presupuesto{% endtrans %}" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
@@ -30,22 +23,4 @@
         </div><!--header-content end-->
     </div>  
 </header><!--header end-->
-
-<div class="responsive-mobile-menu">
-    <div class="responsive-logo">
-        <img src="{{ asset('images/favicon.png')}}" alt="">
-    </div>
-    <ul>
-        <li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a>
-        </li>
-        <li><a href="{{ path('services') }}" title="TKP - {% trans %}Servicios{% endtrans %}">{% trans %}Servicios{% endtrans %}</a>
-            <ul>
-                {% for service in services %}
-                    <li><a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {{ service.name }}">{% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</a></li>
-                {% endfor %}
-            </ul>
-        </li>
-        <li><a href="#" title="TKP - {% trans %}Proyectos{% endtrans %}">{% trans %}Proyectos{% endtrans %}</a></li>
-        <li><a href="#" title="TKP - {% trans %}Contáctanos{% endtrans %}">{% trans %}Contáctanos{% endtrans %}</a></li>
-    </ul>
-</div><!--responsive-mobile-menu end-->
+{{ render(controller('App\\Controller\\HomeController::getHeaderData')) }}

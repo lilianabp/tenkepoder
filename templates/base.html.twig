@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/color.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css')}}">
 </head>
-<body>
+<body {% if app.request.attributes.get('_route') != 'home' %}class="bg-color2"{% endif %}>
     <div class="preloader">
         <div class="loader-content">
             <div class="logo text-center">

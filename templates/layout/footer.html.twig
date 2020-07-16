@@ -6,12 +6,12 @@
                     <div class="tp-contact wow fadeInUp" data-wow-delay="300ms">
                         <div class="main-banner-text title-hd">
                             <span>newsletter</span>
-                            <h1>be always <br /> in touch <span></span></h1>
-                            <p class="bdy">We are grateful to know you are interested in our content and services. Subscribe</p>
+                            <h1>{% trans %}Estamos en contacto {% endtrans %}<span></span></h1>
+                            <p class="bdy">{% trans %}Estamos agradecidos de saber que está interesado en nuestros contenidos y servicios. Suscríbase{% endtrans %}</p>
                         </div><!--title-hd end-->
                         <form class="newsletter-form">
                             <input type="email" name="email" placeholder="Email">
-                            <button type="submit"><img src="images/send.svg" alt=""></button>
+                            <button type="submit"><img src="{{ asset('images/send.svg') }}" alt=""></button>
                         </form>
                         <div class="clearfix"></div>
                     </div><!--tp-contact end-->
@@ -19,15 +19,15 @@
                 <div class="col-lg-6">
                     <div class="testimonial-sec wow fadeInDown" data-wow-delay="300ms">
                         <div class="testi-head">
-                            <div class="testi-thumb">
-                                <img src="images/resources/thumb1.png" alt="">
+                            {# <div class="testi-thumb">
+                                <img src="{{ asset('images/resources/thumb1.png')}}" alt="">
                             </div>
                             <div class="testi-info">
                                 <h3>Katerina Wilson</h3>
                                 <span>CEO at Crope Design Company</span>
-                            </div>
+                            </div> #}
                         </div>
-                        <p>We never give up. Сhallenges make us stronger and more professional. Keep in mind. Beware ;)</p>
+                        <p>{% trans %}Nunca nos damos por vencidos. Los desafíos nos hacen más fuertes y profesionales. Hacemos tus ideas posibles...{% endtrans %}</p>
                         <img src="images/sing.png" alt="">
                     </div><!--testimonial-sec end-->
                     <div class="clearfix"></div>

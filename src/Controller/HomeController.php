@@ -32,7 +32,7 @@ class HomeController extends AbstractController
     {
         $services = $entityManager->getRepository(Service::class)->findAll();
         $projects = $entityManager->getRepository(Project::class)->findAll();
-        return $this->render('layout/header.html.twig', [
+        return $this->render('layout/responsive-mobile-menu.html.twig', [
             'controller_name' => 'HomeController',
             'services' => $services,
             'projects' => $projects,

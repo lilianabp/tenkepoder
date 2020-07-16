@@ -209,6 +209,90 @@
         <source>Llámanos</source>
         <target>Call us</target>
       </trans-unit>
+      <trans-unit id="04ILLAq" resname="Flujo de Trabajo">
+        <source>Flujo de Trabajo</source>
+        <target>Working Process</target>
+      </trans-unit>
+      <trans-unit id="6S7icOg" resname="paso 1">
+        <source>paso 1</source>
+        <target>step 1</target>
+      </trans-unit>
+      <trans-unit id="3aI50BU" resname="Planificación y Estrategia">
+        <source>Planificación y Estrategia</source>
+        <target>Planning and Strategy</target>
+      </trans-unit>
+      <trans-unit id="Hq7Sca9" resname="Evaluación del sitio actual, si fuera el caso, y de los sitios competidores. Identificación de requerimientos y objetivos.">
+        <source>Evaluación del sitio actual, si fuera el caso, y de los sitios competidores. Identificación de requerimientos y objetivos.</source>
+        <target>Evaluation of the actual website, if any, and of the competitors' websites. Identification of requirements and objectives.</target>
+      </trans-unit>
+      <trans-unit id="ZXQm0m9" resname="paso 2">
+        <source>paso 2</source>
+        <target>step 2</target>
+      </trans-unit>
+      <trans-unit id="DR41Jca" resname="Diseño y Desarrollo">
+        <source>Diseño y Desarrollo</source>
+        <target>Design and Development</target>
+      </trans-unit>
+      <trans-unit id="pBpE66g" resname="Definiciones sobre el diseño, colores y fuentes para la marca. Desarrollo del sitio web y su administrador.">
+        <source>Definiciones sobre el diseño, colores y fuentes para la marca. Desarrollo del sitio web y su administrador.</source>
+        <target>Definitions about the design, colors and fonts for the brand. Development of the website and its administrator.</target>
+      </trans-unit>
+      <trans-unit id="aUp_Nrz" resname="paso 3">
+        <source>paso 3</source>
+        <target>step 3</target>
+      </trans-unit>
+      <trans-unit id="kkM1ZYK" resname="Pruebas y Lanzamiento">
+        <source>Pruebas y Lanzamiento</source>
+        <target>Testing and Launch</target>
+      </trans-unit>
+      <trans-unit id=".KGpQ6c" resname="Testeos en un entorno de prueba. Generación/migración de contenidos. Revisión general y lanzamiento o publicación">
+        <source>Testeos en un entorno de prueba. Generación/migración de contenidos. Revisión general y lanzamiento o publicación</source>
+        <target>Testing in a test environment. Content generation/migration. General revision and launch.</target>
+      </trans-unit>
+      <trans-unit id="R5taXax" resname="¿Cómo podemos ayudarte?">
+        <source>¿Cómo podemos ayudarte?</source>
+        <target>How Can We Help You?</target>
+      </trans-unit>
+      <trans-unit id="uMN80R9" resname="¿No sabes por dónde empezar? Te ayudamos.">
+        <source>¿No sabes por dónde empezar? Te ayudamos.</source>
+        <target>Don’t know where to start? We’ll help you.</target>
+      </trans-unit>
+      <trans-unit id="NMDieij" resname="Estamos en contacto">
+        <source>Estamos en contacto</source>
+        <target>Be Always In Touch</target>
+      </trans-unit>
+      <trans-unit id="iYoeUB4" resname="Estamos agradecidos de saber que está interesado en nuestros contenidos y servicios. Suscríbase">
+        <source>Estamos agradecidos de saber que está interesado en nuestros contenidos y servicios. Suscríbase</source>
+        <target>We are grateful to know that you are interested in our content and services. Subscribe</target>
+      </trans-unit>
+      <trans-unit id="TtYmfwW" resname="Nunca nos damos por vencidos. Los desafíos nos hacen más fuertes y profesionales. Hacemos tus ideas posibles...">
+        <source>Nunca nos damos por vencidos. Los desafíos nos hacen más fuertes y profesionales. Hacemos tus ideas posibles...</source>
+        <target>We never give up. Challenges make us stronger and more professional. We make your ideas possible...</target>
+      </trans-unit>
+      <trans-unit id="sH2fJju" resname="¿Cuánto cuesta?">
+        <source>¿Cuánto cuesta?</source>
+        <target>How much does it cost?</target>
+      </trans-unit>
+      <trans-unit id="Dcct2mN" resname="precios orientativos">
+        <source>precios orientativos</source>
+        <target>orientative prices</target>
+      </trans-unit>
+      <trans-unit id="JvOyL9e" resname="Te ofrecemos algunas opciones para que conozcas nuestros rangos de precios. Siempre se pueden customizar a tu presupuesto y requerimientos.">
+        <source>Te ofrecemos algunas opciones para que conozcas nuestros rangos de precios. Siempre se pueden customizar a tu presupuesto y requerimientos.</source>
+        <target>We offer you some options so that you can get to know our price ranges. They can always be customized to your budget and requirements.</target>
+      </trans-unit>
+      <trans-unit id="A.YiRR8" resname="Proyectos relacionados">
+        <source>Proyectos relacionados</source>
+        <target>Related projects</target>
+      </trans-unit>
+      <trans-unit id="Z1Kuafb" resname="Siempre tratamos de implementar nuestros proyectos al más alto nivel. Puedes verlo en nuestro portfolio.">
+        <source>Siempre tratamos de implementar nuestros proyectos al más alto nivel. Puedes verlo en nuestro portfolio.</source>
+        <target>We always try to implement our projects at the highest level. You can see it in our portfolio.</target>
+      </trans-unit>
+      <trans-unit id="U9GqJTl" resname="Ver todos los proyectos">
+        <source>Ver todos los proyectos</source>
+        <target>View all projects</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

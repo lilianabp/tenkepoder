@@ -25,11 +25,13 @@ class ServiceController extends AbstractController
     /**
      * @Route("/{_locale}/services/{slug}", name="service")
      */
-    public function showService(EntityManagerInterface $entityManager)
+    public function showService(EntityManagerInterface $entityManager, $slug)
     {
-    	$services = $entityManager->getRepository(Service::class)->findAll();
+        $services = $entityManager->getRepository(Service::class)->findAll();
+    	$service = $entityManager->getRepository(Service::class)->findOneBy(['slug' => $slug]);
         return $this->render('service/service.html.twig', [
             'controller_name' => 'ServiceController',
+            'service' => $service,
             'services' => $services,
         ]);
     }

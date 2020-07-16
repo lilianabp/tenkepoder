@@ -6,9 +6,9 @@
 <section class="pager-sec text-right pb-75 dark-bg">
 	<div class="container-fluid">
 		<ul>
-			<li><a href="#" title="">Home</a></li>
-			<li><a href="#" title="">Services</a></li>
-			<li><span>Service Details</span></li>
+			<li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a></li>
+			<li><a href="{{ path('services') }}" title="TKP - {% trans %}Servicios{% endtrans %}">{% trans %}Servicios{% endtrans %}</a></li>
+			<li><span>{% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</span></li>
 		</ul>
 	</div>
 </section><!--pager-sec end-->
@@ -20,71 +20,61 @@
 		<h2 class="page-number">01.</h2>
 		<div class="container">
 			<div class="main-banner-text title-hd max-width-80">
-				<span>our services</span>
-				<h1>Applicaton Development for Your Business <span></span></h1>
+				<span>{% trans %}nuestros servicios{% endtrans %}</span>
+				<h1>{% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %} <span></span></h1>
 			</div><!--main-banner-text end-->
 			<div class="service-details pb-0">
 				<div class="row">
 					<div class="col-lg-9">
 						<div class="service-details-content">
-							<img src="images/resources/service.jpg" alt="" class="img-fluid">
-							<p>Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These applications can be pre-installed on phones during manufacturing platforms, or delivered as web applications using server-side or client-side processing (e.g., JavaScript) to provide an "application-like" experience within a Web browser. Application software developers also must consider a long array of screen sizes, hardware specifications</p>
-							<h3>working process</h3>
+							<img src="{% path service.image, 'reference' %}" alt="TKP - {% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn}}{% endif %}" class="img-fluid">
+							<p>{% if app.request.locale == 'es' %}{{ service.abstract|raw }}{% else %}{{ service.abstractEn|raw }}{% endif %}</p>
+							<h3>{% trans %}Flujo de Trabajo{% endtrans %}</h3>
 							<div class="row">
 								<div class="col-lg-4">
 									<div class="wk-text">
-										<span>step 1</span>
-										<h3>Plannig & Strategy</h3>
-										<p>We will help you to outperform your competitors.</p>
+										<span>{% trans %}paso 1{% endtrans %}</span>
+										<h3>{% trans %}Planificación y Estrategia{% endtrans %}</h3>
+										<p>{% trans %}Evaluación del sitio actual, si fuera el caso, y de los sitios competidores. Identificación de requerimientos y objetivos.{% endtrans%}</p>
 									</div><!--wk-text end-->
 								</div>
 								<div class="col-lg-4">
 									<div class="wk-text">
-										<span>step 2</span>
-										<h3>Design & Development</h3>
-										<p>We will help you to outperform your competitors.</p>
+										<span>{% trans %}paso 2{% endtrans %}</span>
+										<h3>{% trans %}Diseño y Desarrollo{% endtrans %}</h3>
+										<p>{% trans %}Definiciones sobre el diseño, colores y fuentes para la marca. Desarrollo del sitio web y su administrador.{% endtrans %}</p>
 									</div><!--wk-text end-->
 								</div>
 								<div class="col-lg-4">
 									<div class="wk-text">
-										<span>step 3</span>
-										<h3>Testing & Launch</h3>
-										<p>We will help you to outperform your competitors.</p>
+										<span>{% trans %}paso 3{% endtrans %}</span>
+										<h3>{% trans %}Pruebas y Lanzamiento{% endtrans %}</h3>
+										<p>{% trans %}Testeos en un entorno de prueba. Generación/migración de contenidos. Revisión general y lanzamiento o publicación {% endtrans %}</p>
 									</div><!--wk-text end-->
 								</div>
 							</div>
-							<p>Front-end development tools are focused on the UI/UX and provide UI design tools, SDKs to access device features, cross-platform support.</p>
-							<p>Back-end tools pick up where the front-end tools leave off, and provide a set of reusable services that are centrally managed and controlled and provide the following abilities:</p>
-							<ul class="sv-links">
-								<li>Integration with back-end systems</li>
-								<li>Data services</li>
-								<li>User authentication-authorization</li>
-								<li>Reusable business logic</li>
-							</ul>
+							{% if app.request.locale == 'es' %}{{ service.description|raw }}{% else %}{{ service.descriptionEn|raw }}{% endif %}
 						</div><!--service-details-content end-->
 					</div>
 					<div class="col-lg-3">
 						<div class="sidebar">
 							<div class="widget widget-categories">
 								<ul>
-									<li><a href="#" title="">UI/UX and Brand</a></li>
-									<li><a href="#" title="">SEO & SMM</a></li>
-									<li><a href="#" title="">App development</a></li>
-									<li><a href="#" title="">web development</a></li>
-									<li><a href="#" title="">e - commerce</a></li>
-									<li><a href="#" title="">Marketing Strategy</a></li>
+									{% for service in services|filter(v => v != service.name ) %}
+										<li><a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">{% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</a></li>
+									{% endfor %}
 								</ul>
 							</div><!--widget-categories end-->
 							<div class="widget widget-help">
-								<h3>How can we help you?</h3>
-								<p>Don’t know where to start? We’ll help you.</p>
-								<a href="#" title="" class="btn-default2">contact us</a>
+								<h3>{% trans %}¿Cómo podemos ayudarte?{% endtrans %}</h3>
+								<p>{% trans %}¿No sabes por dónde empezar? Te ayudamos.{% endtrans %}</p>
+								<a href="#" title="TKP - {% trans %}Contáctanos{% endtrans %}" class="btn-default2">{% trans %}Contáctanos{% endtrans %}</a>
 							</div><!--widget-help end-->
 							<div class="widget widget-newslettter">
 								<h3>Newsletter</h3>
 								<form>
 									<input type="email" name="email" placeholder="Email">
-									<button type="submit"><img src="images/vector.svg" alt=""></button>
+									<button type="submit"><img src="{{ asset('images/vector.svg') }}" alt=""></button>
 								</form>
 								<ul class="lang-slct">
 									<li><a href="#" title="">fb</a></li>
@@ -105,9 +95,9 @@
 	<h2 class="page-number">02.</h2>
 	<div class="container">
 		<div class="main-banner-text title-hd wow fadeInUp mgb-100" data-wow-delay="300ms">
-			<span>how much does it cost</span>
-			<h1>prices packages <span></span></h1>
-			<p class="bdy">We’ve got a lot of awards for our products and services that became popular in the world.</p>
+			<span>{% trans %}¿Cuánto cuesta?{% endtrans %}</span>
+			<h1>{% trans %}precios orientativos {% endtrans %}<span></span></h1>
+			<p class="bdy">{% trans %}Te ofrecemos algunas opciones para que conozcas nuestros rangos de precios. Siempre se pueden customizar a tu presupuesto y requerimientos. {% endtrans %}</p>
 		</div><!--title-hd end-->
 		<div class="prices-section text-center">
 			<div class="row">
@@ -174,41 +164,41 @@
 		<div class="section-head">
 			<div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">
 				<span>portfolio</span>
-				<h1>Related cases <span></span></h1>
-				<p class="bdy">We always try to implement our creative ideas at the highest level. You can see it by looking at our portfolio.</p>
+				<h1>{% trans %}Proyectos relacionados {% endtrans %}<span></span></h1>
+				<p class="bdy">{% trans %}Siempre tratamos de implementar nuestros proyectos al más alto nivel. Puedes verlo en nuestro portfolio.{% endtrans %}</p>
 			</div><!--title-hd end-->
-			<a href="cases.html" title="" class="btn-default2">view all cases <img src="images/icon4.svg" alt=""></a>
+			<a href="cases.html" title="" class="btn-default2">{% trans %}Ver todos los proyectos{% endtrans %}<img src="{{ asset('images/icon4.svg') }}" alt=""></a>
 			<div class="clearfix"></div>
 		</div>
 		<div class="pft-items">
 			<div class="row">
 				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
 					<div class="pft-item wow fadeInUp" data-wow-delay="300ms">
-						<img src="images/resources/pt1.jpg" alt="">
+						<img src="{{ asset('images/resources/pt1.jpg') }}" alt="">
 						<div class="figcaption">
 							<h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-							<a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
+							<a href="case-work.html" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
 						</div><!--figcaption end-->
 					</div><!--pft-item end-->
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+				{# <div class="col-lg-4 col-md-6 col-sm-6 col-12">
 					<div class="pft-item wow fadeInUp" data-wow-delay="600ms">
-						<img src="images/resources/pt2.jpg" alt="">
+						<img src="{{ asset('images/resources/pt2.jpg') }}" alt="">
 						<div class="figcaption">
 							<h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-							<a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
+							<a href="case-work.html" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
 						</div><!--figcaption end-->
 					</div><!--pft-item end-->
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
 					<div class="pft-item wow fadeInUp" data-wow-delay="900ms">
-						<img src="images/resources/pt3.jpg" alt="">
+						<img src="{{ asset('images/resources/pt3.jpg') }}" alt="">
 						<div class="figcaption">
 							<h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
 							<a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
 						</div><!--figcaption end-->
 					</div><!--pft-item end-->
-				</div>
+				</div> #}
 			</div>
 		</div><!--pft-items end-->
 	</div>
