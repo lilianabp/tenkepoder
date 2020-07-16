@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use App\Entity\ServiceTranslation;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use Sonata\AdminBundle\Form\Type\ModelListType;
 
 final class ServiceAdmin extends AbstractAdmin
 {
@@ -44,12 +45,17 @@ final class ServiceAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper): void
     {
         $formMapper
+            ->with('Datos del Servicio', ['class' => 'col-md-6'])
             ->add('name')
             ->add('abstract', CKEditorType::class, [])
             ->add('description', CKEditorType::class, [])
+            ->end()
+            ->with('Service Data', ['class' => 'col-md-6'])
             ->add('name_en')
             ->add('abstract_en', CKEditorType::class, [])
             ->add('description_en', CKEditorType::class, [])
+            ->end()
+            ->add('image', ModelListType::class)
             ;
     }
 

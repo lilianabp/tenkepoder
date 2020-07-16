@@ -201,6 +201,14 @@
         <source>Con más de 10 años de experiencia en diferentes tecnologías.</source>
         <target>With more than 10 years of experience in different technologies.</target>
       </trans-unit>
+      <trans-unit id="WPzJRo." resname="Inicio">
+        <source>Inicio</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="XmCCheA" resname="Llámanos">
+        <source>Llámanos</source>
+        <target>Call us</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

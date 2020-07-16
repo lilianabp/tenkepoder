@@ -7,6 +7,7 @@ use App\Repository\ServiceRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=ServiceRepository::class)
@@ -36,11 +37,6 @@ class Service
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity=Media::class, mappedBy="service")
-     */
-    private $image;
-
-    /**
      * @ORM\ManyToMany(targetEntity=Project::class, inversedBy="services")
      */
     private $projects;
@@ -60,9 +56,19 @@ class Service
      */
     private $description_en;
 
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(unique=true)
+     */
+    private $slug;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Media::class, cascade={"persist", "remove"})
+     */
+    private $image;
+
     public function __construct()
     {
-        $this->image = new ArrayCollection();
         $this->projects = new ArrayCollection();
     }
     
@@ -108,37 +114,6 @@ class Service
     public function setDescription(?string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Media[]
-     */
-    public function getImage(): Collection
-    {
-        return $this->image;
-    }
-
-    public function addImage(Media $image): self
-    {
-        if (!$this->image->contains($image)) {
-            $this->image[] = $image;
-            $image->setService($this);
-        }
-
-        return $this;
-    }
-
-    public function removeImage(Media $image): self
-    {
-        if ($this->image->contains($image)) {
-            $this->image->removeElement($image);
-            // set the owning side to null (unless already changed)
-            if ($image->getService() === $this) {
-                $image->setService(null);
-            }
-        }
 
         return $this;
     }
@@ -201,6 +176,30 @@ class Service
     public function setDescriptionEn(?string $description_en): self
     {
         $this->description_en = $description_en;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getImage(): ?Media
+    {
+        return $this->image;
+    }
+
+    public function setImage(?Media $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

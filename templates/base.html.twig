@@ -61,7 +61,10 @@
     <script src="{{ asset('js/script.js') }}"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-        $(window).scrollTop(localStorage.getItem('position'));
+        if(localStorage.getItem('page') == '{{ app.request.attributes.get('_route') }}') {
+            $(window).scrollTop(localStorage.getItem('position'));
+        }
+        localStorage.clear();
         
         {% if app.request.locale == 'es' %}
             $('.es').addClass('active');
@@ -75,6 +78,7 @@
 
         $(window).scroll(function() {
             localStorage.setItem('position', $(window).scrollTop());
+            localStorage.setItem('page',  '{{ app.request.attributes.get('_route') }}');
             if ($(window).scrollTop() > 300) {
                 btn.addClass('show');
             } else {

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Service;
 use App\Entity\Project;
 use Doctrine\ORM\EntityManagerInterface;
@@ -21,6 +22,20 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
             'services' => $services,
             'projects' => $projects
+        ]);
+    }
+
+    /**
+     * @Route("/{_locale}/headerData", name="headerData")
+     */
+    public function getHeaderData(EntityManagerInterface $entityManager)
+    {
+        $services = $entityManager->getRepository(Service::class)->findAll();
+        $projects = $entityManager->getRepository(Project::class)->findAll();
+        return $this->render('layout/header.html.twig', [
+            'controller_name' => 'HomeController',
+            'services' => $services,
+            'projects' => $projects,
         ]);
     }
 }

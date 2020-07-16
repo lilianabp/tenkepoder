@@ -1,5 +1,5 @@
 sonata_admin:
-    title: 'Ten ke Poder'
+    title: 'Ten Ke Poder'
     title_logo: /images/favicon.png
     dashboard:
         blocks:

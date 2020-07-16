@@ -36,4 +36,5 @@ return [
     Sonata\FormatterBundle\SonataFormatterBundle::class => ['all' => true],
     Sonata\NewsBundle\SonataNewsBundle::class => ['all' => true],
     SunCat\MobileDetectBundle\MobileDetectBundle::class => ['all' => true],
+    Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle::class => ['all' => true],
 ];

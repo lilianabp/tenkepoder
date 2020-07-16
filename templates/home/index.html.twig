@@ -84,7 +84,7 @@
                                 <i class="fa fa-code fa-4x" aria-hidden="true" style="color: #a9afc3;"></i>
                             </div>
                             <h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
-                            <a href="" title="" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
+                            <a href="{{ path('service', {slug: service.slug }) }}" title="" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
                         </div><!--service-col end-->
                     </div>
                 {% endfor %}

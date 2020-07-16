@@ -3,7 +3,7 @@
         <div class="row header-content">
             <div class="logo col-10 col-md-11 col-lg-3">
                 <a href="{{ path('home') }}" title="Ten Ke Poder - TKP">
-                    <img src="{{ asset('images/logo.png') }}" alt="Ten Ke Poder">
+                    <img src="{{ asset('images/logo.png') }}" alt="Ten Ke Poder - TKP">
                 </a>
             </div><!--logo end-->
             {% if is_mobile() == 0 and is_tablet() == 0 %}
@@ -15,8 +15,8 @@
                     </ul>
                 </nav><!--navigation end--> #}
                 <div class="right-side-hd col-lg-9 text-right">
-                    <a href="tel:+34 695 80 78 68"><span>+34 695 80 78 68</span>
-                    <a href="#" title="TKP - Presupuesto" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
+                    <a href="tel:+34 695 80 78 68" title="TKP - {% trans %}Llámanos{% endtrans %}"><span>+34 695 80 78 68</span>
+                    <a href="#" title="TKP - {% trans %}Solicita Presupuesto{% endtrans %}" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
                 </div>
             {% endif %}
             <a href="#" title="" class="menu-btn col-2 col-md-1 ">
@@ -36,16 +36,16 @@
         <img src="{{ asset('images/favicon.png')}}" alt="">
     </div>
     <ul>
-        <li><a href="services.html" title="">Services</a>
+        <li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a>
+        </li>
+        <li><a href="{{ path('services') }}" title="TKP - {% trans %}Servicios{% endtrans %}">{% trans %}Servicios{% endtrans %}</a>
             <ul>
-                <li><a href="service-details.html" title="">Service Details</a></li>
+                {% for service in services %}
+                    <li><a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {{ service.name }}">{% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</a></li>
+                {% endfor %}
             </ul>
         </li>
-        <li><a href="cases.html" title="">Cases</a>
-            <ul>
-                <li><a href="case-work.html" title="">Cases Work</a></li>
-            </ul>
-        </li>
-        <li><a href="contact.html" title="">Contact us</a></li>
+        <li><a href="#" title="TKP - {% trans %}Proyectos{% endtrans %}">{% trans %}Proyectos{% endtrans %}</a></li>
+        <li><a href="#" title="TKP - {% trans %}Contáctanos{% endtrans %}">{% trans %}Contáctanos{% endtrans %}</a></li>
     </ul>
 </div><!--responsive-mobile-menu end-->
