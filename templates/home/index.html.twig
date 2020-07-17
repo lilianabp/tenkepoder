@@ -140,41 +140,25 @@
         <div class="section-head">
             <div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">
                 <span>portfolio</span>
-                <h1>Our latest cases <span></span></h1>
-                <p class="bdy">We always try to implement our creative ideas at the highest level. You can see it by looking at our portfolio.</p>
+                <h1>{% trans %}Proyectos recientes {% endtrans %}<span></span></h1>
+                <p class="bdy">{% trans %}Siempre tratamos de implementar nuestros proyectos al más alto nivel. Sumate a nuestro portfolio.{% endtrans %}</p>
             </div><!--title-hd end-->
-            <a href="cases.html" title="" class="btn-default2">view all cases <img src="images/icon4.svg" alt=""></a>
+            <a href="{{ path('projects') }}" title="TKP - {% trans %}Proyectos{% endtrans %}" class="btn-default2">{% trans %}Ver todos los proyectos{% endtrans %}<img src="images/icon4.svg" alt=""></a>
             <div class="clearfix"></div>
         </div>
         <div class="pft-items">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="pft-item wow fadeInUp" data-wow-delay="300ms">
-                        <img src="images/resources/pt1.jpg" alt="">
-                        <div class="figcaption">
-                            <h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-                            <a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
-                        </div><!--figcaption end-->
-                    </div><!--pft-item end-->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="pft-item wow fadeInUp" data-wow-delay="600ms">
-                        <img src="images/resources/pt2.jpg" alt="">
-                        <div class="figcaption">
-                            <h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-                            <a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
-                        </div><!--figcaption end-->
-                    </div><!--pft-item end-->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="pft-item wow fadeInUp" data-wow-delay="900ms">
-                        <img src="images/resources/pt3.jpg" alt="">
-                        <div class="figcaption">
-                            <h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-                            <a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
-                        </div><!--figcaption end-->
-                    </div><!--pft-item end-->
-                </div>
+                {% for project in projects %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="pft-item wow fadeInUp" data-wow-delay="300ms">
+                            <img src="{% path project.image, 'reference' %}" alt="TKP - {{ project.name }}">
+                            <div class="figcaption">
+                                <h2><a href="{{ path('project', {slug: project.slug}) }}" title="">{{ project.name }}</a></h2>
+                                <a href="{{ path('project', {slug: project.slug}) }}" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
+                            </div><!--figcaption end-->
+                        </div><!--pft-item end-->
+                    </div>
+                {% endfor %}
             </div>
         </div><!--pft-items end-->
     </div>

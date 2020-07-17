@@ -301,6 +301,14 @@
         <source>Siempre podemos conseguir lo que estás buscando, ponemos nuestra creatividad y proactividad a tu servicio.</source>
         <target>We can always get what you are looking for, we put our creativity and proactivity at your service</target>
       </trans-unit>
+      <trans-unit id="ripaHPA" resname="Proyectos recientes">
+        <source>Proyectos recientes</source>
+        <target>Our Latest projects</target>
+      </trans-unit>
+      <trans-unit id="ko0deOl" resname="Siempre tratamos de implementar nuestros proyectos al más alto nivel. Sumate a nuestro portfolio.">
+        <source>Siempre tratamos de implementar nuestros proyectos al más alto nivel. Sumate a nuestro portfolio.</source>
+        <target>We always try to implement our projects at the highest level. Join us in our portfolio.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
