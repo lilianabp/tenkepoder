@@ -82,6 +82,10 @@ class Project
      */
     private $description_en;
 
+    public function __toString() {
+        return $this->getName();
+    }
+
     public function __construct()
     {
         $this->category = new ArrayCollection();

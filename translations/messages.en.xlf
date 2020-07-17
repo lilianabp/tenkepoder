@@ -293,6 +293,14 @@
         <source>Ver todos los proyectos</source>
         <target>View all projects</target>
       </trans-unit>
+      <trans-unit id=".Bkr5Pz" resname="Tenemos los mejores servicios">
+        <source>Tenemos los mejores servicios</source>
+        <target>We Offer The Best Services</target>
+      </trans-unit>
+      <trans-unit id="JuoKUz_" resname="Siempre podemos conseguir lo que estás buscando, ponemos nuestra creatividad y proactividad a tu servicio.">
+        <source>Siempre podemos conseguir lo que estás buscando, ponemos nuestra creatividad y proactividad a tu servicio.</source>
+        <target>We can always get what you are looking for, we put our creativity and proactivity at your service</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

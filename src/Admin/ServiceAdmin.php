@@ -55,6 +55,7 @@ final class ServiceAdmin extends AbstractAdmin
             ->add('abstract_en', CKEditorType::class, [])
             ->add('description_en', CKEditorType::class, [])
             ->end()
+            ->add('projects')
             ->add('image', ModelListType::class)
             ;
     }

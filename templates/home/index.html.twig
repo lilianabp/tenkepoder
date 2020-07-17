@@ -81,10 +81,10 @@
                     <div class="col-lg-3">
                         <div class="service-col wow fadeIn" data-wow-delay="300ms">
                             <div class="svs-icon">
-                                <i class="fa fa-code fa-4x" aria-hidden="true" style="color: #a9afc3;"></i>
+                                <img src="{{ asset('images/iconserv1.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
                             </div>
                             <h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
-                            <a href="{{ path('service', {slug: service.slug }) }}" title="" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
+                            <a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
                         </div><!--service-col end-->
                     </div>
                 {% endfor %}

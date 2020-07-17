@@ -49,6 +49,10 @@ class Client
      */
     private $description_en;
 
+    public function __toString(){
+        return $this->getName();
+    }
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();

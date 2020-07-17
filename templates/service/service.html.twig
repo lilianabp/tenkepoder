@@ -172,33 +172,17 @@
 		</div>
 		<div class="pft-items">
 			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-					<div class="pft-item wow fadeInUp" data-wow-delay="300ms">
-						<img src="{{ asset('images/resources/pt1.jpg') }}" alt="">
-						<div class="figcaption">
-							<h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-							<a href="case-work.html" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
-						</div><!--figcaption end-->
-					</div><!--pft-item end-->
-				</div>
-				{# <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-					<div class="pft-item wow fadeInUp" data-wow-delay="600ms">
-						<img src="{{ asset('images/resources/pt2.jpg') }}" alt="">
-						<div class="figcaption">
-							<h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-							<a href="case-work.html" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
-						</div><!--figcaption end-->
-					</div><!--pft-item end-->
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-					<div class="pft-item wow fadeInUp" data-wow-delay="900ms">
-						<img src="{{ asset('images/resources/pt3.jpg') }}" alt="">
-						<div class="figcaption">
-							<h2><a href="case-work.html" title="">Web site design for curious company</a></h2>
-							<a href="case-work.html" title=""><img src="images/icon9.svg" alt=""></a>
-						</div><!--figcaption end-->
-					</div><!--pft-item end-->
-				</div> #}
+				{% for project in service.projects %}
+					<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+						<div class="pft-item wow fadeInUp" data-wow-delay="300ms">
+							<img src="{% path project.image, 'reference' %}" alt="TKP - {{ project.name }}">
+							<div class="figcaption">
+								<h2><a href="case-work.html" title="">{{ project.name }}</a></h2>
+								<a href="case-work.html" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
+							</div><!--figcaption end-->
+						</div><!--pft-item end-->
+					</div>
+				{% endfor %}
 			</div>
 		</div><!--pft-items end-->
 	</div>

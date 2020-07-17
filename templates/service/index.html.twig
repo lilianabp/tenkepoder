@@ -6,7 +6,7 @@
 <section class="pager-sec text-right pb-75">
 	<div class="container-fluid">
 		<ul>
-			<li><a href="#" title="">Home</a></li>
+			<li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a></li>
 			<li><span>Services</span></li>
 		</ul>
 	</div>
@@ -17,68 +17,26 @@
 	<h2 class="page-number">01.</h2>
 	<div class="container">
 		<div class="main-banner-text title-hd max-width-100">
-			<span>our services</span>
-			<h1>We offer the best services <span></span></h1>
-			<p class="bdy">We always try to implement our creative ideas at the highest level. You can see it by looking at our portfolio. </p>
+			<span>{% trans %}nuestros servicios{% endtrans %}</span>
+			<h1>{% trans %}Tenemos los mejores servicios {% endtrans %}<span></span></h1>
+			<p class="bdy">{% trans %}Siempre podemos conseguir lo que estás buscando, ponemos nuestra creatividad y proactividad a tu servicio. {% endtrans %}</p>
 		</div><!--main-banner-text end-->
 	</div>
 	<div class="services-section without-carousel">
 		<div class="container">
 			<div class="row">
+				{% set locale = app.request.locale %}
+                {% for service in services %}
 				<div class="col-lg-4 col-md-4 col-sm-6">
 					<div class="service-col">
 						<div class="svs-icon">
-							<img src="images/icon5.svg" alt="">
+							<img src="{{ asset('images/iconserv1.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
 						</div>
-						<h3>UI/UX and Brand Identity</h3>
-						<a href="service-details.html" title="" class="btn-default2">read more</a>
+						<h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
+						<a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
 					</div><!--service-col end-->
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="service-col">
-						<div class="svs-icon">
-							<img src="images/icon6.svg" alt="">
-						</div>
-						<h3>App Development</h3>
-						<a href="service-details.html" title="" class="btn-default2">read more</a>
-					</div><!--service-col end-->
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="service-col">
-						<div class="svs-icon">
-							<img src="images/icon7.svg" alt="">
-						</div>
-						<h3>SEO & SMM Optimization</h3>
-						<a href="service-details.html" title="" class="btn-default2">read more</a>
-					</div><!--service-col end-->
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="service-col">
-						<div class="svs-icon">
-							<img src="images/icon8.svg" alt="">
-						</div>
-						<h3>Web Development</h3>
-						<a href="service-details.html" title="" class="btn-default2">read more</a>
-					</div><!--service-col end-->
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="service-col">
-						<div class="svs-icon">
-							<img src="images/icon5.svg" alt="">
-						</div>
-						<h3>E-commerce development</h3>
-						<a href="service-details.html" title="" class="btn-default2">read more</a>
-					</div><!--service-col end-->
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="service-col">
-						<div class="svs-icon">
-							<img src="images/icon6.svg" alt="">
-						</div>
-						<h3>Marketing Strategy</h3>
-						<a href="service-details.html" title="" class="btn-default2">read more</a>
-					</div><!--service-col end-->
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div><!--services-section end-->
@@ -121,123 +79,6 @@
 				</form>
 			</div><!--contact-form end-->
 		</div><!--consulation-section end-->
-	</div>
-</section>
-
-<section class="partners-section">
-	<div class="container">
-		<div class="partners-logo">
-			<div class="partner-col">
-				<img src="images/resources/pt1.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt2.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt3.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt4.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt5.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt1.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt2.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt3.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt4.png" alt="">
-			</div><!--partner-col end-->
-			<div class="partner-col">
-				<img src="images/resources/pt5.png" alt="">
-			</div><!--partner-col end-->
-		</div><!--partners-logo end-->
-	</div>
-</section><!--partners-section end-->
-
-<section class="video-section overlay">
-	<img src="images/resources/video-bg.jpg" alt="">
-	<div class="play-video-div">
-		<div class="poly1">
-			<div class="poly2">
-				<a href="https://www.youtube.com/watch?v=FSGfN9rr78Q" title="" class="play-video html5lightbox">
-					<img src="images/icon1.svg" alt="">
-				</a>
-			</div>
-		</div>
-	</div>
-</section><!--video-section end-->
-
-<section class="sec-block3">
-	<div class="fixed-bg bg7"></div>
-	<h2 class="page-number">04.</h2>
-	<div class="container">
-		<div class="main-banner-text title-hd wow fadeInUp mgb-100" data-wow-delay="300ms">
-			<span>how much does it cost</span>
-			<h1>prices packages <span></span></h1>
-			<p class="bdy">We’ve got a lot of awards for our products and services that became popular in the world.</p>
-		</div><!--title-hd end-->
-		<div class="prices-section text-center">
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="price-col">
-						<div class="price-head">
-							<h4>Basic</h4>
-							<h2><sup>$</sup>479<sup>.99</sup></h2>
-							<span>per month</span>
-						</div>
-						<ul>
-							<li> Customized Store Design</li>
-							<li>  jQuery Rotating Banner</li>
-							<li>  Interactive Menu</li>
-							<li>  Inquiry Form</li>
-							<li> Responsive Design</li>
-						</ul>
-						<a href="#" title="" class="btn-default">Buy Now</a>
-					</div><!--price-col end-->
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="price-col active">
-						<div class="price-head">
-							<h4>Corporate</h4>
-							<h2><sup>$</sup>779<sup>.99</sup></h2>
-							<span>per month</span>
-						</div>
-						<ul>
-							<li>Basic plan</li>
-							<li> Design prototyping</li>
-							<li> Mobile Menu</li>
-							<li> Competitor analysis</li>
-							<li>Offer Pop-Up Windows</li>
-						</ul>
-						<a href="#" title="" class="btn-default">Buy Now</a>
-					</div><!--price-col end-->
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="price-col">
-						<div class="price-head">
-							<h4>Business</h4>
-							<h2><sup>$</sup>989<sup>.99</sup></h2>
-							<span>per month</span>
-						</div>
-						<ul>
-							<li>Corporatre plan</li>
-							<li> Subscription Pages</li>
-							<li> Unlimited Web Space</li>
-							<li> FREE Site Building Tools</li>
-							<li>24/7 Support</li>
-						</ul>
-						<a href="#" title="" class="btn-default">Buy Now</a>
-					</div><!--price-col end-->
-				</div>
-			</div>
-		</div><!--prices-section end-->
 	</div>
 </section>
 {% endblock %}
