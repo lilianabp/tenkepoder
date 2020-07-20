@@ -5,6 +5,18 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
+      <trans-unit id="js8nczW" resname="form.contact.name.placeholder">
+        <source>form.contact.name.placeholder</source>
+        <target>%name%</target>
+      </trans-unit>
+      <trans-unit id="VIAdL8g" resname="form.contact.telephone.placeholder">
+        <source>form.contact.telephone.placeholder</source>
+        <target>%phone%</target>
+      </trans-unit>
+      <trans-unit id="fZ22Gxp" resname="form.contact.message.placeholder">
+        <source>form.contact.message.placeholder</source>
+        <target>%message%</target>
+      </trans-unit>
       <trans-unit id="FC9PbSD" resname="archive_collection.meta_title">
         <source>archive_collection.meta_title</source>
         <target>__archive_collection.meta_title</target>
@@ -344,6 +356,30 @@
       <trans-unit id="xcUajuz" resname="Visitar web">
         <source>Visitar web</source>
         <target>Visit web</target>
+      </trans-unit>
+      <trans-unit id="jTHzvZV" resname="Enviar mensaje">
+        <source>Enviar mensaje</source>
+        <target>Send message</target>
+      </trans-unit>
+      <trans-unit id="o8T3XML" resname="Empecemos">
+        <source>Empecemos</source>
+        <target>LET’S GET STARTED</target>
+      </trans-unit>
+      <trans-unit id="prx4np5" resname="Consulta gratuita">
+        <source>Consulta gratuita</source>
+        <target>Free Consultation</target>
+      </trans-unit>
+      <trans-unit id="QBAtDJj" resname="Cuéntanos sobre tu proyecto y lo haremos realidad...">
+        <source>Cuéntanos sobre tu proyecto y lo haremos realidad...</source>
+        <target>Tell us about your project and we will make it work...</target>
+      </trans-unit>
+      <trans-unit id="jqyukSd" resname="Acepto la">
+        <source>Acepto la</source>
+        <target>I have read and accept the</target>
+      </trans-unit>
+      <trans-unit id="_jIqo26" resname="Política de Privacidad">
+        <source>Política de Privacidad</source>
+        <target>Privacy Policy</target>
       </trans-unit>
     </body>
   </file>

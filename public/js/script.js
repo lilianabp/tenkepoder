@@ -38,7 +38,7 @@ $(window).on("load", function() {
         }
               
         $.ajax({
-            url:"sendemail.php",
+            url:"{{ path('contact') }}",
             method:"POST",
             data: $(form).serialize(),
             beforeSend:function(){

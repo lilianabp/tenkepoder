@@ -1,0 +1,3 @@
+form.contact.name.placeholder: '%name%'
+form.contact.telephone.placeholder: '%phone%'
+form.contact.message.placeholder: '%message%'

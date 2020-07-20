@@ -800,7 +800,8 @@ header .menu-btn {
 	margin-bottom: 37px;
 }
 .input-field input,
-.input-field textarea {
+.input-field textarea,
+.input-field select {
 	border:0;
 	border-bottom: 1px solid #393f4f;
 	padding-bottom: 5px;	
@@ -811,6 +812,9 @@ header .menu-btn {
 	color: #A9AFC3;
 	opacity: 0.5;
 	background: inherit;
+}
+.input-field input[type=checkbox] {
+	width: unset;
 }
 .input-field textarea {
 	height: 116px;
