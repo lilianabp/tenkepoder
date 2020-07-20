@@ -6,9 +6,9 @@
 <section class="pager-sec text-right pb-75 bg-0">
 	<div class="container-fluid">
 		<ul>
-			<li><a href="#" title="">Home</a></li>
-			<li><a href="#" title="">Case</a></li>
-			<li><span>Case work</span></li>
+			<li><a href="{{ path('home') }}" title="">{% trans %}Inicio{% endtrans %}</a></li>
+			<li><a href="{{ path('projects') }}" title="">{% trans %}Proyectos{% endtrans %}</a></li>
+			<li><span>{{ project.name }}</span></li>
 		</ul>
 	</div>
 </section><!--pager-sec end-->
@@ -20,48 +20,54 @@
 		<div class="container">
 			<div class="main-banner-text mw-100 title-hd wow fadeInUp mgb-100" data-wow-delay="300ms">
 				<span>portfolio</span>
-				<h1>Website design for OP company</h1>
+				<h1>{{ project.name }}</h1>
 			</div><!--title-hd end-->
 			<div class="case-work-page">
 				<div class="case-thumbnail">
-					<img src="images/resources/img.jpg" alt="" class="w-100">
-					<div class="cz-controls">
-						<a href="#" title="" class="float-left">prev</a>
-						<a href="#" title="" class="float-right">next</a>
-						<div class="clearfix"></div>
-					</div><!--cz-controls end-->
+					{% for image in project.gallery.galleryHasMedias %}
+						<img src="{% path image.media, 'reference' %}" alt="{{ project.slug }}" class="">
+					{% endfor %}
 				</div><!--case-thumbnail end-->
 				<div class="case-content">
-					<h3>About Project</h3>
-					<p>The agency builds personal brands for entrepreneurs and corporates. We built a page with all kind of information about the service, examples of results, case studies, testimonials of old clients and pricing packages. We like to build new websites especially for any kind of marketing agencies. At this time we created a landing page for marketing agency.</p>
+					<h3>{% trans %}Sobre el proyecto{% endtrans %}</h3>
+					{% if app.request.locale == 'es' %}{{ project.description|raw}}{% else %}{{ project.descriptionEn|raw}}{% endif %}
 					<ul class="mg-list">
 						<li>
-							<h3>Client:</h3>
-							<span>OP Company</span>
+							<h3>{% trans %}Cliente:{% endtrans %}</h3>
+							<span>{{ project.client }}</span>
 						</li>
 						<li>
-							<h3>Start date:</h3>
-							<span>Mar 21, 2020</span>
+							<h3>{% trans %}Fecha de Inicio:{% endtrans %}</h3>
+							{% if app.request.locale == 'es' %}
+								<span>{{ project.startDate|date("d/m/Y") }}</span>
+							{% else %}
+								<span>{{ project.startDate|date("m/d/Y") }}</span>
+							{% endif %}
 						</li>
 						<li>
-							<h3>Category:</h3>
-							<span>UI/UX Design</span>
+							<h3>{% trans %}Categorías:{% endtrans %}</h3>
+							{% for category in project.category|filter(v => v.enabled )  %}
+								<span>#{{ category.name }}</span>
+							{% endfor %}
 						</li>
 						<li>
-							<h3>Finish date:</h3>
-							<span>Apr 21, 2020</span>
+							<h3>{% trans %}Fecha de Fin:{% endtrans %}</h3>
+							{% if app.request.locale == 'es' %}
+								<span>{{ project.finishDate|date("d/m/Y") }}</span>
+							{% else %}
+								<span>{{ project.finishDate|date("m/d/Y") }}</span>
+							{% endif %}
 						</li>
 					</ul>
 					<div class="clearfix"></div>
-					<a href="#" title="" class="btn-default">Visit website</a>
-					<a href="#" title="" class="st-btn"><img src="images/share.svg" alt="">  Share</a>
+					<a href="{{ project.webUrl}}" title="" class="btn-default" target="_blank">{% trans %}Visitar web{% endtrans %}</a>
 				</div><!--case-content end-->
 			</div><!--case-work-page end-->
 		</div>
 	</div><!--about-in-details end-->
 </section><!--about_us_section end-->
 
-<section class="sec-block3">
+{# <section class="sec-block3">
 	<div class="fixed-bg bg4"></div>
 	<h2 class="page-number">02.</h2>
 	<div class="container">
@@ -106,5 +112,5 @@
 			</div>
 		</div><!--pft-items end-->
 	</div>
-</section><!--case-studies-section end-->
+</section><!--case-studies-section end--> #}
 {% endblock %}

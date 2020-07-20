@@ -23,7 +23,7 @@ class ServiceController extends AbstractController
     }
 
     /**
-     * @Route("/{_locale}/services/{slug}", name="service")
+     * @Route("/{_locale}/service-{slug}", name="service")
      */
     public function showService(EntityManagerInterface $entityManager, $slug)
     {

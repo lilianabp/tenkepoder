@@ -6,8 +6,8 @@
 		<section class="pager-sec text-right dark-bg pb-75">
 			<div class="container-fluid">
 				<ul>
-					<li><a href="#" title="">Home</a></li>
-					<li><span>Cases</span></li>
+					<li><a href="{{ path('home') }}" title="">{% trans %}Inicio{% endtrans %}</a></li>
+					<li><span>{% trans %}Proyectos{% endtrans %}</span></li>
 				</ul>
 			</div>
 		</section><!--pager-sec end-->
@@ -19,89 +19,44 @@
 				<div class="container">
 					<div class="main-banner-text title-hd wow fadeInUp mgb-100" data-wow-delay="300ms">
 						<span>portfolio</span>
-						<h1>Our amazing cases <span></span></h1>
-						<p class="bdy">You may be interested in what we can offer you. More services you can find below. We do everything at a high level.</p>
+						<h1>{% trans %}Nuestros trabajos {% endtrans %}<span></span></h1>
+						<p class="bdy">{% trans %}Hacemos todo tipo de trabajo digital, Prestashop, Wordpress, Woocommerce, PHP, Symfony, mantenimiento y modificaciones a medida de proyectos existentes, conexiones con API de terceros y desarrollo de API{% endtrans %}</p>
 					</div><!--title-hd end-->
 					<section class="options">
 						<div class="option-isotop">
 							<ul id="filter" class="option-set filters-nav" data-option-key="filter">
-								<li><a data-option-value="*" class="selected">All</a></li>
-								<li><a data-option-value=".ui-ux">UI/UX and Brand</a></li>
-								<li><a data-option-value=".apps">Apps</a></li>
-								<li><a data-option-value=".seo">SEO & SMM</a></li>
-								<li><a data-option-value=".web">Web</a></li>
-								<li><a data-option-value=".e-commerce">E-commerce</a></li>
-								<li><a data-option-value=".marketing">marketing</a></li>
+								<li><a data-option-value="*" class="selected">{% trans %}Todos{% endtrans %}</a></li>
+								{% for category in categories|filter(v => v != 'default' ) %}
+									<li><a data-option-value=".{{ category.name }}">{{ category.name }}</a></li>
+								{% endfor %}
 							</ul>
 						</div>
 					</section>
 					<div class="masonary-layout">
 						<div class="row">
 							<div class="masonary">
-								<div class="col-lg-4 col-md-6 col-sm-6 apps web">
-									<div class="tema-col">
-										<img src="images/resources/image1.jpg" alt="">
-										<div class="team-caption">
-											<h3><a href="case-work.html" title="">Maria Yaltekee</a></h3>
-											<span>Graphic Designer</span>
-											<a href="case-work.html" title="" class=""><img src="images/arrow-right.svg" alt=""></a>
+								{% for project in projects %}
+									{% set categories = '' %}
+									{% for category in project.category %}
+										{% if category.enabled %}
+											{% set categories = categories~' '~category.name %}
+										{% endif %}
+									{% endfor %}
+									<div class="col-lg-4 col-md-6 col-sm-6 {{categories}}">
+										<div class="tema-col">
+											<img src="{% path project.image, 'reference' %}" alt="{{ project.slug }} {{ categories }}">
+											<div class="team-caption">
+												<h3><a href="{{ path('project', {slug: project.slug }) }}" title="{{project.name}}">{{ project.name }}</a></h3>
+												<span></span>
+												<a href="{{ path('project', {slug: project.slug }) }}" title="{{ project.slug }}" class=""><img src="{{ asset('images/arrow-right.svg')}}" alt="{{ project.slug }}"></a>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-6 web marketing">
-									<div class="tema-col">
-										<img src="images/resources/pt2.jpg" alt="">
-										<div class="team-caption">
-											<h3><a href="case-work.html" title="">Maria Yaltekee</a></h3>
-											<span>Graphic Designer</span>
-											<a href="case-work.html" title="" class=""><img src="images/arrow-right.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-6 e-commerce ui-ux seo">
-									<div class="tema-col">
-										<img src="images/resources/image3.jpg" alt="">
-										<div class="team-caption">
-											<h3><a href="case-work.html" title="">Maria Yaltekee</a></h3>
-											<span>Graphic Designer</span>
-											<a href="case-work.html" title="" class=""><img src="images/arrow-right.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-6 marketing e-commerce seo">
-									<div class="tema-col">
-										<img src="images/resources/image4.jpg" alt="">
-										<div class="team-caption">
-											<h3><a href="case-work.html" title="">Maria Yaltekee</a></h3>
-											<span>Graphic Designer</span>
-											<a href="case-work.html" title="" class=""><img src="images/arrow-right.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-6 e-commerce apps seo">
-									<div class="tema-col">
-										<img src="images/resources/image5.jpg" alt="">
-										<div class="team-caption">
-											<h3><a href="case-work.html" title="">Maria Yaltekee</a></h3>
-											<span>Graphic Designer</span>
-											<a href="case-work.html" title="" class=""><img src="images/arrow-right.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-sm-6 ui-ux apps">
-									<div class="tema-col">
-										<img src="images/resources/image6.jpg" alt="">
-										<div class="team-caption">
-											<h3><a href="case-work.html" title="">Maria Yaltekee</a></h3>
-											<span>Graphic Designer</span>
-											<a href="case-work.html" title="" class=""><img src="images/arrow-right.svg" alt=""></a>
-										</div>
-									</div>
-								</div>
+								{% endfor %}
 							</div>
-							<div class="full-div w-100 text-center mt-70">
+							{# <div class="full-div w-100 text-center mt-70">
 								<a href="#" title="" class="btn-default">Load more</a>
-							</div>
+							</div> #}
 						</div>
 					</div><!--masonary-layout end-->
 				</div>

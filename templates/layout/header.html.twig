@@ -1,4 +1,4 @@
-<header {% if app.request.attributes.get('_route') == 'home' %}class="pb"{% elseif app.request.attributes.get('_route') == 'services' %}class="gradient-bg"{% endif %}>
+<header {% if app.request.attributes.get('_route') == 'home' %}class="pb"{% elseif app.request.attributes.get('_route') == 'services' or app.request.attributes.get('_route') == 'project' %}class="gradient-bg"{% endif %}>
     <div class="container">
         <div class="row header-content">
             <div class="logo col-10 col-md-11 col-lg-3">

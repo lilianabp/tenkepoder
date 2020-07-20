@@ -7,6 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Project;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
+use App\Application\Sonata\ClassificationBundle\Entity\Category;
 
 class ProjectController extends AbstractController
 {
@@ -16,14 +17,16 @@ class ProjectController extends AbstractController
     public function index(EntityManagerInterface $entityManager)
     {
     	$projects = $entityManager->getRepository(Project::class)->findAll();
+    	$categories = $entityManager->getRepository(Category::class)->findBy(['enabled' => 1]);
         return $this->render('project/index.html.twig', [
             'controller_name' => 'ProjectController',
-            'projects' => $projects
+            'projects' => $projects,
+            'categories' => $categories,
         ]);
     }
 
     /**
-     * @Route("/{_locale}/projects/{slug}", name="project")
+     * @Route("/{_locale}/project-{slug}", name="project")
      */
     public function showProject(EntityManagerInterface $entityManager, $slug)
     {

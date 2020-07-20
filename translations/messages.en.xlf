@@ -309,6 +309,42 @@
         <source>Siempre tratamos de implementar nuestros proyectos al más alto nivel. Sumate a nuestro portfolio.</source>
         <target>We always try to implement our projects at the highest level. Join us in our portfolio.</target>
       </trans-unit>
+      <trans-unit id="LFY2UdZ" resname="Nuestros trabajos">
+        <source>Nuestros trabajos</source>
+        <target>Our works</target>
+      </trans-unit>
+      <trans-unit id="vQK5p9c" resname="Todos">
+        <source>Todos</source>
+        <target>All</target>
+      </trans-unit>
+      <trans-unit id="JcKJu_h" resname="Hacemos todo tipo de trabajo digital, Prestashop, Wordpress, Woocommerce, PHP, Symfony, mantenimiento y modificaciones a medida de proyectos existentes, conexiones con API de terceros y desarrollo de API">
+        <source>Hacemos todo tipo de trabajo digital, Prestashop, Wordpress, Woocommerce, PHP, Symfony, mantenimiento y modificaciones a medida de proyectos existentes, conexiones con API de terceros y desarrollo de API</source>
+        <target>We do all kinds of digital work, Prestashop, Wordpress, Woocommerce, PHP, Symfony, maintenance and custom modifications of existing projects, connections to third-party APIs and API development</target>
+      </trans-unit>
+      <trans-unit id="voFbpa." resname="Sobre el proyecto">
+        <source>Sobre el proyecto</source>
+        <target>About project</target>
+      </trans-unit>
+      <trans-unit id="B9xVnD1" resname="Cliente:">
+        <source>Cliente:</source>
+        <target>Client:</target>
+      </trans-unit>
+      <trans-unit id="P1zL5hX" resname="Fecha de Inicio:">
+        <source>Fecha de Inicio:</source>
+        <target>Start date:</target>
+      </trans-unit>
+      <trans-unit id="sNmLD2M" resname="Categorías:">
+        <source>Categorías:</source>
+        <target>Categories:</target>
+      </trans-unit>
+      <trans-unit id="ITHoKTq" resname="Fecha de Fin:">
+        <source>Fecha de Fin:</source>
+        <target>Finish date:</target>
+      </trans-unit>
+      <trans-unit id="xcUajuz" resname="Visitar web">
+        <source>Visitar web</source>
+        <target>Visit web</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
