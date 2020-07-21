@@ -16,11 +16,17 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Intl\Locale;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ContactType extends AbstractType
 {
+    public function __construct(TranslatorInterface $translator) {
+            $this->translator = $translator;
+        }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        
         $builder
             ->add('name', TextType::class, [
                 'required' => true,
@@ -80,12 +86,13 @@ class ContactType extends AbstractType
                         return $service->getNameEn();
                     }
                 },
-                'placeholder' => 'Servicio|Service'
+                'placeholder' => $this->translator->trans('form.contact.service.placeholder')
             ])
             ->add('message', TextareaType::class, [
                 "label" => false,
                 'attr' => [
-                    'placeholder' => 'form.contact.message.placeholder'
+                    'placeholder' => 'form.contact.message.placeholder',
+                    'rows' => 6
                 ],
                 'attr_translation_parameters' => [
                     '%message%' => 'Message',

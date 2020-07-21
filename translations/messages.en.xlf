@@ -17,6 +17,10 @@
         <source>form.contact.message.placeholder</source>
         <target>%message%</target>
       </trans-unit>
+      <trans-unit id="4k6kkRi" resname="form.contact.service.placeholder">
+        <source>form.contact.service.placeholder</source>
+        <target>Choose a Service</target>
+      </trans-unit>
       <trans-unit id="FC9PbSD" resname="archive_collection.meta_title">
         <source>archive_collection.meta_title</source>
         <target>__archive_collection.meta_title</target>
@@ -380,6 +384,78 @@
       <trans-unit id="_jIqo26" resname="Política de Privacidad">
         <source>Política de Privacidad</source>
         <target>Privacy Policy</target>
+      </trans-unit>
+      <trans-unit id="UUScpe5" resname="Hacemos tus ideas posible">
+        <source>Hacemos tus ideas posible</source>
+        <target>Making your ideas posible</target>
+      </trans-unit>
+      <trans-unit id="247HEZ4" resname="Desarrollo de páginas web corporativas, tiendas online, desarrollo a medida, consultoría, tareas de mantenimiento, SEO...">
+        <source>Desarrollo de páginas web corporativas, tiendas online, desarrollo a medida, consultoría, tareas de mantenimiento, SEO...</source>
+        <target>Corporate website development, online stores, custom development, consulting, maintenance jobs, SEO...</target>
+      </trans-unit>
+      <trans-unit id="83ydSm2" resname="Desarrollo Web">
+        <source>Desarrollo Web</source>
+        <target>Web Development</target>
+      </trans-unit>
+      <trans-unit id="VxWYpBr" resname="Diseño responsive">
+        <source>Diseño responsive</source>
+        <target>Responsive Design</target>
+      </trans-unit>
+      <trans-unit id="zeTci7G" resname="Responsive. Soporte SEO con metadatos. Contenidos gestionables.">
+        <source>Responsive. Soporte SEO con metadatos. Contenidos gestionables.</source>
+        <target>Responsive. SEO support with metadata. Management of content.</target>
+      </trans-unit>
+      <trans-unit id="ORzpJtf" resname="Comercio electrónico">
+        <source>Comercio electrónico</source>
+        <target>E-commerce</target>
+      </trans-unit>
+      <trans-unit id="IDqZqgJ" resname="Consultoría y Soporte">
+        <source>Consultoría y Soporte</source>
+        <target>Consultation and Support</target>
+      </trans-unit>
+      <trans-unit id="YETzLHo" resname="Ver más">
+        <source>Ver más</source>
+        <target>Read more</target>
+      </trans-unit>
+      <trans-unit id="xTMoQis" resname="Algunos de nuestros planes">
+        <source>Algunos de nuestros planes</source>
+        <target>Some of our plans</target>
+      </trans-unit>
+      <trans-unit id="CMe66AJ" resname="Para que conozcas nuestros rangos de precios. Siempre se pueden customizar a tu presupuesto y requerimientos.">
+        <source>Para que conozcas nuestros rangos de precios. Siempre se pueden customizar a tu presupuesto y requerimientos.</source>
+        <target>To let you know our price ranges. They can always be customized to your budget and requirements.</target>
+      </trans-unit>
+      <trans-unit id="g4gxm1S" resname="Sitio Web">
+        <source>Sitio Web</source>
+        <target>Website</target>
+      </trans-unit>
+      <trans-unit id="N7hlbNx" resname="Página web corporativa">
+        <source>Página web corporativa</source>
+        <target>Corporate Website</target>
+      </trans-unit>
+      <trans-unit id="sPqPdHC" resname="A medida">
+        <source>A medida</source>
+        <target>Custom</target>
+      </trans-unit>
+      <trans-unit id="UorMN_P" resname="Desarrollo a medida de tus necesidades">
+        <source>Desarrollo a medida de tus necesidades</source>
+        <target>Development customized to your needs</target>
+      </trans-unit>
+      <trans-unit id="OwsP3_L" resname="Conectar">
+        <source>Conectar</source>
+        <target>Connect</target>
+      </trans-unit>
+      <trans-unit id="g98NSdr" resname="O llamar">
+        <source>O llamar</source>
+        <target>Or call</target>
+      </trans-unit>
+      <trans-unit id="_r6zQBL" resname="Creamos tecnologías para tu Negocio.">
+        <source>Creamos tecnologías para tu Negocio.</source>
+        <target>We create cutting-edge technology for your Business.</target>
+      </trans-unit>
+      <trans-unit id="ECCzQVS" resname="Te asistimos desde el comienzo y te brindamos soporte continuo.">
+        <source>Te asistimos desde el comienzo y te brindamos soporte continuo.</source>
+        <target>We help you from the beginning and we offer you continuous support.</target>
       </trans-unit>
     </body>
   </file>

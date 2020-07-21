@@ -29,20 +29,29 @@ $(window).on("load", function() {
         
               var name = $('#contact-form .name').val();
               var email = $('#contact-form .email').val();
-              // var phone = $('#contact-form .phone').val();
-        
-        if(name == '' || email == '')
+              var phone = $('#contact-form .phone').val();
+              var locale = document.location.pathname.split('/');
+        if(name == '' || email == '' || phone == '')
         {
-          $('#contact-form .response').html('<div class="failed">Please fill the required fields.</div>');
+          if(locale[1] == 'en') {
+            $('#contact-form .response').html('<div class="failed">Please fill the required fields *.</div>');
+          } else {
+            $('#contact-form .response').html('<div class="failed">Por favor completa los campos requeridos *.</div>');
+          }
+          
           return false;
         }
               
         $.ajax({
-            url:"{{ path('contact') }}",
+            url:"/es/contact",
             method:"POST",
             data: $(form).serialize(),
             beforeSend:function(){
-                $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Loading...</div>');
+                if(locale[1] == 'en') {
+                    $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Sending...</div>');
+                } else {
+                     $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Enviando...</div>');
+                }
             },
             success:function(data){
                 $('form').trigger("reset");
@@ -51,7 +60,7 @@ $(window).on("load", function() {
                     $('#contact-form .response').fadeOut("slow");
                 }, 5000);
             },
-            error:function(){
+            error:function(data){
                 $('#contact-form .response').fadeIn().html(data);
             }
         });

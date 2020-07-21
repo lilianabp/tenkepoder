@@ -10,6 +10,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use App\Service\EmailService;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class HomeController extends AbstractController
 {
@@ -43,27 +45,35 @@ class HomeController extends AbstractController
         ]);
     }
 
-    // /**
-    //  * @Route("/{_locale}/contact", name="contact")
-    //  */
-    // public function contact(EntityManagerInterface $entityManager, Request $request)
-    // {
-    //     $form = $this->createForm(ContactType::class); 
+    /**
+     * @Route("/{_locale}/contact", name="contact")
+     */
+    public function contact(EntityManagerInterface $entityManager, Request $request, EmailService $emailService)
+    {
+        $form = $this->createForm(ContactType::class); 
 
-    //     $form->handleRequest($request);
+        $form->handleRequest($request);
 
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //        try{
-                
+        if ($form->isSubmitted() && $form->isValid()) {
+           try{
+                $locale = $request->getLocale();
+                if($locale == "es") {
+                    $subject = "Gracias por contactarnos";
+                } else {
+                    $subject = "Thank you for contacting us";
+                }
+                // Send email to user
+                $data = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $request->get('contact')['email'], $request->get('contact')['name']);
 
-    //         } catch (\Exception $exception){
-               
-    //         }
-    //     }
-    //     $response = array(
-    //     );
+            } catch (\Exception $exception){
+               $data = $exception;
+            }
+        }
+        $response = array(
+            'data' => $data
+        );
 
-    //     return new JsonResponse($response);
-    // }
+        return new JsonResponse($response);
+    }
 }
 

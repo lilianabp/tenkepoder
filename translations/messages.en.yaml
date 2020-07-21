@@ -1,3 +1,4 @@
 form.contact.name.placeholder: '%name%'
 form.contact.telephone.placeholder: '%phone%'
 form.contact.message.placeholder: '%message%'
+form.contact.service.placeholder: 'Choose a Service'

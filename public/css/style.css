@@ -226,13 +226,13 @@ a,
 	opacity: 0.7;
 }
 .left-position {
-	background-position: right;
-	background-size: cover;
+	background-position: left;
+	background-size: auto;
 }
 .right-position {
 	background-position: right;
 	background-image: url(../images/resources/home-03.jpg);
-	background-size: cover;
+	background-size: contain;
 }
 .bg3 {
 	background: url(../images/bg3.png) #121318;
@@ -439,7 +439,7 @@ header .menu-btn {
 	background: url(../images/resources/home-01.jpg) #121318;
 	background-repeat: no-repeat;
 	background-position: top right;
-	background-size: contain;
+	background-size: auto;
 	height: 100vh;
 }
 .main-banner:before {
@@ -810,14 +810,25 @@ header .menu-btn {
 	font-size: 18px;
 	line-height: 170%;
 	color: #A9AFC3;
-	opacity: 0.5;
+	opacity: 0.9;
 	background: inherit;
+}
+.input-field label  {
+	color: #A9AFC3;
+	opacity: 0.9;
+}
+.input-field select {
+	height: 36px;
+}
+.input-field select,
+.input-field select:focus {
+	outline-color: transparent;
 }
 .input-field input[type=checkbox] {
 	width: unset;
 }
 .input-field textarea {
-	height: 116px;
+	height: auto;
 	resize: none;
 }
 .input-field > .btn-default {
