@@ -457,6 +457,34 @@
         <source>Te asistimos desde el comienzo y te brindamos soporte continuo.</source>
         <target>We help you from the beginning and we offer you continuous support.</target>
       </trans-unit>
+      <trans-unit id="ZQYI0U4" resname="Gracias por contactarnos&lt;br&gt;y compartir tu proyecto con nosotros.&lt;br&gt;Te responderemos lo antes posible&lt;br&gt;con una propuesta de solución&lt;br&gt;robusta, creativa y pensada para tus requerimientos y presupuesto.">
+        <source>Gracias por contactarnos&lt;br&gt;y compartir tu proyecto con nosotros.&lt;br&gt;Te responderemos lo antes posible&lt;br&gt;con una propuesta de solución&lt;br&gt;robusta, creativa y pensada para tus requerimientos y presupuesto.</source>
+        <target><![CDATA[__Gracias por contactarnos<br>y compartir tu proyecto con nosotros.<br>Te responderemos lo antes posible<br>con una propuesta de solución<br>robusta, creativa y pensada para tus requerimientos y presupuesto.]]></target>
+      </trans-unit>
+      <trans-unit id="G4TaWt8" resname="Nuestros Servicios">
+        <source>Nuestros Servicios</source>
+        <target>Our Services</target>
+      </trans-unit>
+      <trans-unit id="NoN_Sqo" resname="Tienda Online">
+        <source>Tienda Online</source>
+        <target>Online Shop</target>
+      </trans-unit>
+      <trans-unit id="olCoD.f" resname="Woocommerce o Prestashop">
+        <source>Woocommerce o Prestashop</source>
+        <target>Woocommerce or Prestashop</target>
+      </trans-unit>
+      <trans-unit id="sNVQC2U" resname="A medida de tus necesidades">
+        <source>A medida de tus necesidades</source>
+        <target>Customized to your needs</target>
+      </trans-unit>
+      <trans-unit id="_DINcEj" resname="Hola,">
+        <source>Hola,</source>
+        <target>Hello,</target>
+      </trans-unit>
+      <trans-unit id="vko3pnY" resname="Todos los derechos reservados">
+        <source>Todos los derechos reservados</source>
+        <target>All rights reserved</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

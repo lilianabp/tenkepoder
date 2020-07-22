@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Service;
 use App\Entity\Project;
+use App\Entity\Contact;
 use App\Form\ContactType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,8 +51,8 @@ class HomeController extends AbstractController
      */
     public function contact(EntityManagerInterface $entityManager, Request $request, EmailService $emailService)
     {
-        $form = $this->createForm(ContactType::class); 
-
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact); 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +64,7 @@ class HomeController extends AbstractController
                     $subject = "Thank you for contacting us";
                 }
                 // Send email to user
-                $data = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $request->get('contact')['email'], $request->get('contact')['name']);
+                $data = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $request->get('contact')['email'], $contact);
 
             } catch (\Exception $exception){
                $data = $exception;

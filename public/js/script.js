@@ -43,7 +43,7 @@ $(window).on("load", function() {
         }
               
         $.ajax({
-            url:"/es/contact",
+            url:"/"+locale[1]+"/contact",
             method:"POST",
             data: $(form).serialize(),
             beforeSend:function(){

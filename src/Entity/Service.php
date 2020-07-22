@@ -67,9 +67,15 @@ class Service
      */
     private $image;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Contact::class, mappedBy="service")
+     */
+    private $contacts;
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();
+        $this->contacts = new ArrayCollection();
     }
     
     public function __toString()
@@ -200,6 +206,37 @@ class Service
     public function setImage(?Media $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Contact[]
+     */
+    public function getContacts(): Collection
+    {
+        return $this->contacts;
+    }
+
+    public function addContact(Contact $contact): self
+    {
+        if (!$this->contacts->contains($contact)) {
+            $this->contacts[] = $contact;
+            $contact->setService($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContact(Contact $contact): self
+    {
+        if ($this->contacts->contains($contact)) {
+            $this->contacts->removeElement($contact);
+            // set the owning side to null (unless already changed)
+            if ($contact->getService() === $this) {
+                $contact->setService(null);
+            }
+        }
 
         return $this;
     }
