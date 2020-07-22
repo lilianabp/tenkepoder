@@ -103,13 +103,8 @@ class ContactType extends AbstractType
             ->add('privacy', CheckboxType::class, array(
                 'label' => true,
                 'required' => true,
-                'attr' => array(
-                    'class' => ''
-                ),
-                'label_attr' => array('class' => 'texto-condiciones'),
-                'constraints' => new IsTrue(
-                    array(
-                        "message" => "Debes aceptar para continuar")
+                'constraints' => array(
+                    new IsTrue(array("message" => "Debes aceptar para continuar"))
                 )
             ))
         ;

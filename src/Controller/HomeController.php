@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\EmailService;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class HomeController extends AbstractController
 {
@@ -55,23 +56,36 @@ class HomeController extends AbstractController
         $form = $this->createForm(ContactType::class, $contact); 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-           try{
-                $locale = $request->getLocale();
-                if($locale == "es") {
-                    $subject = "Gracias por contactarnos";
-                } else {
-                    $subject = "Thank you for contacting us";
-                }
-                // Send email to user
-                $data = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $request->get('contact')['email'], $contact);
+        $locale = $request->getLocale();
+        $status = "error";
+        $message = ($locale == 'es')?'Hay un error en los datos introducidos.':'There is an error in the information given.';
 
-            } catch (\Exception $exception){
-               $data = $exception;
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($contact);
+            try {
+            //Save contact data
+                $entityManager->flush();
+                $status = "success";
+                $message = ($locale == 'es')?'Datos guardados correctamente.':'Data saved correctly.';
+            } catch (\Exception $e) {
+                $message = $e->getMessage();
+            }  
+
+            $subject = ($locale == "es")?"Gracias por contactarnos":"Thank you for contacting us";
+            try {
+            // Send email to user
+            $status = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $request->get('contact')['email'], $contact);
+            $message = ($locale == 'es')?'Datos enviados correctamente.':'Successfully sent data.';
+            $emailService->sendEmail('email/email_tkp.html.twig', 'Contacto recibido desde la web', $_ENV['MAILER_FROM'],$_ENV['MAILER_FROM'], $contact);
+            } catch(\Exception $e) {
+                $message = $e->getMessage();
             }
+
         }
+
         $response = array(
-            'data' => $data
+            'status' => $status,
+            'message' => $message
         );
 
         return new JsonResponse($response);

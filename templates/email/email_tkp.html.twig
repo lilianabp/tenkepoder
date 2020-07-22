@@ -67,11 +67,7 @@
                     <td>
                         <div style="margin-right: 10px; margin-left: 10px; padding-top: 30px; background-color: #121318; text-align: center">
                             <h3 style="margin-top: 0 !important; margin-bottom: 0 !important; color:#ffffff">
-                                    {% if app.request.locale == 'es' %}
-                                        Gracias por contactarnos y compartir tu proyecto con nosotros.<br>Te responderemos lo antes posible con una propuesta de solución robusta, creativa y pensada para tus requerimientos y presupuesto <span style="width: 8px; height: 8px; background-color: #dc4242; border-radius: 100px; display: inline-block"></span>
-                                    {% else %}
-                                           Thank you for contacting us and sharing your project with us.<br>We will get back to you asap with a solid and creative solution designed for your requirements and budget <span style="width: 8px; height: 8px; background-color: #dc4242; border-radius: 100px; display: inline-block"></span>
-                                    {% endif %}
+                                    Nuevo contacto desde tenkepoder.com
                             </h3>
                         </div>
                         <div style="margin-right: 10px; margin-left: 10px; padding-top: 10px; padding-bottom: 40px; background-color: #121318; text-align: center; color:#ffffff">
@@ -104,7 +100,6 @@
                                     {% if app.request.locale == 'es' %}Mensaje: {% else %}Message: {% endif %}{{ datos.message|raw }}
                                 </p>
                             {% endif %}
-                            <a type="button" class="btn-default" href="tel:34695807868" style="border-color: #DD4242!important; display: inline-block; color: #FFFFFF; height: 60px; line-height: 58px; padding: 0 26px; font-size: 20px; border: 2px solid; border-radius: 50px; background-color: inherit; margin-top: 25px; text-decoration: none" target="_blank">{% trans %}Llámanos{% endtrans %}</a>
                         </div>
                     </td>
                 </tr>

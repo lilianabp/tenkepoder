@@ -26,7 +26,6 @@ $(window).on("load", function() {
         
               var o = new Object();
               var form = '#contact-form';
-        
               var name = $('#contact-form .name').val();
               var email = $('#contact-form .email').val();
               var phone = $('#contact-form .phone').val();
@@ -54,14 +53,16 @@ $(window).on("load", function() {
                 }
             },
             success:function(data){
+              if(data.status == 'success'){
                 $('form').trigger("reset");
-                $('#contact-form .response').fadeIn().html(data);
+              }
+                $('#contact-form .response').fadeIn().html('<div class="text-info">'+data.message+'</div>');
                 setTimeout(function(){
                     $('#contact-form .response').fadeOut("slow");
-                }, 5000);
+                }, 8000);
             },
             error:function(data){
-                $('#contact-form .response').fadeIn().html(data);
+                $('#contact-form .response').fadeIn().html('<div class="text-info">'+data.message+'</div>');
             }
         });
     });
