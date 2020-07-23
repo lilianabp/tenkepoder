@@ -107,6 +107,10 @@ class ContactType extends AbstractType
                     new IsTrue(array("message" => "Debes aceptar para continuar"))
                 )
             ))
+            ->add('recaptchaResponse', null, array(
+                'attr' => array('id' => 'recaptchaResponse'),
+                'mapped' => false
+            ))
         ;
     }
 

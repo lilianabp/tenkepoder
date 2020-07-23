@@ -26,10 +26,13 @@
                 {{ form_widget(form.message) }}
             </div><!--input-field end-->
         </div>
+        <div style="display:none">
+            {{ form_widget(form.recaptchaResponse) }}
+        </div>
         <div class="col-lg-12">
             <div class="input-field">
                 {{ form_widget(form.privacy) }}
-                <label for="contact_privacy">{% trans %}Acepto la {% endtrans %}<a href=""> {% trans %}Política de Privacidad{% endtrans %}</a></label>
+                <label for="contact_privacy">{% trans %}Acepto la {% endtrans %}<a href=""> {% trans %}Política de Privacidad*{% endtrans %}</a></label>
             </div><!--input-field end-->
         </div>
         {{ form_errors(form) }}
@@ -40,3 +43,13 @@
         </div>
     </div>
 {{ form_end(form) }}
+<script src="https://www.google.com/recaptcha/api.js?render=6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr', {action: 'contacto'})
+            .then(function(token) {
+                var recaptchaResponse = document.getElementById('contact_recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+    });
+</script>

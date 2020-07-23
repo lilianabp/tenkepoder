@@ -2818,3 +2818,4 @@ body.no-scroll {
   opacity: 1;
   visibility: visible!important;
 }
+.grecaptcha-badge { visibility: hidden; }
