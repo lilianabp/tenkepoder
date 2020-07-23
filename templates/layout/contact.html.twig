@@ -43,10 +43,10 @@
         </div>
     </div>
 {{ form_end(form) }}
-<script src="https://www.google.com/recaptcha/api.js?render=6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr"></script>
+<script src="https://www.google.com/recaptcha/api.js?render="></script>
 <script>
     grecaptcha.ready(function() {
-        grecaptcha.execute('6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr', {action: 'contacto'})
+        grecaptcha.execute('', {action: 'contacto'})
             .then(function(token) {
                 var recaptchaResponse = document.getElementById('contact_recaptchaResponse');
                 recaptchaResponse.value = token;

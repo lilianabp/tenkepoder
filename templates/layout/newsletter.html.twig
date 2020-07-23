@@ -9,10 +9,10 @@
 	{{ form_widget(form.privacy, {'attr': {'style':"width: 13px;margin-right: 5px"}}) }}
     <label for="newsletter_privacy">{% trans %}Acepto la {% endtrans %}<a href=""> {% trans %}Política de Privacidad{% endtrans %}</a></label>
 {{ form_end(form) }}
-<script src="https://www.google.com/recaptcha/api.js?render=6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr"></script>
+<script src="https://www.google.com/recaptcha/api.js?render="></script>
 <script>
     grecaptcha.ready(function() {
-        grecaptcha.execute('6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr', {action: 'newsletter'})
+        grecaptcha.execute('', {action: 'newsletter'})
             .then(function(token) {
                 var recaptchaResponse = document.getElementById('newsletter_recaptchaResponse');
                 recaptchaResponse.value = token;

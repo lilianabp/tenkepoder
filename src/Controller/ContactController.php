@@ -45,7 +45,7 @@ class ContactController extends AbstractController
 
         // Recaptcha v3 control
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = '6LfkKrUZAAAAACGHWygGnI8iU5IRk2Zali_gv8NX';
+        $recaptcha_secret = '';
         $recaptcha_response = $form->get('recaptchaResponse')->getData();
 
         // Make and decode POST request:
@@ -99,7 +99,7 @@ class ContactController extends AbstractController
 
         // Recaptcha v3 control
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = '6LfkKrUZAAAAACGHWygGnI8iU5IRk2Zali_gv8NX';
+        $recaptcha_secret = '';
         $recaptcha_response = $form->get('recaptchaResponse')->getData();
 
         // Make and decode POST request:
