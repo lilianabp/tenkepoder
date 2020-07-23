@@ -359,7 +359,7 @@ header .container {
 }
 header .logo img,
 .preloader .logo img {
-	max-width: 80%;
+	max-width: 100%;
 	margin-top: 5px;
 }
 nav {
@@ -813,9 +813,17 @@ header .menu-btn {
 	opacity: 0.9;
 	background: inherit;
 }
-.input-field label  {
+.input-field input:focus,
+.input-field textarea:focus,
+.input-field select:focus {
+	border-bottom-color: #DD4242;
+}
+.input-field label,
+.newsletter-form label  {
 	color: #A9AFC3;
-	opacity: 0.9;
+	opacity: 0.5;
+	font-size: 13px;
+    vertical-align: top;
 }
 .input-field select {
 	height: 36px;

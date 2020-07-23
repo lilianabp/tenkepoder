@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ten Ke Poder - {% trans %}Contacto{% endtrans %}{% endblock %}
+
+{% block content %}
+<section class="pager-sec text-right bg-darky pb-75">
+	<div class="container-fluid">
+		<ul>
+			<li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a></li>
+			<li><span>{% trans %}Contacto{% endtrans %}</span></li>
+		</ul>
+	</div>
+</section><!--pager-sec end-->
+
+<section class="sec-block2">
+	<h2 class="page-number bottom">01.</h2>
+	<div class="fixed-bg bg-darky"></div>
+	<div class="container">
+		<div class="contact-us-page">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="contact-list">
+						<div class="contact-lzt">
+							<div class="contact-icon">
+								<img src="{{ asset('images/c-icon1.svg') }}" alt="">
+							</div>
+							<div class="contact-nfo">
+								<h3>{% trans %}Dirección:{% endtrans %}</h3>
+								<p>{% trans %}Primo de Rivera 12, Alicante, 03002, España{% endtrans %}</p>
+							</div>
+						</div><!--contact-lzt end-->
+						<div class="contact-lzt">
+							<div class="contact-icon">
+								<img src="{{ asset('images/c-icon2.svg') }}" alt="">
+							</div>
+							<div class="contact-nfo">
+								<h3>{% trans %}Contáctanos:{% endtrans %}</h3>
+								<span><a href="tel:+34695807868">+34 695 80 78 68</a></span>
+								<span><a href="mailto:info@tenkepoder.com">info@tenkepoder.com</a></span>
+							</div>
+						</div><!--contact-lzt end-->
+						<div class="contact-lzt">
+							<div class="contact-icon">
+								<img src="{{ asset('images/c-icon3.svg') }}" alt="">
+							</div>
+							<div class="contact-nfo">
+								<h3>{% trans %}Horario:{% endtrans %}</h3>
+								<p>{% trans %}Lun - Vi: 9hs - 18hs Sáb, Dom: Cerrado{% endtrans %}</p>
+							</div>
+						</div><!--contact-lzt end-->
+					</div><!--contact-list end-->
+				</div>
+				<div class="col-lg-6">
+					<div class="contact-section-page">
+						<div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">
+							<span>{% trans %}Contáctanos{% endtrans %}</span>
+							<h1>{% trans %}Envíanos un mensaje{% endtrans %}<span></span></h1>
+							<p class="bdy">{% trans %}Cuéntanos sobre tu proyecto y lo haremos realidad...{% endtrans %} </p>
+						</div><!--title-hd end-->
+						<div class="contact-form wow fadeInUp" data-wow-delay="300ms">
+							{% include 'layout/contact.html.twig' with {'form': form } %}
+						</div><!--contact-form end-->
+					</div><!--consulation-section end-->
+				</div>
+			</div>
+		</div><!--contact-us-page end-->
+	</div>
+</section>	
+{% endblock %}

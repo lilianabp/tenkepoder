@@ -24,13 +24,15 @@ $(window).on("load", function() {
     if($('#contact-form').length){
       $('#submit').click(function(){
         
-              var o = new Object();
-              var form = '#contact-form';
-              var name = $('#contact-form .name').val();
-              var email = $('#contact-form .email').val();
-              var phone = $('#contact-form .phone').val();
-              var locale = document.location.pathname.split('/');
-        if(name == '' || email == '' || phone == '')
+        var o = new Object();
+        var form = '#contact-form';
+        var name = $('#contact-form .name').val();
+        var email = $('#contact-form .email').val();
+        var phone = $('#contact-form .phone').val();
+        var privacy = $('#newsletter-form #newsletter_privacy').prop('checked');
+        var locale = document.location.pathname.split('/');
+
+        if(name == '' || email == '' || phone == '' || !privacy)
         {
           if(locale[1] == 'en') {
             $('#contact-form .response').html('<div class="failed">Please fill the required fields *.</div>');
@@ -42,7 +44,7 @@ $(window).on("load", function() {
         }
               
         $.ajax({
-            url:"/"+locale[1]+"/contact",
+            url:"/"+locale[1]+"/sendcontact",
             method:"POST",
             data: $(form).serialize(),
             beforeSend:function(){
@@ -68,6 +70,7 @@ $(window).on("load", function() {
     });
     }
 
+    
 });
 
 

@@ -7,12 +7,9 @@
                         <div class="main-banner-text title-hd">
                             <span>newsletter</span>
                             <h1>{% trans %}Estamos en contacto {% endtrans %}<span></span></h1>
-                            <p class="bdy">{% trans %}Estamos agradecidos de saber que está interesado en nuestros contenidos y servicios. Suscríbase{% endtrans %}</p>
+                            <p class="bdy">{% trans %}Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete{% endtrans %}</p>
                         </div><!--title-hd end-->
-                        <form class="newsletter-form">
-                            <input type="email" name="email" placeholder="Email">
-                            <button type="submit"><img src="{{ asset('images/send.svg') }}" alt=""></button>
-                        </form>
+                        {{ render(controller('App\\Controller\\HomeController::getNewsletter')) }}
                         <div class="clearfix"></div>
                     </div><!--tp-contact end-->
                 </div>

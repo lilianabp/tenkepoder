@@ -277,9 +277,9 @@
         <source>Estamos en contacto</source>
         <target>Be Always In Touch</target>
       </trans-unit>
-      <trans-unit id="iYoeUB4" resname="Estamos agradecidos de saber que está interesado en nuestros contenidos y servicios. Suscríbase">
-        <source>Estamos agradecidos de saber que está interesado en nuestros contenidos y servicios. Suscríbase</source>
-        <target>We are grateful to know that you are interested in our content and services. Subscribe</target>
+      <trans-unit id="iYoeUB4" resname="Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete">
+        <source>Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete</source>
+        <target>We are grateful to know that you are interested in our content and services. Subscribe to</target>
       </trans-unit>
       <trans-unit id="TtYmfwW" resname="Nunca nos damos por vencidos. Los desafíos nos hacen más fuertes y profesionales. Hacemos tus ideas posibles...">
         <source>Nunca nos damos por vencidos. Los desafíos nos hacen más fuertes y profesionales. Hacemos tus ideas posibles...</source>
@@ -484,6 +484,14 @@
       <trans-unit id="RnpAPDp" resname="Todos los derechos reservados">
         <source>Todos los derechos reservados</source>
         <target>All rights reserved</target>
+      </trans-unit>
+      <trans-unit id="dxuWsIE" resname="Contacto">
+        <source>Contacto</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="RB1x11v" resname="Envíanos un mensaje">
+        <source>Envíanos un mensaje</source>
+        <target>Send a message</target>
       </trans-unit>
     </body>
   </file>

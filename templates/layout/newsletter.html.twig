@@ -1,0 +1,56 @@
+{{ form_start(form, {'attr': {'class': 'newsletter-form'} } ) }}
+	<div class="response"></div>
+	{{ form_widget(form.email) }}
+	<button type="submit"><img src="{{ asset('images/send.svg') }}" alt="TKP - Newsletter" id="submit-form"></button>
+	<div class="clearfix"></div>
+	{{ form_widget(form.privacy, {'attr': {'style':"width: 13px;margin-right: 5px"}}) }}
+    <label for="newsletter_privacy">{% trans %}Acepto la {% endtrans %}<a href=""> {% trans %}Política de Privacidad{% endtrans %}</a></label>
+{{ form_end(form) }}
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript">
+if($('.newsletter-form').length){
+      $('#submit-form').click(function(){
+          var o = new Object();
+          var form = '.newsletter-form';
+          var email = $('.newsletter-form #newsletter_email').val();
+          var privacy = $('.newsletter-form #newsletter_privacy').prop('checked');
+          var locale = document.location.pathname.split('/');
+
+          if(email == '' || !privacy)
+          {
+            if(locale[1] == 'en') {
+              $('.newsletter-form .response').html('<div class="failed">Please fill the required fields *.</div>');
+            } else {
+              $('.newsletter-form .response').html('<div class="failed">Por favor completa los campos requeridos *.</div>');
+            }
+            
+            return false;
+          }
+                
+          $.ajax({
+              url:"/"+locale[1]+"/sendnewsletter",
+              method:"POST",
+              data: $(form).serialize(),
+              beforeSend:function(){
+                  if(locale[1] == 'en') {
+                      $('.newsletter-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Sending...</div>');
+                  } else {
+                      $('.newsletter-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Enviando...</div>');
+                  }
+              },
+              success:function(data){
+                if(data.status == 'success'){
+                  $('form').trigger("reset");
+                }
+                $('.newsletter-form .response').fadeIn().html('<div class="text-info">'+data.message+'</div>');
+                  setTimeout(function(){
+                      $('.newsletter-form .response').fadeOut("slow");
+                }, 8000);
+              },
+              error:function(data){
+                  $('.newsletter-form .response').fadeIn().html('<div class="text-info">'+data.message+'</div>');
+              }
+          });
+      });
+    }
+</script>
