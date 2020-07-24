@@ -2819,3 +2819,16 @@ body.no-scroll {
   visibility: visible!important;
 }
 .grecaptcha-badge { visibility: hidden; }
+.privacy,
+.privacy p {
+	font-family: Muli;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 170%;
+	color: #A9AFC3;
+}
+.privacy h2 {
+    font-size: 24px;
+    padding: 13px 0;
+}

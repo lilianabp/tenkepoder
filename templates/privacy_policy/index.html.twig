@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ten Ke Poder{% endblock %}
+
+{% block content %}
+	<section class="pager-sec text-right pb-75 bg-0">
+	<div class="container-fluid">
+		<ul>
+			<li><a href="{{ path('home') }}" title="">{% trans %}Inicio{% endtrans %}</a></li>
+			<li><span>{% trans %}Política de Privacidad{% endtrans %}</span></li>
+		</ul>
+	</div>
+</section><!--pager-sec end-->
+<section class="cases-section black-bg">
+	<div class="page-content">
+		<div class="fixed-bg bg7"></div>
+		<h2 class="page-number">01.</h2>
+		<div class="container">
+			<div class="main-banner-text mw-100 title-hd wow fadeInUp mgb-100" data-wow-delay="300ms">
+				<span>{% trans %}Términos y Condiciones{% endtrans %}</span>
+				<h1>{% trans %}Política de Privacidad{% endtrans %}</h1>
+			</div><!--title-hd end-->
+			<div class="privacy">{% if app.request.locale == 'es' %}{{ privacy.text|raw }}{% else %}{{ privacy.textEn|raw }}{% endif %}</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

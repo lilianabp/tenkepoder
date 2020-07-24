@@ -83,8 +83,10 @@
             localStorage.setItem('page',  '{{ app.request.attributes.get('_route') }}');
             if ($(window).scrollTop() > 300) {
                 btn.addClass('show');
+                $('header').addClass('sticky');
             } else {
                 btn.removeClass('show');
+                $('header').removeClass('sticky');
             }
         });
 

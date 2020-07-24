@@ -47,3 +47,24 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Servicios, label: Servicios, on_top: true }
         public: true
+
+    admin.privacy_policy:
+        class: App\Admin\PrivacyPolicyAdmin
+        arguments: [~, App\Entity\PrivacyPolicy, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Política de Privacidad, label: Política de Privacidad, on_top: true }
+        public: true
+
+    admin.contact:
+        class: App\Admin\ContactAdmin
+        arguments: [~, App\Entity\Contact, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Contactos, label: Contactos, on_top: true }
+        public: true
+
+    admin.newsletter:
+        class: App\Admin\NewsletterAdmin
+        arguments: [~, App\Entity\Newsletter, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Newsletter, label: Newsletter, on_top: true }
+        public: true

@@ -32,7 +32,7 @@
         <div class="col-lg-12">
             <div class="input-field">
                 {{ form_widget(form.privacy) }}
-                <label for="contact_privacy">{% trans %}Acepto la {% endtrans %}<a href=""> {% trans %}Política de Privacidad*{% endtrans %}</a></label>
+                <label for="contact_privacy">{% trans %}Acepto la {% endtrans %}<a href="{{ path('privacy_policy') }}"> {% trans %}Política de Privacidad*{% endtrans %}</a></label>
             </div><!--input-field end-->
         </div>
         {{ form_errors(form) }}

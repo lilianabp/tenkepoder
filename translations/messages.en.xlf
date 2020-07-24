@@ -277,7 +277,7 @@
         <source>Estamos en contacto</source>
         <target>Be Always In Touch</target>
       </trans-unit>
-      <trans-unit id="iYoeUB4" resname="Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete">
+      <trans-unit id="L0lbVtm" resname="Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete">
         <source>Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete</source>
         <target>We are grateful to know that you are interested in our content and services. Subscribe to</target>
       </trans-unit>
@@ -492,6 +492,14 @@
       <trans-unit id="RB1x11v" resname="Envíanos un mensaje">
         <source>Envíanos un mensaje</source>
         <target>Send a message</target>
+      </trans-unit>
+      <trans-unit id="wPW0ApF" resname="Política de Privacidad*">
+        <source>Política de Privacidad*</source>
+        <target>Privacy Policy*</target>
+      </trans-unit>
+      <trans-unit id="uhStBvj" resname="Términos y Condiciones">
+        <source>Términos y Condiciones</source>
+        <target>Terms and Conditions</target>
       </trans-unit>
     </body>
   </file>

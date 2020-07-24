@@ -7,7 +7,7 @@
         {{ form_widget(form.recaptchaResponse) }}
     </div>
 	{{ form_widget(form.privacy, {'attr': {'style':"width: 13px;margin-right: 5px"}}) }}
-    <label for="newsletter_privacy">{% trans %}Acepto la {% endtrans %}<a href=""> {% trans %}Política de Privacidad{% endtrans %}</a></label>
+    <label for="newsletter_privacy">{% trans %}Acepto la {% endtrans %}<a href="{{ path('privacy_policy') }}"> {% trans %}Política de Privacidad{% endtrans %}</a></label>
 {{ form_end(form) }}
 <script src="https://www.google.com/recaptcha/api.js?render="></script>
 <script>
