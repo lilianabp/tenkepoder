@@ -28,9 +28,10 @@
 				{% set locale = app.request.locale %}
                 {% for service in services %}
 				<div class="col-lg-4 col-md-4 col-sm-6">
+
 					<div class="service-col">
 						<div class="svs-icon">
-							<img src="{{ asset('images/iconserv1.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
+							<img src="{{ asset('images/iconserv'~loop.index~'.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
 						</div>
 						<h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
 						<a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>

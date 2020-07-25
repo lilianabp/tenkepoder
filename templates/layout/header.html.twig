@@ -9,7 +9,7 @@
             {% if is_mobile() == 0 and is_tablet() == 0 %}
                 <div class="right-side-hd col-lg-9 text-right">
                     <a href="tel:+34 695 80 78 68" title="TKP - {% trans %}Llámanos{% endtrans %}"><span>+34 695 80 78 68</span>
-                    <a href="#" title="TKP - {% trans %}Solicita Presupuesto{% endtrans %}" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
+                    <a href="#consultation" title="TKP - {% trans %}Solicita Presupuesto{% endtrans %}" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
                 </div>
             {% endif %}
             <a href="#" title="" class="menu-btn col-2 col-md-1 ">
@@ -23,4 +23,4 @@
         </div><!--header-content end-->
     </div>  
 </header><!--header end-->
-{{ render(controller('App\\Controller\\HomeController::getHeaderData')) }}
+{{ render(controller('App\\Controller\\HomeController::getHeaderData', { 'route': app.request.attributes.get('_route'), 'route_params': app.request.attributes.get('_route_params') })) }}

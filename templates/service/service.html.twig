@@ -29,6 +29,7 @@
 						<div class="service-details-content">
 							<img src="{% path service.image, 'reference' %}" alt="TKP - {% if app.request.locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn}}{% endif %}" class="img-fluid">
 							<p>{% if app.request.locale == 'es' %}{{ service.abstract|raw }}{% else %}{{ service.abstractEn|raw }}{% endif %}</p>
+							<p>{% if app.request.locale == 'es' %}{{ service.description|raw }}{% else %}{{ service.descriptionEn|raw }}{% endif %}</p>
 							<h3>{% trans %}Flujo de Trabajo{% endtrans %}</h3>
 							<div class="row">
 								<div class="col-lg-4">
@@ -49,11 +50,10 @@
 									<div class="wk-text">
 										<span>{% trans %}paso 3{% endtrans %}</span>
 										<h3>{% trans %}Pruebas y Lanzamiento{% endtrans %}</h3>
-										<p>{% trans %}Testeos en un entorno de prueba. Generación/migración de contenidos. Revisión general y lanzamiento o publicación {% endtrans %}</p>
+										<p>{% trans %}Testeos en un entorno de prueba. Generación/migración de contenidos. Publicación. Garantía de 3 meses. {% endtrans %}</p>
 									</div><!--wk-text end-->
 								</div>
 							</div>
-							{% if app.request.locale == 'es' %}{{ service.description|raw }}{% else %}{{ service.descriptionEn|raw }}{% endif %}
 						</div><!--service-details-content end-->
 					</div>
 					<div class="col-lg-3">
@@ -68,9 +68,9 @@
 							<div class="widget widget-help">
 								<h3>{% trans %}¿Cómo podemos ayudarte?{% endtrans %}</h3>
 								<p>{% trans %}¿No sabes por dónde empezar? Te ayudamos.{% endtrans %}</p>
-								<a href="#" title="TKP - {% trans %}Contáctanos{% endtrans %}" class="btn-default2">{% trans %}Contáctanos{% endtrans %}</a>
+								<a href="{{ path('contact') }}" title="TKP - {% trans %}Contáctanos{% endtrans %}" class="btn-default2">{% trans %}Contáctanos{% endtrans %}</a>
 							</div><!--widget-help end-->
-							<div class="widget widget-newslettter">
+							{# <div class="widget widget-newslettter">
 								<h3>Newsletter</h3>
 								<form>
 									<input type="email" name="email" placeholder="Email">
@@ -81,7 +81,7 @@
 									<li><a href="#" title="">lin</a></li>
 									<li><a href="#" title="">inst</a></li>
 								</ul>
-							</div><!--widget-newslettter end-->
+							</div><!--widget-newslettter end--> #}
 						</div><!--sidebar end-->
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 	</div><!--about-in-details end-->
 </section><!--about_us_section end-->
 
-<section class="sec-block">
+{# <section class="sec-block">
 	<div class="fixed-bg bg7"></div>
 	<h2 class="page-number">02.</h2>
 	<div class="container">
@@ -156,10 +156,10 @@
 		</div><!--prices-section end-->
 	</div>
 </section>
-
+ #}
 <section class="sec-block">
 	<div class="fixed-bg bg4"></div>
-	<h2 class="page-number">03.</h2>
+	<h2 class="page-number">02.</h2>
 	<div class="container">
 		<div class="section-head">
 			<div class="main-banner-text title-hd wow fadeInUp" data-wow-delay="300ms">

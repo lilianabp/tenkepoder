@@ -501,6 +501,10 @@
         <source>Términos y Condiciones</source>
         <target>Terms and Conditions</target>
       </trans-unit>
+      <trans-unit id="Z1bEoOf" resname="Testeos en un entorno de prueba. Generación/migración de contenidos. Publicación. Garantía de 3 meses.">
+        <source>Testeos en un entorno de prueba. Generación/migración de contenidos. Publicación. Garantía de 3 meses.</source>
+        <target>Testing in a test environment. Content generation/migration. Launch. 3 months of warranty.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

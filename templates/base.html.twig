@@ -69,11 +69,11 @@
         localStorage.clear();
         
         {% if app.request.locale == 'es' %}
-            $('.es').addClass('active');
-            $('.en').removeClass('active');
+            $('.es').addClass('active btn-default2');
+            $('.en').removeClass('active btn-default2');
         {% else %}
-            $('.en').addClass('active');
-            $('.es').removeClass('active');
+            $('.en').addClass('active btn-default2');
+            $('.es').removeClass('active btn-default2');
         {% endif %}
 
         var btn = $('#button');
@@ -83,10 +83,8 @@
             localStorage.setItem('page',  '{{ app.request.attributes.get('_route') }}');
             if ($(window).scrollTop() > 300) {
                 btn.addClass('show');
-                $('header').addClass('sticky');
             } else {
                 btn.removeClass('show');
-                $('header').removeClass('sticky');
             }
         });
 

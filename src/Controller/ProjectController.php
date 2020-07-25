@@ -16,7 +16,7 @@ class ProjectController extends AbstractController
      */
     public function index(EntityManagerInterface $entityManager)
     {
-    	$projects = $entityManager->getRepository(Project::class)->findAll();
+    	$projects = $entityManager->getRepository(Project::class)->findBy([],['finish_date'=>'DESC']);
     	$categories = $entityManager->getRepository(Category::class)->findBy(['enabled' => 1]);
         return $this->render('project/index.html.twig', [
             'controller_name' => 'ProjectController',

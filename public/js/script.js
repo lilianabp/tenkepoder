@@ -15,6 +15,11 @@ $(window).on("load", function() {
     $("html").on("click", function() {
       $(".responsive-mobile-menu").removeClass("show");
     });
+
+    $(".close-menu").on("click", function() {
+      $(".responsive-mobile-menu").removeClass("show");
+    });
+
     $(".menu-btn, .responsive-mobile-menu").on("click", function(e) {
       e.stopPropagation();
     })

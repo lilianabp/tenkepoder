@@ -39,7 +39,7 @@
     {% if is_mobile() or is_tablet() %}
         <div class="container">
             <div class="row pt-4 text-center">
-                <div class="col-12"><a href="#" title="TKP - Presupuesto" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a></div>
+                <div class="col-12"><a href="#consultation" title="TKP - Presupuesto" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a></div>
                 <div class="col-12"><a href="tel:+34695807868" title="TKP - Presupuesto" class="btn-default2 mt-4 ml-1">+34 695 80 78 68</a></div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                 <h1>{% trans %}Somos un equipo de profesionales{% endtrans %}<span></span></h1>
                 <p>{% trans %}Con más de 10 años de experiencia en diferentes tecnologías. {% endtrans %}</p>
                 <p class="bdy">{% trans %}Estamos comprometidos con la calidad de nuestros productos y su satisfacción, gracias a nuestro grupo de profesionales con experiencia somos capaces de brindarle el valor agregado que usted y su negocio están buscando.{% endtrans %} </p>
-                <a href="about.html" title="" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt=""></a>
+                <a href="{{ path('services') }}" title="" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt=""></a>
             </div>
         </div><!--expt-text end-->
         <div class="clearfix"></div>
@@ -81,7 +81,7 @@
                     <div class="col-lg-3">
                         <div class="service-col wow fadeIn" data-wow-delay="300ms">
                             <div class="svs-icon">
-                                <img src="{{ asset('images/iconserv1.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
+                                <img src="{{ asset('images/iconserv'~loop.index~'.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
                             </div>
                             <h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
                             <a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
@@ -93,7 +93,7 @@
     </div><!--services-section end-->
 </section>
 
-<section class="sec-block overlay">
+<section class="sec-block overlay" id="consultation">
     <div class="bg-position right-position"></div>
     <div class="container">
         <div class="consulation-section">
@@ -125,7 +125,7 @@
         <div class="pft-items">
             <div class="row">
                 {% for project in projects %}
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 pb-3">
                         <div class="pft-item wow fadeInUp" data-wow-delay="300ms">
                             <img src="{% path project.image, 'reference' %}" alt="TKP - {{ project.name }}">
                             <div class="figcaption">

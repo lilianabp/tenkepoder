@@ -7,6 +7,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Service;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
+use App\Entity\Newsletter;
+use App\Form\NewsletterType;
 
 class ServiceController extends AbstractController
 {
@@ -29,10 +31,14 @@ class ServiceController extends AbstractController
     {
         $services = $entityManager->getRepository(Service::class)->findAll();
     	$service = $entityManager->getRepository(Service::class)->findOneBy(['slug' => $slug]);
+
+        $newsletter = new Newsletter();
+        $form = $this->createForm(NewsletterType::class, $newsletter);
         return $this->render('service/service.html.twig', [
             'controller_name' => 'ServiceController',
             'service' => $service,
             'services' => $services,
+            'form' => $form,
         ]);
     }
 }

@@ -42,7 +42,7 @@
 											{% set categories = categories~' '~category.name %}
 										{% endif %}
 									{% endfor %}
-									<div class="col-lg-4 col-md-6 col-sm-6 {{categories}}">
+									<div class="col-lg-4 col-md-6 col-sm-6 pb-2 {{categories}}">
 										<div class="tema-col">
 											<img src="{% path project.image, 'reference' %}" alt="{{ project.slug }} {{ categories }}">
 											<div class="team-caption">

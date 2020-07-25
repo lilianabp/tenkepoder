@@ -37,14 +37,17 @@ class HomeController extends AbstractController
     /**
      * @Route("/{_locale}/headerData", name="headerData")
      */
-    public function getHeaderData(EntityManagerInterface $entityManager)
+    public function getHeaderData(EntityManagerInterface $entityManager, $route, $route_params)
     {
         $services = $entityManager->getRepository(Service::class)->findAll();
         $projects = $entityManager->getRepository(Project::class)->findAll();
+     
         return $this->render('layout/responsive-mobile-menu.html.twig', [
             'controller_name' => 'HomeController',
             'services' => $services,
             'projects' => $projects,
+            'route' => $route,
+            'route_params' => $route_params,
         ]);
     }
 

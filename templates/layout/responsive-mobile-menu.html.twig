@@ -1,8 +1,15 @@
 <div class="responsive-mobile-menu">
+    {% set params = route_params|merge(app.request.query.all) %}
+    {% if is_mobile() %}
+        <i class="fa fa-times fa-2x close-menu" aria-hidden="true"></i>
+    {% endif %}
     <div class="responsive-logo">
         <img src="{{ asset('images/logo_menu_responsive.png')}}" alt="Ten Ke Poder" style="width: 35%">
     </div>
     <ul>
+        {% if is_mobile() %}
+            <li><a class="es active mr-4" href="{{ path(route, params|merge({ _locale: 'es' })) }}" title="Ten Ke Poder">{% trans %}Español{% endtrans %}</a><a class="en" href="{{ path(route, params|merge({ _locale: 'en' })) }}" title="Ten Ke Poder">{% trans %}Inglés{% endtrans %}</a></li>
+        {% endif %}
         <li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a>
         </li>
         <li><a href="{{ path('services') }}" title="TKP - {% trans %}Servicios{% endtrans %}">{% trans %}Servicios{% endtrans %}</a>
@@ -14,5 +21,6 @@
         </li>
         <li><a href="{{ path('projects') }}" title="TKP - {% trans %}Proyectos{% endtrans %}">{% trans %}Proyectos{% endtrans %}</a></li>
         <li><a href="{{ path('contact') }}" title="TKP - {% trans %}Contáctanos{% endtrans %}">{% trans %}Contáctanos{% endtrans %}</a></li>
+        <li><a href="{{ path('privacy_policy') }}" title="TKP - {% trans %}Política de Privacidad{% endtrans %}">{% trans %}Política de Privacidad{% endtrans %}</a></li>
     </ul>
 </div><!--responsive-mobile-menu end-->
