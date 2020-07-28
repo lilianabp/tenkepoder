@@ -3,13 +3,13 @@
         <div class="row header-content">
             <div class="logo col-10 col-md-11 col-lg-3">
                 <a href="{{ path('home') }}" title="Ten Ke Poder - TKP">
-                    <img src="{{ asset('images/logo.png') }}" alt="Ten Ke Poder - TKP">
+                    <img src="{{ asset('images/logo.webp') }}" alt="Ten Ke Poder - TKP" loading="lazy">
                 </a>
             </div><!--logo end-->
             {% if is_mobile() == 0 and is_tablet() == 0 %}
                 <div class="right-side-hd col-lg-9 text-right">
                     <a href="tel:+34 695 80 78 68" title="TKP - {% trans %}Llámanos{% endtrans %}"><span>+34 695 80 78 68</span>
-                    <a href="#consultation" title="TKP - {% trans %}Solicita Presupuesto{% endtrans %}" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
+                    <a {% if app.request.attributes.get('_route') == 'home' %}href="#consultation"{% else %}href="{{ path('contact') }}"{% endif %} title="TKP - {% trans %}Solicita Presupuesto{% endtrans %}" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a>
                 </div>
             {% endif %}
             <a href="#" title="" class="menu-btn col-2 col-md-1 ">

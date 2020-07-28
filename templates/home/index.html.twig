@@ -11,7 +11,7 @@
                     <span class="wow fadeInUp" data-wow-delay="300ms">{% trans %}Estrategia{% endtrans %}</span>
                     <h1 class="wow fadeInUp" data-wow-delay="450ms">{% trans %}Soluciones digitales{% endtrans %}<span></span></h1>
                     <p class="wow fadeInUp" data-wow-delay="600ms">{% trans %}Creamos nuevas tecnologías para tu negocio. Te ayudamos a mantener, adaptar o expandir tu proyecto. {% endtrans %}</p>
-                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;"></a>
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -21,7 +21,7 @@
                     <span>{% trans %}Creatividad{% endtrans %}</span>
                     <h1>{% trans %}Diseño web{% endtrans %}<span></span></h1>
                     <p>{% trans %}Responsive. Soporte SEO con metadatos que te permiten posicionar fácilmente. Contenidos web gestionables. {% endtrans %}</p>
-                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;"></a>
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -31,7 +31,7 @@
                     <span>{% trans %}Compromiso{% endtrans %}</span>
                     <h1>{% trans %}Orientado a objetivos{% endtrans %}<span></span></h1>
                     <p>{% trans %}Te ofrecemos soluciones web adaptadas a tus necesidades y objetivos. {% endtrans %}</p>
-                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;"></a>
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -56,7 +56,7 @@
                 <h1>{% trans %}Somos un equipo de profesionales{% endtrans %}<span></span></h1>
                 <p>{% trans %}Con más de 10 años de experiencia en diferentes tecnologías. {% endtrans %}</p>
                 <p class="bdy">{% trans %}Estamos comprometidos con la calidad de nuestros productos y su satisfacción, gracias a nuestro grupo de profesionales con experiencia somos capaces de brindarle el valor agregado que usted y su negocio están buscando.{% endtrans %} </p>
-                <a href="{{ path('services') }}" title="" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt=""></a>
+                <a href="{{ path('services') }}" title="" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="" loading="lazy"></a>
             </div>
         </div><!--expt-text end-->
         <div class="clearfix"></div>
@@ -81,7 +81,7 @@
                     <div class="col-lg-3">
                         <div class="service-col wow fadeIn" data-wow-delay="300ms">
                             <div class="svs-icon">
-                                <img src="{{ asset('images/iconserv'~loop.index~'.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}">
+                                <img src="{{ asset('images/iconserv'~loop.index~'.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" loading="lazy">
                             </div>
                             <h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
                             <a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
@@ -119,7 +119,7 @@
                 <h1>{% trans %}Proyectos recientes {% endtrans %}<span></span></h1>
                 <p class="bdy">{% trans %}Siempre tratamos de implementar nuestros proyectos al más alto nivel. Sumate a nuestro portfolio.{% endtrans %}</p>
             </div><!--title-hd end-->
-            <a href="{{ path('projects') }}" title="TKP - {% trans %}Proyectos{% endtrans %}" class="btn-default2">{% trans %}Ver todos los proyectos{% endtrans %}<img src="images/icon4.svg" alt=""></a>
+            <a href="{{ path('projects') }}" title="TKP - {% trans %}Proyectos{% endtrans %}" class="btn-default2">{% trans %}Ver todos los proyectos{% endtrans %}<img src="images/icon4.svg" alt="" loading="lazy"></a>
             <div class="clearfix"></div>
         </div>
         <div class="pft-items">
@@ -127,7 +127,7 @@
                 {% for project in projects %}
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 pb-3">
                         <div class="pft-item wow fadeInUp" data-wow-delay="300ms">
-                            <img src="{% path project.image, 'reference' %}" alt="TKP - {{ project.name }}">
+                            <img src="{% path project.image, 'reference' %}" alt="TKP - {{ project.name }}" loading="lazy">
                             <div class="figcaption">
                                 <h2><a href="{{ path('project', {slug: project.slug}) }}" title="">{{ project.name }}</a></h2>
                                 <a href="{{ path('project', {slug: project.slug}) }}" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>

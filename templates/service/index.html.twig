@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ten Ke Poder{% endblock %}
+{% block title %}Ten Ke Poder - {% trans %}Servicios{% endtrans %}{% endblock %}
 
 {% block content %}
 <section class="pager-sec text-right pb-75">
 	<div class="container-fluid">
 		<ul>
 			<li><a href="{{ path('home') }}" title="TKP - {% trans %}Inicio{% endtrans %}">{% trans %}Inicio{% endtrans %}</a></li>
-			<li><span>Services</span></li>
+			<li><span>{% trans %}Servicios{% endtrans %}</span></li>
 		</ul>
 	</div>
 </section><!--pager-sec end-->

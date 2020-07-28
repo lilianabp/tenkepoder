@@ -206,7 +206,7 @@ a,
 	z-index: -1;
 }
 .bg-position {
-	background-image: url(../images/resources/home-02.jpg);
+	background-image: url(../images/resources/home-02.webp);
 	background-size: inherit;
 	position: absolute;
 	top: 0;
@@ -231,7 +231,7 @@ a,
 }
 .right-position {
 	background-position: right;
-	background-image: url(../images/resources/home-03.jpg);
+	background-image: url(../images/resources/home-03.webp);
 	background-size: contain;
 }
 .bg3 {
@@ -436,7 +436,7 @@ header .menu-btn {
 /* ================ MAIN BANNER ================ */
 
 .main-banner {
-	background: url(../images/resources/home-01.jpg) #121318;
+	background: url(../images/resources/home-01.webp) #121318;
 	background-repeat: no-repeat;
 	background-position: top right;
 	background-size: auto;
@@ -1847,7 +1847,7 @@ footer {
 /* ================ WIDGET HELP ================== */
 
 .widget-help {
-	background-image: url(../images/resources/home-01.jpg);
+	background-image: url(../images/resources/home-01.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 44px 40px;

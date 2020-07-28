@@ -26,12 +26,23 @@ class HomeController extends AbstractController
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact); 
 
-        return $this->render('home/index.html.twig', [
+
+        $response = $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'services' => $services,
             'projects' => $projects,
             'form' => $form->createView(),
         ]);
+
+        // cache for 3600 seconds
+        $response->setMaxAge(3600);
+        $response->setSharedMaxAge(3600);
+
+        // (optional) set a custom Cache-Control directive
+        $response->headers->addCacheControlDirective('must-revalidate', true);
+
+        return $response;
+         
     }
 
     /**

@@ -12,7 +12,7 @@
 	.main-banner-text.title-hd > h1 {font-size: 54px;}
 	footer  {background-position: center;}
 	.right-position {background-position: right;}
-	.main-banner {background-size: contain;background-position: right;}
+	.main-banner {background-size: contain!important;background-position: right!important;}
 	.lang-slct li {padding: 0 13px;}
 	header.pb .container {padding: 0 15px 0 115px;}
 	.page-number {right: 40px;}
