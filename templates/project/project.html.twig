@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ten Ke Poder - {% trans %}Proyectos{% endtrans %}{% endblock %}
+{% block title %}Ten Ke Poder - {{ project.name }} - {% for category in project.category|filter(v => v.enabled )  %} {{ category.name }} {% endfor %}{% endblock %}
 
 {% block content %}
 <section class="pager-sec text-right pb-75 bg-0">

@@ -517,6 +517,10 @@
         <source>Escríbenos</source>
         <target>Email us</target>
       </trans-unit>
+      <trans-unit id="Vgx1mXj" resname="Seguinos en Instagram">
+        <source>Seguinos en Instagram</source>
+        <target>Follow us on Instagram</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

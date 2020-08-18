@@ -8,11 +8,13 @@
                             <span>{% trans %}Motivación{% endtrans %}</span>
                             <h1>{% trans %}Estamos en contacto {% endtrans %}<span></span></h1>
                             <p class="bdy">{% trans %}Estamos agradecidos de saber que estás interesado en nuestros servicios. Contáctanos{% endtrans %}</p>
-                            <a href="{{ path('contact') }}" class="pr-3" title="{% trans %}Escríbenos{% endtrans %}"><i class="fa fa-envelope-o fa-2x mt-3" aria-hidden="true"></i></a>
-                            <a href="tel:+34695807868" class="pr-3" title="{% trans %}Llámanos{% endtrans %}"><i class="fa fa-phone-square fa-2x mt-3" aria-hidden="true"></i></a>
+                            <a href="{{ path('contact') }}" class="" title="{% trans %}Escríbenos{% endtrans %}"><i class="fa fa-envelope-o fa-2x mt-3" aria-hidden="true"></i></a>
+                            <a href="tel:+34695807868" class="" title="{% trans %}Llámanos{% endtrans %}"><i class="fa fa-phone-square fa-2x mt-3" aria-hidden="true"></i></a>
                             {% if is_mobile() %}
                                 <a href="https://wa.me/34695807868"><i class="fa fa-whatsapp fa-2x mt-3" aria-hidden="true"></i></a>
                             {% endif %}
+                            <a href="https://www.facebook.com/tenkepoder" target="_blank" title="Facebook"><i class="fa fa-facebook-official fa-2x mt-3" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/tenkepoder" target="_blank" title="Instagram"><i class="fa fa-instagram fa-2x mt-3" aria-hidden="true"></i></a>
                         </div><!--title-hd end-->
                         <div class="clearfix"></div>
                     </div><!--tp-contact end-->
@@ -21,7 +23,12 @@
                     <div class="testimonial-sec wow fadeInDown" data-wow-delay="300ms">
                         <div class="testi-head"></div>
                         <p>{% trans %}Nunca nos damos por vencidos. Los desafíos nos hacen más fuertes y profesionales. Hacemos tus ideas posibles...{% endtrans %}</p>
-                    </div><!--testimonial-sec end-->
+                        <!-- SnapWidget -->
+                        <h5 style="color:#e5e7ed" class="mt-5 mb-3">{% trans %}Seguinos en Instagram{% endtrans %} <a href="https://www.instagram.com/tenkepoder/" style="color:#DD4242" target="_blank">@tenkepoder</a></h5>
+                       <!-- SnapWidget -->
+                        <script src="https://snapwidget.com/js/snapwidget.js" async defer></script>
+                        <iframe src="https://snapwidget.com/embed/863565" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;width:100%; "></iframe>
+                        </div><!--testimonial-sec end-->
                     <div class="clearfix"></div>
                 </div>
             </div>

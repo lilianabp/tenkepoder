@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ten Ke Poder{% endblock %}
+{% block title %}Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder{% endblock %}
 
 {% block content %}
 <section class="main-banner" {% if is_mobile() %}style="background-size: cover;background-position: center;"{% endif %}>
@@ -11,7 +11,7 @@
                     <span class="wow fadeInUp" data-wow-delay="300ms">{% trans %}Estrategia{% endtrans %}</span>
                     <h1 class="wow fadeInUp" data-wow-delay="450ms">{% trans %}Soluciones digitales{% endtrans %}<span></span></h1>
                     <p class="wow fadeInUp" data-wow-delay="600ms">{% trans %}Creamos nuevas tecnologías para tu negocio. Te ayudamos a mantener, adaptar o expandir tu proyecto. {% endtrans %}</p>
-                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
+                    <a href="#sec-block" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -21,7 +21,7 @@
                     <span>{% trans %}Creatividad{% endtrans %}</span>
                     <h1>{% trans %}Diseño web{% endtrans %}<span></span></h1>
                     <p>{% trans %}Responsive. Soporte SEO con metadatos que te permiten posicionar fácilmente. Contenidos web gestionables. {% endtrans %}</p>
-                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
+                    <a href="#sec-block" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -31,7 +31,7 @@
                     <span>{% trans %}Compromiso{% endtrans %}</span>
                     <h1>{% trans %}Orientado a objetivos{% endtrans %}<span></span></h1>
                     <p>{% trans %}Te ofrecemos soluciones web adaptadas a tus necesidades y objetivos. {% endtrans %}</p>
-                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="TKP - Services" style="display: unset; width: auto;" loading="lazy"></a>
+                    <a href="#sec-block" title="TKP - Services" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder" style="display: unset; width: auto;" loading="lazy"></a>
                 </div><!--main-banner-text end-->
             </div>
         </div><!--banner-slide end-->
@@ -39,9 +39,15 @@
     {% if is_mobile() or is_tablet() %}
         <div class="container">
             <div class="row pt-4 text-center">
-                <div class="col-12"><a href="#consultation" title="TKP - Presupuesto" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a></div>
-                <div class="col-12"><a href="tel:+34695807868" title="TKP - Presupuesto" class="btn-default2 mt-4 ml-1">+34 695 80 78 68</a></div>
-                <div class="col-12"><a href="https://wa.me/34695807868"><i class="fa fa-whatsapp fa-2x mt-3" aria-hidden="true" style="color: #dd4242"></i></a></div>
+                <div class="col-12"><a href="#consultation" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | Presupuesto" class="btn-default">{% trans %}Solicita Presupuesto{% endtrans %}</a></div>
+                <div class="col-12"><a href="tel:+34695807868" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | Presupuesto" class="btn-default2 mt-4 ml-1">+34 695 80 78 68</a></div>
+                <div class="col-12">
+                    <a href="https://wa.me/34695807868">
+                        <i class="fa fa-whatsapp fa-2x mt-3" aria-hidden="true" style="color: #dd4242"></i>
+                    </a>
+                    <a href="https://www.facebook.com/tenkepoder" target="_blank"><i class="fa fa-facebook-official fa-2x mt-3" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/tenkepoder" target="_blank"><i class="fa fa-instagram fa-2x mt-3" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
     {% endif %}
@@ -57,7 +63,7 @@
                 <h1>{% trans %}Somos un equipo de profesionales{% endtrans %}<span></span></h1>
                 <p>{% trans %}Con más de 10 años de experiencia en diferentes tecnologías. {% endtrans %}</p>
                 <p class="bdy">{% trans %}Estamos comprometidos con la calidad de nuestros productos y su satisfacción, gracias a nuestro grupo de profesionales con experiencia somos capaces de brindarle el valor agregado que usted y su negocio están buscando.{% endtrans %} </p>
-                <a href="{{ path('services') }}" title="" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="" loading="lazy"></a>
+                <a href="{{ path('services') }}" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder" class="btn-default2">{% trans %}ver más{% endtrans %} <img src="images/icon4.svg" alt="" loading="lazy"></a>
             </div>
         </div><!--expt-text end-->
         <div class="clearfix"></div>
@@ -85,7 +91,7 @@
                                 <img src="{{ asset('images/iconserv'~loop.index~'.svg') }}" alt="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" loading="lazy">
                             </div>
                             <h3>{% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}</h3>
-                            <a href="{{ path('service', {slug: service.slug }) }}" title="TKP - {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
+                            <a href="{{ path('service', {slug: service.slug }) }}" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | {% if locale == 'es' %}{{ service.name }}{% else %}{{ service.nameEn }}{% endif %}" class="btn-default2">{% trans %}ver más{% endtrans %}</a>
                         </div><!--service-col end-->
                     </div>
                 {% endfor %}
@@ -120,7 +126,7 @@
                 <h1>{% trans %}Proyectos recientes {% endtrans %}<span></span></h1>
                 <p class="bdy">{% trans %}Siempre tratamos de implementar nuestros proyectos al más alto nivel. Sumate a nuestro portfolio.{% endtrans %}</p>
             </div><!--title-hd end-->
-            <a href="{{ path('projects') }}" title="TKP - {% trans %}Proyectos{% endtrans %}" class="btn-default2">{% trans %}Ver todos los proyectos{% endtrans %}<img src="images/icon4.svg" alt="" loading="lazy"></a>
+            <a href="{{ path('projects') }}" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | {% trans %}Proyectos{% endtrans %}" class="btn-default2">{% trans %}Ver todos los proyectos{% endtrans %}<img src="images/icon4.svg" alt="" loading="lazy"></a>
             <div class="clearfix"></div>
         </div>
         <div class="pft-items">
@@ -128,10 +134,10 @@
                 {% for project in projects %}
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 pb-3">
                         <div class="pft-item wow fadeInUp" data-wow-delay="300ms">
-                            <img src="{% path project.image, 'reference' %}" alt="TKP - {{ project.name }}" loading="lazy">
+                            <img src="{% path project.image, 'reference' %}" alt="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | {{ project.name }}" loading="lazy">
                             <div class="figcaption">
-                                <h2><a href="{{ path('project', {slug: project.slug}) }}" title="">{{ project.name }}</a></h2>
-                                <a href="{{ path('project', {slug: project.slug}) }}" title=""><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
+                                <h2><a href="{{ path('project', {slug: project.slug}) }}" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | {{ project.name }}">{{ project.name }}</a></h2>
+                                <a href="{{ path('project', {slug: project.slug}) }}" title="Diseño, Desarrollo y Posicionamiento Web | Ten Ke Poder | {{ project.name }}"><img src="{{ asset('images/icon9.svg') }}" alt=""></a>
                             </div><!--figcaption end-->
                         </div><!--pft-item end-->
                     </div>
