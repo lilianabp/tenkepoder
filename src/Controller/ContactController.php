@@ -45,8 +45,8 @@ class ContactController extends AbstractController
 
         // Recaptcha v3 control
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = '';
-        $recaptcha_response = $form->get('recaptchaResponse')->getData();
+        $recaptcha_secret = '6LfkKrUZAAAAACGHWygGnI8iU5IRk2Zali_gv8NX';
+        $recaptcha_response = $request->request->get('g-recaptcha-response');
 
         // Make and decode POST request:
         $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
@@ -64,10 +64,10 @@ class ContactController extends AbstractController
 	                $message = $e->getMessage();
 	            }  
 
-	            $subject = ($locale == "es")?"Gracias por contactarnos":"Thank you for contacting us";
+	            $subject = ($locale == 'es')?'Gracias por contactarnos':'Thank you for contacting us';
 	            try {
 	            // Send email to user
-	            $status = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $request->get('contact')['email'], $contact);
+	            $status = $emailService->sendEmail('email/email_user.html.twig', $subject, $_ENV['MAILER_FROM'], $contact->getEmail(), $contact);
 	            $message = ($locale == 'es')?'Datos enviados correctamente.':'Successfully sent data.';
 	            $emailService->sendEmail('email/email_tkp.html.twig', 'Contacto recibido desde la web', $_ENV['MAILER_FROM'],$_ENV['MAILER_FROM'], $contact);
 	            } catch(\Exception $e) {
@@ -99,7 +99,7 @@ class ContactController extends AbstractController
 
         // Recaptcha v3 control
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = '';
+        $recaptcha_secret = '6LfkKrUZAAAAACGHWygGnI8iU5IRk2Zali_gv8NX';
         $recaptcha_response = $form->get('recaptchaResponse')->getData();
 
         // Make and decode POST request:

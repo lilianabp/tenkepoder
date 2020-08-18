@@ -8,30 +8,24 @@
     <meta name="author" content="Ten Ke Poder">
     <meta name="keywords" content="" />
     <link rel="icon" href="{{ asset('images/favicon.png') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/animate.css')}}" async defer>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}" async defer>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/compressed.css')}}" async defer>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" async defer>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css')}}" async defer>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick-theme.css')}}" async defer>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}" async defer>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/color.css')}}" async defer>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css')}}" async defer>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" async defer>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB35E5Z1EJ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173932602-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-YB35E5Z1EJ');
+      gtag('config', 'UA-173932602-1');
     </script>
 </head>
 <body {% if app.request.attributes.get('_route') != 'home' %}class="bg-color2"{% endif %}>
     <div class="preloader">
         <div class="loader-content">
             <div class="logo text-center">
-                <img src="{{ asset('images/logo.webp') }}" alt="Ten Ke Poder - TKP" loading="lazy">
+                <img src="{{ asset('images/logo.webp') }}" alt="Ten Ke Poder - TKP" loading="lazy" width="250">
             </div>
             <h2>{% trans %}cargando...{% endtrans %}</h2>
             <img src="{{ asset('images/preloader.gif') }}" alt="Ten Ke Poder - TKP" loading="lazy">
@@ -61,17 +55,9 @@
         {% include 'layout/footer.html.twig' %}
     </div><!--wrapper end-->
     <div class="clearfix"></div>
-    
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/popper.js') }}" async></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}" async></script>
-    <script src="{{ asset('js/plugin/slick.min.js') }}" async></script>
-    <script src="{{ asset('js/plugin/html5lightbox.js') }}" async></script>
-    <script src="{{ asset('js/plugin/isotope.js') }}" async></script>
-    <script src="{{ asset('js/wow.min.js') }}" async></script>
-    <script src="{{ asset('js/script.js') }}" async></script>
-    <script type="text/javascript" async  defer>
-    $(document).ready(function(){
+    <script src="{{ asset('js/compressed.js') }}" async defer></script>
+    <script type="text/javascript" async>
+    window.onload = function () {
         if(localStorage.getItem('page') == '{{ app.request.attributes.get('_route') }}') {
             $(window).scrollTop(localStorage.getItem('position'));
         }
@@ -101,7 +87,7 @@
           e.preventDefault();
           $('html, body').animate({scrollTop:0}, '300');
         });
-    });
+    };
     </script>
 </body>
 </html>

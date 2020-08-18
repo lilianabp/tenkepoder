@@ -9,6 +9,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Newsletter;
 use App\Form\NewsletterType;
+use App\Entity\Contact;
+use App\Form\ContactType;
 
 class ServiceController extends AbstractController
 {
@@ -18,9 +20,12 @@ class ServiceController extends AbstractController
     public function index(EntityManagerInterface $entityManager)
     {
     	$services = $entityManager->getRepository(Service::class)->findAll();
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
         return $this->render('service/index.html.twig', [
             'controller_name' => 'ServiceController',
             'services' => $services,
+            'form' => $form->createView(),
         ]);
     }
 

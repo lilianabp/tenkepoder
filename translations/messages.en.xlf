@@ -505,6 +505,18 @@
         <source>Testeos en un entorno de prueba. Generación/migración de contenidos. Publicación. Garantía de 3 meses.</source>
         <target>Testing in a test environment. Content generation/migration. Launch. 3 months of warranty.</target>
       </trans-unit>
+      <trans-unit id="lTJCA44" resname="Motivación">
+        <source>Motivación</source>
+        <target>Motivation</target>
+      </trans-unit>
+      <trans-unit id="yDBQqay" resname="Estamos agradecidos de saber que estás interesado en nuestros servicios. Contáctanos">
+        <source>Estamos agradecidos de saber que estás interesado en nuestros servicios. Contáctanos</source>
+        <target>We are grateful to know that you are interested in our services. Contact us at</target>
+      </trans-unit>
+      <trans-unit id="6cgpBuG" resname="Escríbenos">
+        <source>Escríbenos</source>
+        <target>Email us</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

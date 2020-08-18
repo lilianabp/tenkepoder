@@ -5,11 +5,15 @@
                 <div class="col-lg-6">
                     <div class="tp-contact wow fadeInUp" data-wow-delay="300ms">
                         <div class="main-banner-text title-hd">
-                            <span>newsletter</span>
+                            <span>{% trans %}Motivación{% endtrans %}</span>
                             <h1>{% trans %}Estamos en contacto {% endtrans %}<span></span></h1>
-                            <p class="bdy">{% trans %}Estamos agradecidos de saber que estás interesado en nuestros contenidos y servicios. Suscríbete{% endtrans %}</p>
+                            <p class="bdy">{% trans %}Estamos agradecidos de saber que estás interesado en nuestros servicios. Contáctanos{% endtrans %}</p>
+                            <a href="{{ path('contact') }}" class="pr-3" title="{% trans %}Escríbenos{% endtrans %}"><i class="fa fa-envelope-o fa-2x mt-3" aria-hidden="true"></i></a>
+                            <a href="tel:+34695807868" class="pr-3" title="{% trans %}Llámanos{% endtrans %}"><i class="fa fa-phone-square fa-2x mt-3" aria-hidden="true"></i></a>
+                            {% if is_mobile() %}
+                                <a href="https://wa.me/34695807868"><i class="fa fa-whatsapp fa-2x mt-3" aria-hidden="true"></i></a>
+                            {% endif %}
                         </div><!--title-hd end-->
-                        {{ render(controller('App\\Controller\\HomeController::getNewsletter')) }}
                         <div class="clearfix"></div>
                     </div><!--tp-contact end-->
                 </div>

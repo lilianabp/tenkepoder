@@ -54,9 +54,9 @@ $(window).on("load", function() {
             data: $(form).serialize(),
             beforeSend:function(){
                 if(locale[1] == 'en') {
-                    $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Sending...</div>');
+                    $('#contact-form .response').html('<div class="text-info"><img src="https://tenkepoder.com/images/preloader.gif"> Sending...</div>');
                 } else {
-                     $('#contact-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Enviando...</div>');
+                     $('#contact-form .response').html('<div class="text-info"><img src="https://tenkepoder.com/images/preloader.gif"> Enviando...</div>');
                 }
             },
             success:function(data){
@@ -101,9 +101,9 @@ $(window).on("load", function() {
               data: $(form).serialize(),
               beforeSend:function(){
                   if(locale[1] == 'en') {
-                      $('.newsletter-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Sending...</div>');
+                      $('.newsletter-form .response').html('<div class="text-info"><img src="https://tenkepoder.com/images/preloader.gif"> Sending...</div>');
                   } else {
-                      $('.newsletter-form .response').html('<div class="text-info"><img src="images/preloader.gif"> Enviando...</div>');
+                      $('.newsletter-form .response').html('<div class="text-info"><img src="https://tenkepoder.com/images/preloader.gif"> Enviando...</div>');
                   }
               },
               success:function(data){
@@ -120,7 +120,7 @@ $(window).on("load", function() {
               }
           });
       });
-    }
+    };
     
 });
 

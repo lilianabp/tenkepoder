@@ -1,4 +1,4 @@
-{{ form_start(form, {'attr': {'class': 'newsletter-form'} } ) }}
+{{ form_start(form, {'attr': {'class': 'newsletter-form', 'id': 'newsletter-form'} } ) }}
 	<div class="response"></div>
 	{{ form_widget(form.email) }}
 	<button type="submit" id="submit-form"><img src="{{ asset('images/send.svg') }}" alt="TKP - Newsletter"></button>
@@ -9,13 +9,3 @@
 	{{ form_widget(form.privacy, {'attr': {'style':"width: 13px;margin-right: 5px"}}) }}
     <label for="newsletter_privacy">{% trans %}Acepto la {% endtrans %}<a href="{{ path('privacy_policy') }}"> {% trans %}Política de Privacidad{% endtrans %}</a></label>
 {{ form_end(form) }}
-<script src="https://www.google.com/recaptcha/api.js?render=" async></script>
-<script>
-    grecaptcha.ready(function() {
-        grecaptcha.execute('', {action: 'newsletter'})
-            .then(function(token) {
-                var recaptchaResponse = document.getElementById('newsletter_recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-    });
-</script>

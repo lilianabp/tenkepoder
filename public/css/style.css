@@ -1131,7 +1131,7 @@ header .menu-btn {
 /* ======================= FOOTER ========================= */
 
 footer {
-	background-image: url(../images/footer-bg.jpg);
+	background-image: url(../images/footer-bg.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 }

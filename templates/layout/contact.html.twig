@@ -1,3 +1,18 @@
+<script>
+var onloadCallback = function() {
+  widgetId = grecaptcha.render('submit', {
+    'sitekey' : '6LfkKrUZAAAAAPjDfDlZ_uzEH8f90Ba9tydwl5kr',
+    'callback' : onSubmit
+  });
+  grecaptcha.execute(widgetId).then(function(token) {
+        var recaptchaResponse = document.getElementById('contact_recaptchaResponse');
+        recaptchaResponse.value = token;
+    });
+};
+var onSubmit = function(token) {
+    console.log('success!');
+};
+</script>
 {{ form_start(form, {'attr': {'id': 'contact-form'} } ) }}
     <div class="response"></div>
     <div class="row">
@@ -38,18 +53,9 @@
         {{ form_errors(form) }}
         <div class="col-lg-12">
             <div class="input-field m-0">
-                <button type="button" class="btn-default" id="submit">{% trans %}Enviar mensaje{% endtrans %}</button>
+                <button type="submit" class="btn-default" id="submit">{% trans %}Enviar mensaje{% endtrans %}</button>
             </div>
         </div>
     </div>
 {{ form_end(form) }}
-<script src="https://www.google.com/recaptcha/api.js?render=" async></script>
-<script>
-    grecaptcha.ready(function() {
-        grecaptcha.execute('', {action: 'contacto'})
-            .then(function(token) {
-                var recaptchaResponse = document.getElementById('contact_recaptchaResponse');
-                recaptchaResponse.value = token;
-            });
-    });
-</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
