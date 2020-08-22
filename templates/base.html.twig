@@ -56,7 +56,7 @@
     </div><!--wrapper end-->
     <div class="clearfix"></div>
     <script src="{{ asset('js/compressed.js') }}" async defer></script>
-    <script type="text/javascript" async>
+    <script type="text/javascript" async defer>
     window.onload = function () {
         if(localStorage.getItem('page') == '{{ app.request.attributes.get('_route') }}') {
             $(window).scrollTop(localStorage.getItem('position'));
@@ -71,21 +71,19 @@
             $('.es').removeClass('active btn-default2');
         {% endif %}
 
-        var btn = $('#button');
-
-        $(window).scroll(function() {
-            localStorage.setItem('position', $(window).scrollTop());
-            localStorage.setItem('page',  '{{ app.request.attributes.get('_route') }}');
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
+       $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
             } else {
-                btn.removeClass('show');
+                $('#back-to-top').fadeOut();
             }
         });
-
-        btn.on('click', function(e) {
-          e.preventDefault();
-          $('html, body').animate({scrollTop:0}, '300');
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
         });
     };
     </script>

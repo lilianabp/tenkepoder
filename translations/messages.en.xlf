@@ -521,6 +521,22 @@
         <source>Seguinos en Instagram</source>
         <target>Follow us on Instagram</target>
       </trans-unit>
+      <trans-unit id="YErAgkB" resname="Desarrollo de páginas webs y tiendas online. Te ayudamos a expandir tu negocio con programación personalizada PHP, WordPress, PrestaShop, Symfony.">
+        <source>Desarrollo de páginas webs y tiendas online. Te ayudamos a expandir tu negocio con programación personalizada PHP, WordPress, PrestaShop, Symfony.</source>
+        <target>Development of websites and online stores. We help you to expand your business with customized programming PHP, WordPress, PrestaShop, Symfony.</target>
+      </trans-unit>
+      <trans-unit id="ZcVSaZF" resname="Responsive. Soporte SEO con metadatos. Contenidos web gestionables. Temas o plantillas Wordpress, Woocommerce, Prestashop. Tú diseño web a medida.">
+        <source>Responsive. Soporte SEO con metadatos. Contenidos web gestionables. Temas o plantillas Wordpress, Woocommerce, Prestashop. Tú diseño web a medida.</source>
+        <target>Responsive. SEO support with metadata. Management of web content. Themes for Wordpress, Woocommerce, Prestashop. Your customized web design.</target>
+      </trans-unit>
+      <trans-unit id="9ZBM96E" resname="Marketing">
+        <source>Marketing</source>
+        <target>Marketing</target>
+      </trans-unit>
+      <trans-unit id="v08kudF" resname="Te ofrecemos soluciones web adaptadas a tus necesidades y orientado a tus objetivos. Desarrollamos campañas de marketing online. SEO, SEM, Instagram, Facebook, Google Ads.">
+        <source>Te ofrecemos soluciones web adaptadas a tus necesidades y orientado a tus objetivos. Desarrollamos campañas de marketing online. SEO, SEM, Instagram, Facebook, Google Ads.</source>
+        <target>We offer you web solutions adapted to your needs and oriented to your goals. We perform online marketing campaigns. SEO, SEM, Instagram, Facebook, Google Ads.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
